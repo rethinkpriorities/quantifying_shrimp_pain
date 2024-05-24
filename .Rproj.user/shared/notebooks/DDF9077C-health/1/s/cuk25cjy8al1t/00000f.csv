@@ -1,0 +1,5 @@
+"0","disease_farms<-data.frame("
+"0","  ext = paintrack_disease*prev_disease$Extensive*prop_sample$Ext,"
+"0","  semi = paintrack_disease*prev_disease$`Semi-Intensive`*prop_sample$Semi,"
+"0","  int = paintrack_disease*prev_disease$Intensive*prop_sample$Int,"
+"0","  super = paintrack_disease*prev_disease$`Super-Intensive`*prop_sample$Super)"

@@ -1,0 +1,253 @@
+---
+title: "Transportation"
+---
+
+
+{{< include _functions_data.qmd >}}
+
+
+
+# Waterless transport
+
+## Prevalence
+
+Only broodstock shrimp being transported by air and shrimp sold live are transported without water. Therefore, we think extensive farms are very unlikely to use waterless transportation, semi-intensive are somewhat likely, and intensive and super-intensive are very likely, though we are most uncertain about semi-intensive and intensive farms. We then weight these prevalences by the proportion of shrimp who are broodstock and the proportion that are sold live (which we estimate to be around 2%).
+
+Not all broodstock are transported every year, some are found in domestic hatcheries, so we multiply the broodstock proportion by a distribution between 0.2 to 0.5 to account for this.
+
+Our prevalence estimates are:
+
+| **Extensive**    | **Semi-intensive** | **Intensive**       | **Super-intensive** |
+|------------------|------------------|------------------|------------------|
+| 0--10% (mean 5%) | 0--50% (mean 25%)  | 50--100% (mean 75%) | 80--100% (mean 90%) |
+
+```{r}
+find_good_sd_binary(mean_val=0.05, tol=1e-6,
+                   fifth_percentile=0, ninety_fifth_percentile=0.1)
+find_good_sd_binary(mean_val=0.25, tol=1e-6,
+                   fifth_percentile=0, ninety_fifth_percentile=0.5)
+find_good_sd_binary(mean_val=0.75, tol=1e-6, #sd_val=0.15,
+                   fifth_percentile=0.5, ninety_fifth_percentile=1)
+find_good_sd_binary(mean_val=0.9, tol=1e-6, #sd_val=0.05,
+                   fifth_percentile=0.8, ninety_fifth_percentile=1)
+```
+
+Sampling from beta distribution:
+```{r}
+prev_nowater_stat <- data.frame(FarmType = c(
+  "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
+                               mean = c(0.05, 0.25, 0.75, 0.9),
+                               sd = c(0.03708807, 0.1728733, 0.1736133, 0.0723155))
+prev_nowater_dist<-mapply(sample_beta, prev_nowater_stat$mean, prev_nowater_stat$sd)
+colnames(prev_nowater_dist)<-prev_nowater_stat$FarmType
+
+prev_nowater_unadjusted<-as.data.frame(prev_nowater_dist)
+
+
+sold_live<-runif(n, min=0.01, max=0.02)
+broodstock_transported<-runif(n, min=0.2, max=0.5)
+Waterless_Population_Proportion=((female_broodstock_prop*2)*broodstock_transported)+sold_live # adding shrimp who are sold live (estimated to be between 1% to 5% of shrimp) to proportion of broodstock (calculated as proportion of broodstock that are female, multiplied by two)
+plot(density(Waterless_Population_Proportion))
+
+prev_nowater<-prev_nowater_unadjusted*Waterless_Population_Proportion
+
+```
+
+## Pain-Tracks
+
+Our hypothesized pain category allocations are as follows:
+
+![](images/waterless.png)
+
+```{r}
+dur_nowater = rtruncnorm(n, a=4, b=72, mean=30, sd = 8)
+
+pain_nowater<-data.frame(sample_dirichlet(0.03, 0.06, 39, 60.91)) %>%
+  `colnames<-`(paincategories)
+
+```
+
+Combine the intensity and duration information
+
+```{r}
+paintrack_nowater<-(dur_nowater * pain_nowater)
+```
+
+::: {.callout-note collapse="true"}
+### Duration notes
+
+We estimate a rough total shipment time as 15-35 hours. This is based on the fact that 
+American Penaeid, Inc. report being [three and a half hours away from international airports](https://penaeid.com/the-facility/) and that their customers are [8-28 hours away by plane](https://penaeid.com/footprint/). If we account for travel from the airport to the hatchery by assuming another 3.5 hours of travel time, then we arrive at our estimation of 15--35 hours. Our maximum duration comes from [Benchmark Genetics Shrimp](https://perma.cc/M8ZB-QJBD), who say they are prepared to acclimatize broodstock who have traveled for up to 72 hours.
+:::
+
+::: {.callout-note collapse="true"}
+### Intensity notes
+
+Reducing temperature over 30 minutes in preparation for travel can causes oxidative stress, significantly increases mortality for trips of at least 10 hours ([Xu et al., 2021](https://doi.org/10.1016/j.jtherbio.2021.103080)). An operator we called at American Penaeid for our previous report estimated an \~85% survival rate for broodstock. Survival rates of "[up to 80 percent](https://perma.cc/QFF8-NB59)" after 12 to 24 hours are often reported ([Goodrick et al., 1993](https://perma.cc/QFK6-6TVA); [Xu et al., 2021](https://doi.org/10.1016/j.jtherbio.2021.103080)). Survival may actually be worse than is reported because conditions are likely better controlled in studies than they are in practice.
+:::
+
+Weight the pain tracks by prevalence estimations and proportion of farming attributable to each farm type, as well as the average days lived by a shrimp.
+
+```{r}
+nowater_farms<-data.frame(
+  ext = paintrack_nowater*prev_nowater$Extensive*prop_sample$Ext,
+  semi = paintrack_nowater*prev_nowater$`Semi-Intensive`*prop_sample$Semi,
+  int = paintrack_nowater*prev_nowater$Intensive*prop_sample$Int,
+  super = paintrack_nowater*prev_nowater$`Super-Intensive`*prop_sample$Super)
+```
+
+Add the pain categories across farm types and calculate the disabling-equivalent pain hours.
+
+```{r}
+nowater<-nowater_farms %>%
+  mutate(allfarms.Annoying = ext.Annoying + semi.Annoying + int.Annoying + super.Annoying,
+         allfarms.Hurtful = ext.Hurtful + semi.Hurtful + int.Hurtful + super.Hurtful,
+         allfarms.Disabling = ext.Disabling + semi.Disabling + int.Disabling + super.Disabling,
+         allfarms.Excruciating = ext.Excruciating + semi.Excruciating + int.Excruciating + super.Excruciating,)
+
+average_hours_nowater <- nowater %>%
+  select(starts_with("allfarms"))
+
+average_hours_nowater$Disabling_Equivalent<- (
+  average_hours_nowater$allfarms.Annoying*Annoying_Weight) + (
+    average_hours_nowater$allfarms.Hurtful*Hurtful_Weight) +(
+      average_hours_nowater$allfarms.Disabling*Disabling_Weight)+(
+        average_hours_nowater$allfarms.Excruciating*Excruciating_Weight)
+
+nowater_summary<-cbind(round(rbind(
+  (quantile(x =average_hours_nowater$allfarms.Annoying, probs = c(.05, .50, .95))), 
+  (quantile(x =average_hours_nowater$allfarms.Hurtful, probs = c(.05, .50, .95))), 
+  (quantile(x =average_hours_nowater$allfarms.Disabling, probs = c(.05, .50, .95))),
+  (quantile(x =average_hours_nowater$allfarms.Excruciating, probs = c(.05, .50, .95))),
+  (quantile(x =average_hours_nowater$Disabling_Equivalent, probs = c(.05, .50, .95)))), 10),
+  "Mean" = colMeans(average_hours_nowater))
+row.names(nowater_summary)<-c(
+  "Annoying_nowater","Hurtful_nowater","Disabling_nowater", "Excruciating_nowater", "Disabling-Equivalent_Waterless_transport")
+show_table(nowater_summary)
+
+```
+
+# Water-based transport
+
+## Prevalence
+
+We do not assess brief cases of shrimp being transferred between tanks or ponds on the same farm---even though it is likely to cause some stress, the magnitude is not that of the other welfare threats we evaluate. Any shrimp transported between facilities within the same country are usually transported using water-based methods. Since most farms probably do not have on-site hatcheries, this means that most shrimp are transported in this way at some point, though we are somewhat uncertain about this. Super-intensive facilities are more likely to have on-site hatcheries.
+
+Our prevalence estimates are:
+
+| **Extensive**       | **Semi-intensive**  | **Intensive**      | **Super-intensive** |
+|------------------|------------------|------------------|------------------|
+| 50--100% (mean 75%) | 90--100% (mean 95%) | 50--90% (mean 70%) | 10--90% (mean 50%)  |
+
+```{r}
+find_good_sd_binary(mean_val=0.75, tol=1e-6,
+                   fifth_percentile=0.5, ninety_fifth_percentile=1)
+find_good_sd_binary(mean_val=0.95, tol=1e-6,
+                   fifth_percentile=0.9, ninety_fifth_percentile=1)
+find_good_sd_binary(mean_val=0.7, tol=1e-6, #sd_val=0.15,
+                   fifth_percentile=0.5, ninety_fifth_percentile=0.9)
+find_good_sd_binary(mean_val=0.5, tol=1e-6, #sd_val=0.05,
+                   fifth_percentile=0.1, ninety_fifth_percentile=0.9)
+```
+
+Sampling from beta distribution:
+```{r}
+prev_water_stat <- data.frame(FarmType = c(
+  "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
+                               mean = c(0.75, 0.95, 0.7, 0.5),
+                               sd = c(0.173297, 0.03705066, 0.1236821, 0.2478614))
+prev_water_dist<-mapply(sample_beta, prev_water_stat$mean, prev_water_stat$sd)
+colnames(prev_water_dist)<-prev_water_stat$FarmType
+
+prev_water<-as.data.frame(prev_water_dist)
+```
+
+## Pain-Tracks
+
+Our hypothesized pain category allocations are as follows:
+
+![](images/water.png)
+
+```{r}
+dur_water = rtruncnorm(n, a=0.1, b=72, mean=24, sd = 16)
+
+pain_water<-data.frame(sample_dirichlet(0.03, 0.1, 25, 74.87)) %>%
+  `colnames<-`(paincategories)
+
+```
+
+Combine the intensity and duration information
+
+```{r}
+paintrack_water<-(dur_water * pain_water)
+```
+
+::: {.callout-note collapse="true"}
+### Duration
+
+We estimate that water-based transport could, in theory, last from a few minutes up to 72 hours but that longer durations are less common.
+:::
+
+::: {.callout-note collapse="true"}
+### Intensity notes
+
+Mortality rates can reach 25% for 24-hour trips ([Debnath et al., 2015, Table 3](https://doi.org/10.1111/raq.12094)). High densities during transportation also pose risks to water quality, including dissolved oxygen depletion and increased ammonia concentrations. As some individuals become weaker, incidences of cannibalism can also rise. We account for these issues here because they are separate from dissolved oxygen and ammonia in farm ponds.
+
+We assign pain to the 'annoying' and 'hurtful' categories to account for restricted movement and behavior, and to 'disabling' and 'excruciating' to account for cannibalism and mortality.
+:::
+
+Then we combine all of the estimations for water-based transport.
+
+```{r}
+water_farms<-data.frame(
+  ext = paintrack_water*prev_water$Extensive*prop_sample$Ext,
+  semi = paintrack_water*prev_water$`Semi-Intensive`*prop_sample$Semi,
+  int = paintrack_water*prev_water$Intensive*prop_sample$Int,
+  super = paintrack_water*prev_water$`Super-Intensive`*prop_sample$Super)
+```
+
+Add the pain categories across farm types and calculate the disabling-equivalent pain hours.
+
+```{r}
+water<-water_farms %>%
+  mutate(allfarms.Annoying = ext.Annoying + semi.Annoying + int.Annoying + super.Annoying,
+         allfarms.Hurtful = ext.Hurtful + semi.Hurtful + int.Hurtful + super.Hurtful,
+         allfarms.Disabling = ext.Disabling + semi.Disabling + int.Disabling + super.Disabling,
+         allfarms.Excruciating = ext.Excruciating + semi.Excruciating + int.Excruciating + super.Excruciating,)
+
+average_hours_water <- water %>%
+  select(starts_with("allfarms"))
+
+average_hours_water$Disabling_Equivalent<- (
+  average_hours_water$allfarms.Annoying*Annoying_Weight) + (
+    average_hours_water$allfarms.Hurtful*Hurtful_Weight) +(
+      average_hours_water$allfarms.Disabling*Disabling_Weight)+(
+        average_hours_water$allfarms.Excruciating*Excruciating_Weight)
+
+water_summary<-cbind(round(rbind(
+  (quantile(x =average_hours_water$allfarms.Annoying, probs = c(.05, .50, .95))), 
+  (quantile(x =average_hours_water$allfarms.Hurtful, probs = c(.05, .50, .95))), 
+  (quantile(x =average_hours_water$allfarms.Disabling, probs = c(.05, .50, .95))),
+  (quantile(x =average_hours_water$allfarms.Excruciating, probs = c(.05, .50, .95))),
+  (quantile(x =average_hours_water$Disabling_Equivalent, probs = c(.05, .50, .95)))), 10),
+  "Mean" = colMeans(average_hours_water))
+row.names(water_summary)<-c(
+  "Annoying_water","Hurtful_water","Disabling_water", "Excruciating_water", "Disabling-Equivalent_Water-based_transport")
+show_table(water_summary)
+
+```
+
+
+```{r}
+#| echo: false
+#| output: false
+#| eval: true
+
+transportation<-c("nowater_summary", "water_summary")
+
+for (i in 1:length(transportation)){
+  savefile<-paste0(paste0("../results/", transportation[i]), ".csv")
+  write.csv(get(transportation[i]), file=savefile)
+}
+
+```

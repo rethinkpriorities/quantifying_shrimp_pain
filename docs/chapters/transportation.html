@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Methods for quantifying the impact of welfare threats on shrimp - Transportation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/harvest_slaughter.html" rel="next">
+<link href="../chapters/health.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/water_quality.html">Welfare threats</a></li><li class="breadcrumb-item"><a href="../chapters/transportation.html"><span class="chapter-title">Transportation</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Methods for quantifying the impact of welfare threats on shrimp</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/set-up.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set-up and data preparation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Welfare threats</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/water_quality.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Water quality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/pond_habitat.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pond habitat</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/feed_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Feed management</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/health.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Health</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/transportation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Transportation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/harvest_slaughter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Harvest and slaughter</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Results</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#waterless-transport" id="toc-waterless-transport" class="nav-link active" data-scroll-target="#waterless-transport">Waterless transport</a>
+  <ul class="collapse">
+  <li><a href="#prevalence" id="toc-prevalence" class="nav-link" data-scroll-target="#prevalence">Prevalence</a></li>
+  <li><a href="#pain-tracks" id="toc-pain-tracks" class="nav-link" data-scroll-target="#pain-tracks">Pain-Tracks</a></li>
+  </ul></li>
+  <li><a href="#water-based-transport" id="toc-water-based-transport" class="nav-link" data-scroll-target="#water-based-transport">Water-based transport</a>
+  <ul class="collapse">
+  <li><a href="#prevalence-1" id="toc-prevalence-1" class="nav-link" data-scroll-target="#prevalence-1">Prevalence</a></li>
+  <li><a href="#pain-tracks-1" id="toc-pain-tracks-1" class="nav-link" data-scroll-target="#pain-tracks-1">Pain-Tracks</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/water_quality.html">Welfare threats</a></li><li class="breadcrumb-item"><a href="../chapters/transportation.html"><span class="chapter-title">Transportation</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Transportation</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="waterless-transport" class="level1">
+<h1>Waterless transport</h1>
+<section id="prevalence" class="level2">
+<h2 class="anchored" data-anchor-id="prevalence">Prevalence</h2>
+<p>Only broodstock shrimp being transported by air and shrimp sold live are transported without water. Therefore, we think extensive farms are very unlikely to use waterless transportation, semi-intensive are somewhat likely, and intensive and super-intensive are very likely, though we are most uncertain about semi-intensive and intensive farms. We then weight these prevalences by the proportion of shrimp who are broodstock and the proportion that are sold live (which we estimate to be around 2%).</p>
+<p>Not all broodstock are transported every year, some are found in domestic hatcheries, so we multiply the broodstock proportion by a distribution between 0.2 to 0.5 to account for this.</p>
+<p>Our prevalence estimates are:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Extensive</strong></th>
+<th><strong>Semi-intensive</strong></th>
+<th><strong>Intensive</strong></th>
+<th><strong>Super-intensive</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0–10% (mean 5%)</td>
+<td>0–50% (mean 25%)</td>
+<td>50–100% (mean 75%)</td>
+<td>80–100% (mean 90%)</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.05</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="dv">0</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0368478</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.25</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="dv">0</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1727593</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.75</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.15,</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1725248</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.9</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.05,</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.8</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.07310057</code></pre>
+</div>
+</div>
+<p>Sampling from beta distribution:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>prev_nowater_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.25</span>, <span class="fl">0.75</span>, <span class="fl">0.9</span>),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.03708807</span>, <span class="fl">0.1728733</span>, <span class="fl">0.1736133</span>, <span class="fl">0.0723155</span>))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>prev_nowater_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_nowater_stat<span class="sc">$</span>mean, prev_nowater_stat<span class="sc">$</span>sd)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_nowater_dist)<span class="ot">&lt;-</span>prev_nowater_stat<span class="sc">$</span>FarmType</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>prev_nowater_unadjusted<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_nowater_dist)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>sold_live<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="at">min=</span><span class="fl">0.01</span>, <span class="at">max=</span><span class="fl">0.02</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>broodstock_transported<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="at">min=</span><span class="fl">0.2</span>, <span class="at">max=</span><span class="fl">0.5</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>Waterless_Population_Proportion<span class="ot">=</span>((female_broodstock_prop<span class="sc">*</span><span class="dv">2</span>)<span class="sc">*</span>broodstock_transported)<span class="sc">+</span>sold_live <span class="co"># adding shrimp who are sold live (estimated to be between 1% to 5% of shrimp) to proportion of broodstock (calculated as proportion of broodstock that are female, multiplied by two)</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(Waterless_Population_Proportion))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="transportation_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>prev_nowater<span class="ot">&lt;-</span>prev_nowater_unadjusted<span class="sc">*</span>Waterless_Population_Proportion</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pain-tracks" class="level2">
+<h2 class="anchored" data-anchor-id="pain-tracks">Pain-Tracks</h2>
+<p>Our hypothesized pain category allocations are as follows:</p>
+<p><img src="images/waterless.png" class="img-fluid"></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dur_nowater <span class="ot">=</span> <span class="fu">rtruncnorm</span>(n, <span class="at">a=</span><span class="dv">4</span>, <span class="at">b=</span><span class="dv">72</span>, <span class="at">mean=</span><span class="dv">30</span>, <span class="at">sd =</span> <span class="dv">8</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>pain_nowater<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.03</span>, <span class="fl">0.06</span>, <span class="dv">39</span>, <span class="fl">60.91</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Combine the intensity and duration information</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>paintrack_nowater<span class="ot">&lt;-</span>(dur_nowater <span class="sc">*</span> pain_nowater)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Duration notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We estimate a rough total shipment time as 15-35 hours. This is based on the fact that American Penaeid, Inc.&nbsp;report being <a href="https://penaeid.com/the-facility/">three and a half hours away from international airports</a> and that their customers are <a href="https://penaeid.com/footprint/">8-28 hours away by plane</a>. If we account for travel from the airport to the hatchery by assuming another 3.5 hours of travel time, then we arrive at our estimation of 15–35 hours. Our maximum duration comes from <a href="https://perma.cc/M8ZB-QJBD">Benchmark Genetics Shrimp</a>, who say they are prepared to acclimatize broodstock who have traveled for up to 72 hours.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Intensity notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Reducing temperature over 30 minutes in preparation for travel can causes oxidative stress, significantly increases mortality for trips of at least 10 hours (<a href="https://doi.org/10.1016/j.jtherbio.2021.103080">Xu et al., 2021</a>). An operator we called at American Penaeid for our previous report estimated an ~85% survival rate for broodstock. Survival rates of “<a href="https://perma.cc/QFF8-NB59">up to 80 percent</a>” after 12 to 24 hours are often reported (<a href="https://perma.cc/QFK6-6TVA">Goodrick et al., 1993</a>; <a href="https://doi.org/10.1016/j.jtherbio.2021.103080">Xu et al., 2021</a>). Survival may actually be worse than is reported because conditions are likely better controlled in studies than they are in practice.</p>
+</div>
+</div>
+</div>
+<p>Weight the pain tracks by prevalence estimations and proportion of farming attributable to each farm type, as well as the average days lived by a shrimp.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>nowater_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">semi =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">int =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">super =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Add the pain categories across farm types and calculate the disabling-equivalent pain hours.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>nowater<span class="ot">&lt;-</span>nowater_farms <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>average_hours_nowater <span class="ot">&lt;-</span> nowater <span class="sc">%&gt;%</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>average_hours_nowater<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  average_hours_nowater<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    average_hours_nowater<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>      average_hours_nowater<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>        average_hours_nowater<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>nowater_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_nowater))</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(nowater_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_nowater"</span>,<span class="st">"Hurtful_nowater"</span>,<span class="st">"Disabling_nowater"</span>, <span class="st">"Excruciating_nowater"</span>, <span class="st">"Disabling-Equivalent_Waterless_transport"</span>)</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(nowater_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> 5% </th>
+   <th style="text-align:right;"> 50% </th>
+   <th style="text-align:right;"> 95% </th>
+   <th style="text-align:right;"> Mean </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Annoying_nowater </td>
+   <td style="text-align:right;"> 0.0667529 </td>
+   <td style="text-align:right;"> 0.1536398 </td>
+   <td style="text-align:right;"> 0.2856364 </td>
+   <td style="text-align:right;"> 0.1619736 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Hurtful_nowater </td>
+   <td style="text-align:right;"> 0.0419052 </td>
+   <td style="text-align:right;"> 0.0978090 </td>
+   <td style="text-align:right;"> 0.1850438 </td>
+   <td style="text-align:right;"> 0.1036503 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling_nowater </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0008201 </td>
+   <td style="text-align:right;"> 0.0001557 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Excruciating_nowater </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0002831 </td>
+   <td style="text-align:right;"> 0.0000794 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling-Equivalent_Waterless_transport </td>
+   <td style="text-align:right;"> 0.0031816 </td>
+   <td style="text-align:right;"> 0.0123721 </td>
+   <td style="text-align:right;"> 0.1267407 </td>
+   <td style="text-align:right;"> 0.0517893 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+</section>
+<section id="water-based-transport" class="level1">
+<h1>Water-based transport</h1>
+<section id="prevalence-1" class="level2">
+<h2 class="anchored" data-anchor-id="prevalence-1">Prevalence</h2>
+<p>We do not assess brief cases of shrimp being transferred between tanks or ponds on the same farm—even though it is likely to cause some stress, the magnitude is not that of the other welfare threats we evaluate. Any shrimp transported between facilities within the same country are usually transported using water-based methods. Since most farms probably do not have on-site hatcheries, this means that most shrimp are transported in this way at some point, though we are somewhat uncertain about this. Super-intensive facilities are more likely to have on-site hatcheries.</p>
+<p>Our prevalence estimates are:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Extensive</strong></th>
+<th><strong>Semi-intensive</strong></th>
+<th><strong>Intensive</strong></th>
+<th><strong>Super-intensive</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>50–100% (mean 75%)</td>
+<td>90–100% (mean 95%)</td>
+<td>50–90% (mean 70%)</td>
+<td>10–90% (mean 50%)</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.75</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1735861</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.95</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.9</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.03670729</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.7</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.15,</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1242004</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.5</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.05,</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.1</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2479444</code></pre>
+</div>
+</div>
+<p>Sampling from beta distribution:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>prev_water_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.75</span>, <span class="fl">0.95</span>, <span class="fl">0.7</span>, <span class="fl">0.5</span>),</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.173297</span>, <span class="fl">0.03705066</span>, <span class="fl">0.1236821</span>, <span class="fl">0.2478614</span>))</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>prev_water_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_water_stat<span class="sc">$</span>mean, prev_water_stat<span class="sc">$</span>sd)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_water_dist)<span class="ot">&lt;-</span>prev_water_stat<span class="sc">$</span>FarmType</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>prev_water<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_water_dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pain-tracks-1" class="level2">
+<h2 class="anchored" data-anchor-id="pain-tracks-1">Pain-Tracks</h2>
+<p>Our hypothesized pain category allocations are as follows:</p>
+<p><img src="images/water.png" class="img-fluid"></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>dur_water <span class="ot">=</span> <span class="fu">rtruncnorm</span>(n, <span class="at">a=</span><span class="fl">0.1</span>, <span class="at">b=</span><span class="dv">72</span>, <span class="at">mean=</span><span class="dv">24</span>, <span class="at">sd =</span> <span class="dv">16</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>pain_water<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.03</span>, <span class="fl">0.1</span>, <span class="dv">25</span>, <span class="fl">74.87</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Combine the intensity and duration information</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>paintrack_water<span class="ot">&lt;-</span>(dur_water <span class="sc">*</span> pain_water)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Duration
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We estimate that water-based transport could, in theory, last from a few minutes up to 72 hours but that longer durations are less common.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Intensity notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Mortality rates can reach 25% for 24-hour trips (<a href="https://doi.org/10.1111/raq.12094">Debnath et al., 2015, Table 3</a>). High densities during transportation also pose risks to water quality, including dissolved oxygen depletion and increased ammonia concentrations. As some individuals become weaker, incidences of cannibalism can also rise. We account for these issues here because they are separate from dissolved oxygen and ammonia in farm ponds.</p>
+<p>We assign pain to the ‘annoying’ and ‘hurtful’ categories to account for restricted movement and behavior, and to ‘disabling’ and ‘excruciating’ to account for cannibalism and mortality.</p>
+</div>
+</div>
+</div>
+<p>Then we combine all of the estimations for water-based transport.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>water_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">semi =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">int =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">super =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Add the pain categories across farm types and calculate the disabling-equivalent pain hours.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>water<span class="ot">&lt;-</span>water_farms <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>average_hours_water <span class="ot">&lt;-</span> water <span class="sc">%&gt;%</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>average_hours_water<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>  average_hours_water<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    average_hours_water<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>      average_hours_water<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>        average_hours_water<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>water_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_water))</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(water_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_water"</span>,<span class="st">"Hurtful_water"</span>,<span class="st">"Disabling_water"</span>, <span class="st">"Excruciating_water"</span>, <span class="st">"Disabling-Equivalent_Water-based_transport"</span>)</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(water_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> 5% </th>
+   <th style="text-align:right;"> 50% </th>
+   <th style="text-align:right;"> 95% </th>
+   <th style="text-align:right;"> Mean </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Annoying_water </td>
+   <td style="text-align:right;"> 2.5309177 </td>
+   <td style="text-align:right;"> 13.8800618 </td>
+   <td style="text-align:right;"> 29.0857687 </td>
+   <td style="text-align:right;"> 14.5892966 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Hurtful_water </td>
+   <td style="text-align:right;"> 0.8265666 </td>
+   <td style="text-align:right;"> 4.5308162 </td>
+   <td style="text-align:right;"> 10.0927009 </td>
+   <td style="text-align:right;"> 4.8686389 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling_water </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000937 </td>
+   <td style="text-align:right;"> 0.1068054 </td>
+   <td style="text-align:right;"> 0.0194248 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Excruciating_water </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0192934 </td>
+   <td style="text-align:right;"> 0.0057867 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling-Equivalent_Water-based_transport </td>
+   <td style="text-align:right;"> 0.0958431 </td>
+   <td style="text-align:right;"> 0.6160014 </td>
+   <td style="text-align:right;"> 8.2244725 </td>
+   <td style="text-align:right;"> 3.5477647 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/health.html" class="pagination-link" aria-label="Health">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Health</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/harvest_slaughter.html" class="pagination-link" aria-label="Harvest and slaughter">
+        <span class="nav-page-text"><span class="chapter-title">Harvest and slaughter</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

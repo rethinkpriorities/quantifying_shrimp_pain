@@ -1,0 +1,8 @@
+"0","prev_ablation_stat <- data.frame(FarmType = c("
+"0","  ""Extensive"", ""Semi-Intensive"",""Intensive"",""Super-Intensive""),"
+"0","                               mean = c(0.75, 0.75, 0.98, 0.98),"
+"0","                               sd = c(0.2916584, 0.1742204, 0.058643, 0.058643))"
+"0","prev_ablation_dist<-mapply(sample_beta, prev_ablation_stat$mean, prev_ablation_stat$sd)"
+"0","colnames(prev_ablation_dist)<-prev_ablation_stat$FarmType"
+"0",""
+"0","prev_ablation_unadjusted<-as.data.frame(prev_ablation_dist)"

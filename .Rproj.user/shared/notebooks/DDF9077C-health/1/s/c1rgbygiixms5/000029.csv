@@ -1,0 +1,4 @@
+"0",""
+"0","# 168 hours in a week, sample from log-normal for consistency"
+"0","sec_dur_ablation<-sample_trunclogn(n=n, min_value=0, max_value=240, mean=120, sd=72)"
+"0","plot(density(sec_dur_ablation) , main=""Duration of chronic eyestalk ablation pain"", xlab=""Hours"")"

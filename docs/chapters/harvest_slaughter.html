@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Methods for quantifying the impact of welfare threats on shrimp - Harvest and slaughter</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/results.html" rel="next">
+<link href="../chapters/transportation.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/water_quality.html">Welfare threats</a></li><li class="breadcrumb-item"><a href="../chapters/harvest_slaughter.html"><span class="chapter-title">Harvest and slaughter</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Methods for quantifying the impact of welfare threats on shrimp</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/set-up.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set-up and data preparation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Welfare threats</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/water_quality.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Water quality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/pond_habitat.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pond habitat</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/feed_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Feed management</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/health.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Health</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/transportation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transportation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/harvest_slaughter.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Harvest and slaughter</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Results</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#harvest" id="toc-harvest" class="nav-link active" data-scroll-target="#harvest">Harvest</a>
+  <ul class="collapse">
+  <li><a href="#prevalence" id="toc-prevalence" class="nav-link" data-scroll-target="#prevalence">Prevalence</a></li>
+  <li><a href="#pain-tracks" id="toc-pain-tracks" class="nav-link" data-scroll-target="#pain-tracks">Pain-Tracks</a></li>
+  </ul></li>
+  <li><a href="#slaughter" id="toc-slaughter" class="nav-link" data-scroll-target="#slaughter">Slaughter</a>
+  <ul class="collapse">
+  <li><a href="#prevalence-1" id="toc-prevalence-1" class="nav-link" data-scroll-target="#prevalence-1">Prevalence</a></li>
+  <li><a href="#pain-tracks-1" id="toc-pain-tracks-1" class="nav-link" data-scroll-target="#pain-tracks-1">Pain-Tracks</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/water_quality.html">Welfare threats</a></li><li class="breadcrumb-item"><a href="../chapters/harvest_slaughter.html"><span class="chapter-title">Harvest and slaughter</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Harvest and slaughter</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="harvest" class="level1">
+<h1>Harvest</h1>
+<p>Here, we are evaluating any collection method that does not kill the shrimp before removing them from the ponds or tanks nor pumps them directly to slaughter. This includes cast nets or seine nets, scoop nets, draining shrimp out of the pond into a net, and mechanically pumping shrimp out of the pond.</p>
+<section id="prevalence" class="level2">
+<h2 class="anchored" data-anchor-id="prevalence">Prevalence</h2>
+<p>All shrimp who make it to slaughter age are harvested. Some intensive and super-intensive farms use pumps that pump shrimp directly into the ice slurry slaughter, so these do not apply to this welfare threat. Therefore, we use ranges between 99 to 100% and 95 to 100%, respectively.</p>
+<p>Extensive and semi-intensive farms probably only use collection methods of the type considered here, so we set these to 100%.</p>
+<p>Our prevalence estimates are:</p>
+<table class="table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 21%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Extensive</strong></th>
+<th><strong>Semi-intensive</strong></th>
+<th><strong>Intensive</strong></th>
+<th><strong>Super-intensive</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>100%</td>
+<td>100%</td>
+<td>99–100% *</td>
+<td>95–100%</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.995</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="at">sd_val=</span><span class="fl">0.01</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.99</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.003744034</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.975</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="at">sd_val=</span><span class="fl">0.01</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.95</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01852459</code></pre>
+</div>
+</div>
+<p>Sampling from beta distribution:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>prev_harvest_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.99999</span>, <span class="fl">0.999999</span>, <span class="fl">0.995</span>, <span class="fl">0.975</span>),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.0000001</span>, <span class="fl">0.0000001</span>, <span class="fl">0.003740806</span>, <span class="fl">0.01850762</span>))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>prev_harvest_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_harvest_stat<span class="sc">$</span>mean, prev_harvest_stat<span class="sc">$</span>sd)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_harvest_dist)<span class="ot">&lt;-</span>prev_harvest_stat<span class="sc">$</span>FarmType</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>prev_harvest_dist[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>prev_harvest_unadjusted<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_harvest_dist)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>prev_harvest<span class="ot">&lt;-</span>prev_harvest_unadjusted<span class="sc">*</span>stage_probabilities[,<span class="dv">3</span>] <span class="co"># weighting by the probability a shrimp makes it to slaughter age</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pain-tracks" class="level2">
+<h2 class="anchored" data-anchor-id="pain-tracks">Pain-Tracks</h2>
+<p>Our hypothesized pain category allocations are as follows:</p>
+<p><img src="images/harvest.png" class="img-fluid"></p>
+<p>We think the duration of harvest varies by farm type so we construct a Pain-Track for each farm type. However, we use the same pain intensity attributions for each.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dur_harvest_ext<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span>) </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dur_harvest_semi<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>dur_harvest_int<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>, <span class="fl">0.75</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>dur_harvest_super<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="dv">1</span><span class="sc">/</span><span class="dv">12</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>pain_harvest<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="dv">1</span>, <span class="dv">20</span>, <span class="dv">69</span>, <span class="dv">10</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Combine the intensity and duration information</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>paintrack_harvest_ext<span class="ot">&lt;-</span>(dur_harvest_ext <span class="sc">*</span> pain_harvest)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>paintrack_harvest_semi<span class="ot">&lt;-</span>(dur_harvest_semi <span class="sc">*</span> pain_harvest)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>paintrack_harvest_int<span class="ot">&lt;-</span>(dur_harvest_int <span class="sc">*</span> pain_harvest)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>paintrack_harvest_super<span class="ot">&lt;-</span>(dur_harvest_super <span class="sc">*</span> pain_harvest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Duration notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Farmer’s often lower the level of water in the pond then use a dragnet to collect shrimp. Shrimp are sometimes taken out of the dragnet in smaller groups (e.g.&nbsp;see <a href="https://drive.google.com/file/d/1bqGRmLywNAOWSq80Op38SJu-GWgj3Zyh/view?usp=sharing">this video</a>). In these cases, shrimp left in the dragnet may be experience long periods before being collected out of the ponds. <a href="https://perma.cc/V2NT-GH52">Shrimp Welfare Project’s (2022, p.15)</a> India Scoping Report states that “once shrimp are taken from the water via a dragnet, they are placed in crates and left for several minutes before being weighed.”</p>
+<p>Additionally, some shrimp will be taken out of the pond and then discarded in the sorting process (e.g.&nbsp;due to discoloration). These shrimp likely die from air exposure. Even shrimp who are not discardede may die during this evaluation period, as death from oxidative stress only takes a bit longer than 30 minutes for <em>P. vannamei</em> (<a href="https://doi.org/10.1080/15222055.2014.955157">Liu et al., 2015</a>). We attempt to account for these instances by estimating a maximum harvest length of an hour.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Intensity notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Shrimp who are collected out of the ponds experience prolonged air exposure, which could cause death by suffocation. They may also be crushed by other shrimp or by farm workers. We, therefore, assign most pain to ‘hurtful’ and ‘disabling’.</p>
+</div>
+</div>
+</div>
+<p>Weight the pain tracks by prevalence estimations and proportion of farming attributable to each farm type.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>harvest_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> paintrack_harvest_ext<span class="sc">*</span>prev_harvest<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">semi =</span> paintrack_harvest_semi<span class="sc">*</span>prev_harvest<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">int =</span> paintrack_harvest_int<span class="sc">*</span>prev_harvest<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">super =</span> paintrack_harvest_super<span class="sc">*</span>prev_harvest<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Add the pain categories across farm types and calculate the disabling-equivalent pain hours.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>harvest<span class="ot">&lt;-</span>harvest_farms <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>average_hours_harvest <span class="ot">&lt;-</span> harvest <span class="sc">%&gt;%</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>average_hours_harvest<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  average_hours_harvest<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    average_hours_harvest<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>      average_hours_harvest<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        average_hours_harvest<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>harvest_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_harvest<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_harvest<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_harvest<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_harvest<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_harvest<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_harvest))</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(harvest_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_harvest"</span>,<span class="st">"Hurtful_harvest"</span>,<span class="st">"Disabling_harvest"</span>, <span class="st">"Excruciating_harvest"</span>, <span class="st">"Disabling-Equivalent_Harvest"</span>)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(harvest_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> 5% </th>
+   <th style="text-align:right;"> 50% </th>
+   <th style="text-align:right;"> 95% </th>
+   <th style="text-align:right;"> Mean </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Annoying_harvest </td>
+   <td style="text-align:right;"> 0.0127546 </td>
+   <td style="text-align:right;"> 0.0319849 </td>
+   <td style="text-align:right;"> 0.0625670 </td>
+   <td style="text-align:right;"> 0.0340525 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Hurtful_harvest </td>
+   <td style="text-align:right;"> 0.1141398 </td>
+   <td style="text-align:right;"> 0.2322161 </td>
+   <td style="text-align:right;"> 0.3652988 </td>
+   <td style="text-align:right;"> 0.2347088 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling_harvest </td>
+   <td style="text-align:right;"> 0.0297267 </td>
+   <td style="text-align:right;"> 0.0656446 </td>
+   <td style="text-align:right;"> 0.1151680 </td>
+   <td style="text-align:right;"> 0.0680610 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Excruciating_harvest </td>
+   <td style="text-align:right;"> 0.0001416 </td>
+   <td style="text-align:right;"> 0.0021984 </td>
+   <td style="text-align:right;"> 0.0106688 </td>
+   <td style="text-align:right;"> 0.0033886 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling-Equivalent_Harvest </td>
+   <td style="text-align:right;"> 0.1145817 </td>
+   <td style="text-align:right;"> 0.9490683 </td>
+   <td style="text-align:right;"> 6.2843983 </td>
+   <td style="text-align:right;"> 1.7922216 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+</section>
+<section id="slaughter" class="level1">
+<h1>Slaughter</h1>
+<p>Here, we are evaluating the ice slurry method of slaughter.</p>
+<section id="prevalence-1" class="level2">
+<h2 class="anchored" data-anchor-id="prevalence-1">Prevalence</h2>
+<p>All shrimp who are slaughtered are slaughtered using ice slurry, bar those on farms that the Shrimp Welfare Project has provided electrical stunners to. SWP currently estimate they have helped 1.2 billion shrimp by providing electrical stunners—that’s 0.3% of the number of penaeids slaughtered per year:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>slaughtered_samp<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">"../data/slaughtered_samples.csv"</span>) <span class="co"># from Guesstimate model</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>slaughtered_samp<span class="ot">&lt;-</span>slaughtered_samp[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>] <span class="co"># keep only penaeids</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sum across rows</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>slaughtered_samp_totals<span class="ot">&lt;-</span>slaughtered_samp <span class="sc">%&gt;%</span> </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">total=</span>vannamei <span class="sc">+</span> monodon <span class="sc">+</span> other_pen)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1200000000</span><span class="sc">/</span><span class="fu">mean</span>(slaughtered_samp_totals<span class="sc">$</span>total))<span class="sc">*</span><span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2990682</code></pre>
+</div>
+</div>
+<p>Shrimp who are sold live are not slaughtered so we must account for this in our estimations. We, therefore, estimate that all farm types are 98% likely to use ice slurry to slaughter shrimp. We then account for the fact that only shrimp who make it slaughter age and do not die during collection are slaughtered. To do this, we weight by the relevant life-stage proportions, and by our estimate that between 0% and 50% of shrimp die during collection, before slaughter.</p>
+<p>Our prevalence estimates are:</p>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><strong>Extensive</strong></td>
+<td><strong>Semi-intensive</strong></td>
+<td><strong>Intensive</strong></td>
+<td><strong>Super-intensive</strong></td>
+</tr>
+<tr class="even">
+<td>Prevalence of using ice slurry</td>
+<td>50–90%</td>
+<td>60–95%</td>
+<td>98–100%</td>
+<td>100%</td>
+</tr>
+<tr class="odd">
+<td>Die before slaughter on farms that use ice</td>
+<td>0–50%</td>
+<td>0–50%</td>
+<td>0–25%</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+<p>First, we draw from the beta distribution for the prevalence of using ice slurry:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.7</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1238744</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.775</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.6</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.112082</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.9885</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="at">sd_val=</span><span class="fl">0.1</span>,</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.98</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.997</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.00561764</code></pre>
+</div>
+</div>
+<p>Sampling from beta distribution:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>prev_iceslurry_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.7</span>, <span class="fl">0.775</span>, <span class="fl">0.9885</span>, <span class="fl">0.99999</span>),</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.1242302</span>, <span class="fl">0.1117355</span>, <span class="fl">0.00561642</span>, <span class="fl">0.00001</span>))</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>prev_iceslurry_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_iceslurry_stat<span class="sc">$</span>mean, prev_iceslurry_stat<span class="sc">$</span>sd)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_iceslurry_dist)<span class="ot">&lt;-</span>prev_iceslurry_stat<span class="sc">$</span>FarmType</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>prev_iceslurry_dist[,<span class="dv">4</span>]<span class="ot">&lt;-</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, the prevalence of shrimp that die after harvest, before slaughter.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.25</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="dv">0</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.173169</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.125</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="dv">0</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.09007676</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>prev_slaught_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.25</span>, <span class="fl">0.125</span>, <span class="fl">0.00001</span>),</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.1735919</span>, <span class="fl">0.1735919</span>, <span class="fl">0.09051201</span>, <span class="fl">0.00001</span>))</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>prev_slaught_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_slaught_stat<span class="sc">$</span>mean, prev_slaught_stat<span class="sc">$</span>sd)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_slaught_dist)<span class="ot">&lt;-</span>prev_slaught_stat<span class="sc">$</span>FarmType</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>prev_slaught_dist[,<span class="dv">4</span>]<span class="ot">&lt;-</span><span class="dv">1</span> <span class="co"># as we are multiplying with the ice slurry prevalences, we cannot set this to 0, as the calculation would not work. Since we just want the super-intensive prevalence to be 1, we set it to 1 here. </span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>prev_slaught_unadjusted<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_slaught_dist<span class="sc">*</span>prev_iceslurry_dist)</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="co"># adjust for the fact that only shrimp who don't die pre-slaughter are slaughtered</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>slaughter_population_proportion <span class="ot">&lt;-</span> stage_probabilities[,<span class="dv">3</span>]</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="co"># adjust for shrimp slaughtered by electrical stunners provided by SWP</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>electrical_stunning<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">-</span>(<span class="dv">1200000000</span><span class="sc">/</span><span class="fu">mean</span>(slaughtered_samp_totals<span class="sc">$</span>total))<span class="sc">*</span><span class="dv">100</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="co"># also adjust for shrimp sold live</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>prev_slaught<span class="ot">&lt;-</span>prev_slaught_unadjusted<span class="sc">*</span>slaughter_population_proportion<span class="sc">*</span>electrical_stunning<span class="sc">*</span>sold_live</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pain-tracks-1" class="level2">
+<h2 class="anchored" data-anchor-id="pain-tracks-1">Pain-Tracks</h2>
+<p>We expect that the duration and intensity of ice slurry slaughter is roughly the same across farms types, so we use only one pain track here.</p>
+<p><img src="images/slaughter.png" class="img-fluid"></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>dur_slaught<span class="ot">&lt;-</span><span class="fu">rtruncnorm</span>(n, <span class="fl">0.008</span>, <span class="fl">0.16</span>, <span class="at">mean=</span><span class="fl">0.06</span>, <span class="at">sd=</span><span class="fl">0.015</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>pain_slaught<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="dv">20</span>, <span class="dv">79</span>, <span class="dv">1</span>, <span class="dv">0</span>), <span class="at">Annoying=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Combine the intensity and duration information</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>paintrack_slaught_ext<span class="ot">&lt;-</span>(dur_slaught <span class="sc">*</span> pain_slaught)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>paintrack_slaught_semi<span class="ot">&lt;-</span>(dur_slaught <span class="sc">*</span> pain_slaught)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>paintrack_slaught_int<span class="ot">&lt;-</span>(dur_slaught <span class="sc">*</span> pain_slaught)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>paintrack_slaught_super<span class="ot">&lt;-</span>(dur_slaught <span class="sc">*</span> pain_slaught)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Duration notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="http://doi.org/10.3390/ani8090158">Weineck et al.&nbsp;(2018)</a> found that shrimp show no heart rate after around four minutes in ice slurry. We increase the maximum time it could take to seven minutes to account for the fact that ice used on farms may be slightly warmer than in laboratory conditions.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Intensity notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Whether shrimp feel pain during ice slurry slaughter is highly uncertain. <em>P. vannamei</em> shrimp tail-flick vigorously after being submerged in the ice slurry (<a href="http://doi.org/10.3390/ani8090158">Weineck et al., 2018</a>). Tail-flicking is a reflex—when shrimp’ abdomens are removed from the rest of their body, they still show tail-flicking activity (<a href="http://doi.org/10.3390/ani8090158">Weineck et al., 2018</a>). As such, it is unlikely to be, by itself, a reliable indicator of pain. However, that does not necessarily mean that the individual cannot consciously experience it.</p>
+<p>The salinity of ice slurry is also likely to be different from that of the pond. Given that shrimp can detect cold (<a href="https://doi.org/10.1016/S1095-6433(98)01025-3">Tani &amp; Kuramoto, 1998</a>) and are likely to be stressed from being out of the pond and in an environment of different temperature and salinity, we assign most pain to ‘hurtful’ and ‘disabling’.</p>
+</div>
+</div>
+</div>
+<p>Finally, we combine the prevalence, intensity, and duration estimates.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>slaught_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> paintrack_slaught_ext<span class="sc">*</span>prev_slaught<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">semi =</span> paintrack_slaught_semi<span class="sc">*</span>prev_slaught<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">int =</span> paintrack_slaught_int<span class="sc">*</span>prev_slaught<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">super =</span> paintrack_slaught_super<span class="sc">*</span>prev_slaught<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Add the pain categories across farm types and calculate the disabling-equivalent pain hours.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>slaught<span class="ot">&lt;-</span>slaught_farms <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>average_hours_slaught <span class="ot">&lt;-</span> slaught <span class="sc">%&gt;%</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>average_hours_slaught<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>  average_hours_slaught<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    average_hours_slaught<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>      average_hours_slaught<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>        average_hours_slaught<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>slaught_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_slaught<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_slaught<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_slaught<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_slaught<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_slaught<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_slaught))</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(slaught_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_slaught"</span>,<span class="st">"Hurtful_slaught"</span>,<span class="st">"Disabling_slaught"</span>, <span class="st">"Excruciating_slaught"</span>, <span class="st">"Disabling-Equivalent_Ice-Slurry_slaughter"</span>)</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(slaught_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> 5% </th>
+   <th style="text-align:right;"> 50% </th>
+   <th style="text-align:right;"> 95% </th>
+   <th style="text-align:right;"> Mean </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Annoying_slaught </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Hurtful_slaught </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000003 </td>
+   <td style="text-align:right;"> 0.0000022 </td>
+   <td style="text-align:right;"> 0.0000006 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling_slaught </td>
+   <td style="text-align:right;"> 0.0000125 </td>
+   <td style="text-align:right;"> 0.0000427 </td>
+   <td style="text-align:right;"> 0.0001100 </td>
+   <td style="text-align:right;"> 0.0000496 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Excruciating_slaught </td>
+   <td style="text-align:right;"> 0.0000029 </td>
+   <td style="text-align:right;"> 0.0000106 </td>
+   <td style="text-align:right;"> 0.0000287 </td>
+   <td style="text-align:right;"> 0.0000125 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling-Equivalent_Ice-Slurry_slaughter </td>
+   <td style="text-align:right;"> 0.0004234 </td>
+   <td style="text-align:right;"> 0.0046062 </td>
+   <td style="text-align:right;"> 0.0181315 </td>
+   <td style="text-align:right;"> 0.0063235 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/transportation.html" class="pagination-link" aria-label="Transportation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Transportation</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/results.html" class="pagination-link" aria-label="Results">
+        <span class="nav-page-text">Results</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

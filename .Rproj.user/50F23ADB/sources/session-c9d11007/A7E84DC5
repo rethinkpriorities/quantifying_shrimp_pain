@@ -1,0 +1,28 @@
+{
+    "id": "A7E84DC5",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1716567459706.0,
+    "source_on_save": false,
+    "relative_order": 12,
+    "properties": {
+        "id": "f9fa25f87a0b416194e3021923e33f24",
+        "name": "paintype.plot",
+        "title": "paintype.plot",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 0,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1716567459706,
+    "read_only": false,
+    "read_only_alternatives": []
+}

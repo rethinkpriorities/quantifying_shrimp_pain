@@ -1,0 +1,7 @@
+"0","paintrack_malnu_ext<-(dur_malnu_ext * pain_malnu_ext)"
+"0",""
+"0","paintrack_malnu_semi<-(dur_malnu_semi * pain_malnu_semi)"
+"0",""
+"0","paintrack_malnu_int<-(dur_malnu_int * pain_malnu_int)"
+"0",""
+"0","paintrack_malnu_super<-(dur_malnu_super * pain_malnu_super)"

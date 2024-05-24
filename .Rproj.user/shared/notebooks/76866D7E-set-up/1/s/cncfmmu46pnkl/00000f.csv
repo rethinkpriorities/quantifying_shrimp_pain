@@ -1,0 +1,2 @@
+"0","par(mfcol=c(1,3))"
+"0","plot(density(Annoying_Weight),  main=""Annoying weightings"")"

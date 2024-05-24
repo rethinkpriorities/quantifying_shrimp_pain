@@ -1,0 +1,8 @@
+"0","prev_hunger_stat <- data.frame(FarmType = c("
+"0","  ""Extensive"", ""Semi-Intensive"",""Intensive"",""Super-Intensive""),"
+"0","                               mean = c(0.05, 0.1, 0.15, 0.15),"
+"0","                               sd = c(0.03691847, 0.1071233, 0.07320132, 0.07320132))"
+"0","prev_hunger_dist<-mapply(sample_beta, prev_hunger_stat$mean, prev_hunger_stat$sd)"
+"0","colnames(prev_hunger_dist)<-prev_hunger_stat$FarmType"
+"0",""
+"0","prev_hunger<-as.data.frame(prev_hunger_dist)"

@@ -1,0 +1,5 @@
+"0","hunger_farms<-data.frame("
+"0","  ext = paintrack_hunger_ext*prev_hunger$Extensive*prop_sample$Ext,"
+"0","  semi = paintrack_hunger_semi*prev_hunger$`Semi-Intensive`*prop_sample$Semi,"
+"0","  int = paintrack_hunger_int*prev_hunger$Intensive*prop_sample$Int,"
+"0","  super = paintrack_hunger_super*prev_hunger$`Super-Intensive`*prop_sample$Super)"

@@ -1,0 +1,3 @@
+"0","paintrack_ablation<-(first_dur_ablation * first_pain_ablation) + ("
+"0","  sec_dur_ablation * sec_pain_ablation)"
+"0",""

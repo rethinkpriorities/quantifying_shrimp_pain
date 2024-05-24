@@ -1,0 +1,281 @@
+---
+title: "Feed management"
+---
+
+{{< include _functions_data.qmd >}}
+
+# Malnutrition
+
+## Prevalence
+
+Extensive farms rely solely on food produced naturally by ponds for shrimp, whereas semi-intensive farms supplement this with artificial feeds, and intensive and super-intensive farms usually rely solely on artificial feeds. To what extent these artificial feeds meet shrimp nutrient requirements is difficult to know and likely highly variable across farms, feeds, and countries.
+
+Broadly, we expect malnutrition is not a significant problem on shrimp farms because nutrition is closely linked with shrimp growth and, therefore, farm production and profits. As such, shrimp farmers are highly incentivized to ensure shrimp meet their nutrient requirements. Additionally, the nutritional requirements of shrimp have been well-studied (e.g., [Ayisi et al., 2017](https://doi.org/10.1016/j.hjb.2017.09.004)).
+
+Our prevalence estimates are:
+
+| **Extensive**    | **Semi-intensive** | **Intensive**    | **Super-intensive** |
+|------------------|------------------|------------------|------------------|
+| 0--10% (mean 5%) | 0--10% (mean 5%)   | 0--10% (mean 5%) | 0--10% (mean 5%)    |
+
+```{r}
+find_good_sd_binary(mean_val=0.05, tol=1e-6,
+                   fifth_percentile=0, ninety_fifth_percentile=0.1)
+```
+
+Sampling from beta distribution:
+
+```{r}
+prev_malnu_stat <- data.frame(FarmType = c(
+  "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
+                               mean = c(0.05, 0.05, 0.05, 0.05),
+                               sd = c(0.03671062, 0.03671062, 0.03671062, 0.03671062))
+prev_malnu_dist<-mapply(sample_beta, prev_malnu_stat$mean, prev_malnu_stat$sd)
+colnames(prev_malnu_dist)<-prev_malnu_stat$FarmType
+
+prev_malnu<-as.data.frame(prev_malnu_dist)
+```
+
+## Pain-Tracks
+
+![](images/malnutrition.png)
+
+```{r}
+dur_malnu_ext<-rtruncnorm(n, a=84, b=336, mean=210, sd=21) # we set the standard deviation at a quarter of the lower bound
+dur_malnu_semi<-rtruncnorm(n, a=84, b=168, mean=105, sd=21)
+dur_malnu_int<-rtruncnorm(n, a=84, b=168, mean=126, sd=21)
+dur_malnu_super<-rtruncnorm(n, a=42, b=84, mean=63, sd=10.5)
+
+pain_malnu_ext<-data.frame(
+  Excruciating = 0,
+  Disabling = 0) %>% 
+  cbind(sample_dirichlet(0, 0, 0.05, 99.95)) %>%
+  `colnames<-`(paincategories)
+
+pain_malnu_semi<-data.frame(
+  Excruciating = 0,
+  Disabling = 0) %>% 
+  cbind(sample_dirichlet(0, 0, 0.05, 99.95)) %>%
+  `colnames<-`(paincategories)
+
+pain_malnu_int<-data.frame(
+  Excruciating = 0,
+  Disabling = 0) %>% 
+  cbind(sample_dirichlet(0, 0, 0.05, 99.95)) %>%
+  `colnames<-`(paincategories)
+
+pain_malnu_super<-data.frame(
+  Excruciating = 0,
+  Disabling = 0) %>% 
+  cbind(sample_dirichlet(0, 0, 0.05, 99.95)) %>%
+  `colnames<-`(paincategories)
+```
+
+Combine the intensity and duration information
+
+```{r}
+paintrack_malnu_ext<-(dur_malnu_ext * pain_malnu_ext)
+
+paintrack_malnu_semi<-(dur_malnu_semi * pain_malnu_semi)
+
+paintrack_malnu_int<-(dur_malnu_int * pain_malnu_int)
+
+paintrack_malnu_super<-(dur_malnu_super * pain_malnu_super)
+```
+
+::: {.callout-note collapse="true"}
+### Duration notes
+
+If a shrimp experiences malnutrition, it is likely after several feedings with inadequate nutrition. Additionally, farmers change the feed they provide to shrimp depending on shrimp life stage or other factors, like costs. Farmers generally monitor the growth of their shrimp, so if shrimp are not getting the nutrients they require and consequently not growing as expected, farmers are likely to react accordingly and try to prevent continued effects of malnutrition.
+
+In intensive and super-intensive farms, since farmers check the growth of shrimp regularly, we expect shrimp will not experience malnutrition for more than one to two weeks across the entire production cycle. - 1 week = 168 hours - 2 weeks = 336 hours. In extensive farms we hypothesize they may not notice for up to four weeks - 4 weeks = 672 hours
+
+We hypothesize that shrimp only feel the effects of malnutrition half of the time they are experiencing it, as the malnutrition likely has to be severe and prolonged to influence welfare. Semi-intensive farms often have both naturally occurring food in the pond (promoted by fertilizer) and supplemental artificial food. As there are multiple food sources, malnutrition may be slightly lower, so we skew the durations slightly lower for this farm type. Intensive farms rely only on artificial feeds so we do not skew the duration distribution for this farm type. Super-intensive farms, while feeding shrimp only artificial feeds, check shrimp regularly for growth and have shorter farming periods. Therefore, there is less chance for prolonged malnutrition in these farms, so we shorten the duration by half.
+:::
+
+::: {.callout-note collapse="true"}
+### Intensity notes
+
+As noted in [our previous report](https://doi.org/10.17605/OSF.IO/YAFQV):
+
+> "Malnutrition can reduce a shrimp's ability to respond to or resist diseases (see [Zhang et al., 2022, pp.392-401](https://5mbooks.com/product/the-shrimp-book-ii) for review). Other forms of malnutrition that are probably less common, such as lack of protein, can reduce shrimp growth or cause weight loss because protein stored in the body is used for energy for other processes ([Zhang et al., 2022, p.393](https://5mbooks.com/product/the-shrimp-book-ii)."
+
+*P. vannamei* may also have to be selectively bred to be able to be reared on high soybean meal diets (according to [this broodstock company website](https://perma.cc/S42Y-6BRZ)), potentially implying they do not naturally tolerate this diet.
+:::
+
+Then we combine prevalence, intensity, and duration of pain caused by malnutrition. The durations used in the Pain-Tracks are for the whole farming cycle, so we do not need to weight these estimations by the average days lived by a shrimp.
+
+```{r}
+malnu_farms<-data.frame(
+  ext = paintrack_malnu_ext*prev_malnu$Extensive*prop_sample$Ext,
+  semi = paintrack_malnu_semi*prev_malnu$`Semi-Intensive`*prop_sample$Semi,
+  int = paintrack_malnu_int*prev_malnu$Intensive*prop_sample$Int,
+  super = paintrack_malnu_super*prev_malnu$`Super-Intensive`*prop_sample$Super)
+```
+
+Add the pain categories across farm types and calculate the disabling-equivalent pain hours.
+
+```{r}
+malnu<-malnu_farms %>%
+  mutate(allfarms.Annoying = ext.Annoying + semi.Annoying + int.Annoying + super.Annoying,
+         allfarms.Hurtful = ext.Hurtful + semi.Hurtful + int.Hurtful + super.Hurtful,
+         allfarms.Disabling = ext.Disabling + semi.Disabling + int.Disabling + super.Disabling,
+         allfarms.Excruciating = ext.Excruciating + semi.Excruciating + int.Excruciating + super.Excruciating,)
+
+average_hours_malnu <- malnu %>%
+  select(starts_with("allfarms"))
+
+average_hours_malnu$Disabling_Equivalent<- (
+  average_hours_malnu$allfarms.Annoying*Annoying_Weight) + (
+    average_hours_malnu$allfarms.Hurtful*Hurtful_Weight) +(
+      average_hours_malnu$allfarms.Disabling*Disabling_Weight)+(
+        average_hours_malnu$allfarms.Excruciating*Excruciating_Weight)
+
+malnu_summary<-cbind(round(rbind(
+  (quantile(x =average_hours_malnu$allfarms.Annoying, probs = c(.05, .50, .95))), 
+  (quantile(x =average_hours_malnu$allfarms.Hurtful, probs = c(.05, .50, .95))), 
+  (quantile(x =average_hours_malnu$allfarms.Disabling, probs = c(.05, .50, .95))),
+  (quantile(x =average_hours_malnu$allfarms.Excruciating, probs = c(.05, .50, .95))),
+  (quantile(x =average_hours_malnu$Disabling_Equivalent, probs = c(.05, .50, .95)))), 10),
+  "Mean" = colMeans(average_hours_malnu))
+row.names(malnu_summary)<-c(
+  "Annoying_malnu","Hurtful_malnu","Disabling_malnu", "Excruciating_malnu", "Disabling-Equivalent_Malnutrition")
+show_table(malnu_summary)
+
+```
+
+# Hunger
+
+## Prevalence
+
+In extensive farms, shrimp rely on the natural feed of the pond. Since shrimp can likely graze continuously in these ponds, we think shrimp in extensive farms are unlikely to be underfed. Semi-intensive, intensive and super-intensive farms provision shrimp with artificial feeds, which can be expensive ([Ayisi et al., 2017](https://doi.org/10.1016/j.hjb.2017.09.004)), so underfeeding may be more common in these farm types due to farmers trying to save on costs. However, given the critical role of feeding in shrimp growth, we hypothesize that inadequate nutrition in shrimp farms is unlikely to be a welfare problem of significant scope.
+
+| **Extensive**    | **Semi-intensive** | **Intensive**     | **Super-intensive** |
+|------------------|------------------|------------------|------------------|
+| 0--10% (mean 5%) | 0--25% (mean 10%)  | 0--25% (mean 15%) | 0--25% (mean 15%)   |
+
+```{r}
+find_good_sd_binary(mean_val=0.05, tol=1e-6,
+                   fifth_percentile=0, ninety_fifth_percentile=0.1)
+find_good_sd_binary(mean_val=0.1, tol=1e-6,
+                   fifth_percentile=0, ninety_fifth_percentile=0.25)
+find_good_sd_binary(mean_val=0.15, tol=1e-6,
+                   fifth_percentile=0, ninety_fifth_percentile=0.25)
+```
+
+Sampling from beta distribution:
+
+```{r}
+prev_hunger_stat <- data.frame(FarmType = c(
+  "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
+                               mean = c(0.05, 0.1, 0.15, 0.15),
+                               sd = c(0.03691847, 0.1071233, 0.07320132, 0.07320132))
+prev_hunger_dist<-mapply(sample_beta, prev_hunger_stat$mean, prev_hunger_stat$sd)
+colnames(prev_hunger_dist)<-prev_hunger_stat$FarmType
+
+prev_hunger<-as.data.frame(prev_hunger_dist)
+```
+
+## Pain-Tracks
+
+![](images/hunger.png)
+
+Durations marked \* equate to roughly one second at the longest duration, to account for rare instances of cannibalism due to hunger.
+
+```{r}
+dur_hunger_ext<-rtruncnorm(n, a=24, b=672, mean=348, sd=87)
+dur_hunger_semi<-rtruncnorm(n, a=24, b=168, mean=96, sd=24)
+dur_hunger_int<-rtruncnorm(n, a=24, b=168, mean=96, sd=24)
+dur_hunger_super<-rtruncnorm(n, a=24, b=168, mean=72, sd=24)
+
+pain_hunger_ext<-data.frame(sample_dirichlet(0.00005, 0.00005, 9, 90.9999)) %>%
+  `colnames<-`(paincategories)
+
+pain_hunger_semi<-data.frame(sample_dirichlet(0.0002, 0.0002, 20, 79.9996)) %>%
+  `colnames<-`(paincategories)
+
+pain_hunger_int<-data.frame(sample_dirichlet(0.0002, 0.0002, 20, 79.9996)) %>%
+  `colnames<-`(paincategories)
+
+pain_hunger_super<-data.frame(sample_dirichlet(0.0002, 0.0002, 20, 79.9996)) %>%
+  `colnames<-`(paincategories)
+```
+
+Combine the intensity and duration information
+
+```{r}
+paintrack_hunger_ext<-(dur_hunger_ext * pain_hunger_ext)
+
+paintrack_hunger_semi<-(dur_hunger_semi * pain_hunger_semi)
+
+paintrack_hunger_int<-(dur_hunger_int * pain_hunger_int)
+
+paintrack_hunger_super<-(dur_hunger_super * pain_hunger_super)
+```
+
+::: {.callout-note collapse="true"}
+### Duration notes
+
+Similarly to malnutrition we expect that if shrimp are underfed, farmers would notice relatively quickly during routine growth checks. As extensive farms do not provide extra feed, instead relying on the natural productivity of the pond, shrimp could be underfed in these systems for longer but the intensity would be lower.
+:::
+
+::: {.callout-note collapse="true"}
+### Intensity notes
+
+When underfed, penaeids show increased cannibalism ([Lara et al., 2017](https://doi.org/10.1016/j.aquaeng.2017.02.003)) and reduced immune function ([Dai et al., 2018](https://doi.org/10.1016/j.fsi.2018.05.040)).
+:::
+
+Finally, we combine the prevalence, intensity, and duration estimates.
+
+```{r}
+hunger_farms<-data.frame(
+  ext = paintrack_hunger_ext*prev_hunger$Extensive*prop_sample$Ext,
+  semi = paintrack_hunger_semi*prev_hunger$`Semi-Intensive`*prop_sample$Semi,
+  int = paintrack_hunger_int*prev_hunger$Intensive*prop_sample$Int,
+  super = paintrack_hunger_super*prev_hunger$`Super-Intensive`*prop_sample$Super)
+```
+
+Add the pain categories across farm types and calculate the disabling-equivalent pain hours.
+
+```{r}
+hunger<-hunger_farms %>%
+  mutate(allfarms.Annoying = ext.Annoying + semi.Annoying + int.Annoying + super.Annoying,
+         allfarms.Hurtful = ext.Hurtful + semi.Hurtful + int.Hurtful + super.Hurtful,
+         allfarms.Disabling = ext.Disabling + semi.Disabling + int.Disabling + super.Disabling,
+         allfarms.Excruciating = ext.Excruciating + semi.Excruciating + int.Excruciating + super.Excruciating,)
+
+average_hours_hunger <- hunger %>%
+  select(starts_with("allfarms"))
+
+average_hours_hunger$Disabling_Equivalent<- (
+  average_hours_hunger$allfarms.Annoying*Annoying_Weight) + (
+    average_hours_hunger$allfarms.Hurtful*Hurtful_Weight) +(
+      average_hours_hunger$allfarms.Disabling*Disabling_Weight)+(
+        average_hours_hunger$allfarms.Excruciating*Excruciating_Weight)
+
+hunger_summary<-cbind(round(rbind(
+  (quantile(x =average_hours_hunger$allfarms.Annoying, probs = c(.05, .50, .95))), 
+  (quantile(x =average_hours_hunger$allfarms.Hurtful, probs = c(.05, .50, .95))), 
+  (quantile(x =average_hours_hunger$allfarms.Disabling, probs = c(.05, .50, .95))),
+  (quantile(x =average_hours_hunger$allfarms.Excruciating, probs = c(.05, .50, .95))),
+  (quantile(x =average_hours_hunger$Disabling_Equivalent, probs = c(.05, .50, .95)))), 10),
+  "Mean" = colMeans(average_hours_hunger))
+row.names(hunger_summary)<-c(
+  "Annoying_hunger","Hurtful_hunger","Disabling_hunger", "Excruciating_hunger", "Disabling-Equivalent_Hunger")
+show_table(hunger_summary)
+
+```
+
+```{r}
+#| echo: false
+#| output: false
+#| eval: true
+
+feedmanagement<-c("malnu_summary", "hunger_summary")
+
+for (i in 1:length(feedmanagement)){
+  savefile<-paste0(paste0("../results/", feedmanagement[i]), ".csv")
+  write.csv(get(feedmanagement[i]), file=savefile)
+}
+
+```

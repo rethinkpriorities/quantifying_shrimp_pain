@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Methods for quantifying the impact of welfare threats on shrimp - Health</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/transportation.html" rel="next">
+<link href="../chapters/feed_management.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/water_quality.html">Welfare threats</a></li><li class="breadcrumb-item"><a href="../chapters/health.html"><span class="chapter-title">Health</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Methods for quantifying the impact of welfare threats on shrimp</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/set-up.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set-up and data preparation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Welfare threats</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/water_quality.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Water quality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/pond_habitat.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pond habitat</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/feed_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Feed management</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/health.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Health</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/transportation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transportation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/harvest_slaughter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Harvest and slaughter</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Results</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#eyestalk-ablation" id="toc-eyestalk-ablation" class="nav-link active" data-scroll-target="#eyestalk-ablation">Eyestalk ablation</a>
+  <ul class="collapse">
+  <li><a href="#prevalence" id="toc-prevalence" class="nav-link" data-scroll-target="#prevalence">Prevalence</a></li>
+  <li><a href="#pain-tracks" id="toc-pain-tracks" class="nav-link" data-scroll-target="#pain-tracks">Pain-Tracks</a></li>
+  </ul></li>
+  <li><a href="#biosecurity-failures" id="toc-biosecurity-failures" class="nav-link" data-scroll-target="#biosecurity-failures">Biosecurity failures</a>
+  <ul class="collapse">
+  <li><a href="#prevalence-1" id="toc-prevalence-1" class="nav-link" data-scroll-target="#prevalence-1">Prevalence</a></li>
+  <li><a href="#pain-tracks-1" id="toc-pain-tracks-1" class="nav-link" data-scroll-target="#pain-tracks-1">Pain-Tracks</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/water_quality.html">Welfare threats</a></li><li class="breadcrumb-item"><a href="../chapters/health.html"><span class="chapter-title">Health</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Health</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="eyestalk-ablation" class="level1">
+<h1>Eyestalk ablation</h1>
+<p>We split eyestalk ablation into two categories: The ablation itself and the hour immediately afterward (acute pain), and the week after that (chronic pain).</p>
+<section id="prevalence" class="level2">
+<h2 class="anchored" data-anchor-id="prevalence">Prevalence</h2>
+<p>An estimate we will use for both parts is how often eyestalk ablation occurs in each production system. We assume that eyestalk ablation becomes more common in more intensive systems because these systems are far more likely to rely on captive broodstock than wild-caught shrimp. Still, the prevalence is unlikely to be 100% for intensive and super-intensive farms because some broodstock suppliers have stopped using eyestalk ablation (<a href="https://doi.org/10.3389/fmars.2022.886024">Albalat et al., 2022</a>). We are less certain to what extent semi-intensive farms use captive broodstock. Traditionally, extensive systems relied more on wild-caught young shrimp, so we are less certain how prevalent eyestalk ablation is in thiis farm type.</p>
+<p>Our prevalence estimates are:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Extensive</strong></th>
+<th><strong>Semi-intensive</strong></th>
+<th><strong>Intensive</strong></th>
+<th><strong>Super-intensive</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>25–100% (mean 75%)</td>
+<td>50–100% (mean 75%)</td>
+<td>90–100% (mean 98%)</td>
+<td>90–100% (mean 98%)</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.75</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.25</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2914784</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.75</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1733532</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.98</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="at">sd_val=</span><span class="fl">0.1</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.9</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.05873486</code></pre>
+</div>
+</div>
+<p>Sampling from beta distribution:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>prev_ablation_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.75</span>, <span class="fl">0.75</span>, <span class="fl">0.98</span>, <span class="fl">0.98</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.2916584</span>, <span class="fl">0.1742204</span>, <span class="fl">0.058643</span>, <span class="fl">0.058643</span>))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>prev_ablation_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_ablation_stat<span class="sc">$</span>mean, prev_ablation_stat<span class="sc">$</span>sd)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_ablation_dist)<span class="ot">&lt;-</span>prev_ablation_stat<span class="sc">$</span>FarmType</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>prev_ablation_unadjusted<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_ablation_dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We also need to adjust for the fact that only female broodstock are subjected to eyestalk ablation, not their offspring who are actually raised for food. We calculate the number of broodstock by using the total number of shrimp that die on farms (from <a href="http://doi.org/10.31219/osf.io/b8n3t">Waldhorn &amp; Autric’s 2023</a> Guesstimate model), divided by the number of eggs different species lay per spawn, and assuming only half the eggs hatch.</p>
+<p>See <a href="../chapters/set-up.html">set up chapter</a> for how the variables used here were calculated.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># distribution of egg numbers</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>allspecies_dof<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(allspecies_dof)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>vannamei_eggs<span class="ot">&lt;-</span><span class="fu">runif</span>(<span class="dv">100000</span>, <span class="at">min=</span><span class="dv">100000</span>, <span class="at">max=</span><span class="dv">250000</span>) <span class="co"># according to FAO</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>vannamei_broodstock<span class="ot">&lt;-</span>allspecies_dof<span class="sc">$</span>vannamei_dof<span class="sc">/</span>vannamei_eggs<span class="sc">*</span><span class="fl">0.5</span> <span class="co"># assuming only half of eggs hatch. </span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>vannamei_broodstock_prop<span class="ot">&lt;-</span>vannamei_broodstock<span class="sc">/</span>(vannamei_broodstock<span class="sc">+</span>allspecies_dof<span class="sc">$</span>vannamei_dof)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>monodon_eggs<span class="ot">&lt;-</span><span class="fu">runif</span>(<span class="dv">100000</span>, <span class="at">min=</span><span class="dv">500000</span>, <span class="at">max=</span><span class="dv">750000</span>) <span class="co"># according to FAO</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>monodon_broodstock<span class="ot">&lt;-</span>allspecies_dof<span class="sc">$</span>monodon_dof<span class="sc">/</span>monodon_eggs<span class="sc">*</span><span class="fl">0.5</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>monodon_broodstock_prop<span class="ot">&lt;-</span>monodon_broodstock<span class="sc">/</span>(monodon_broodstock<span class="sc">+</span>allspecies_dof<span class="sc">$</span>monodon_dof)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>otherpen_eggs<span class="ot">&lt;-</span><span class="fu">runif</span>(<span class="dv">100000</span>, <span class="at">min=</span><span class="dv">200000</span>, <span class="at">max=</span><span class="dv">1000000</span>) <span class="co"># according to Table 4.6a, Wickins and Lee (2002)</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>otherpen_broodstock<span class="ot">&lt;-</span>allspecies_dof<span class="sc">$</span>otherpen_dof<span class="sc">/</span>otherpen_eggs<span class="sc">*</span><span class="fl">0.5</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>otherpen_broodstock_prop<span class="ot">&lt;-</span>otherpen_broodstock<span class="sc">/</span>(otherpen_broodstock<span class="sc">+</span>allspecies_dof<span class="sc">$</span>otherpen_dof)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>female_broodstock_prop<span class="ot">&lt;-</span>(vannamei_broodstock<span class="sc">+</span>monodon_broodstock<span class="sc">+</span>otherpen_broodstock)<span class="sc">/</span>(vannamei_broodstock<span class="sc">+</span>monodon_broodstock<span class="sc">+</span>otherpen_broodstock<span class="sc">+</span>allspecies_dof<span class="sc">$</span>vannamei_dof<span class="sc">+</span>allspecies_dof<span class="sc">$</span>monodon_dof<span class="sc">+</span>allspecies_dof<span class="sc">$</span>otherpen_dof)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(female_broodstock_prop) <span class="co"># the proportion of shrimp that are female broodstock.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.185401e-06 3.101944e-06 1.695270e-06 2.580187e-06 1.862622e-06
+[6] 3.088814e-06</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># multiply proportion of farms that source larvae from ablated broodstock by proportion of shrimp on those farms that are broodstock. This gives you the proportion of farmed broodstock that are ablated shrimp.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>prev_ablation<span class="ot">&lt;-</span>prev_ablation_unadjusted<span class="sc">*</span>female_broodstock_prop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pain-tracks" class="level2">
+<h2 class="anchored" data-anchor-id="pain-tracks">Pain-Tracks</h2>
+<p><img src="images/ablation.png" class="img-fluid"></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>first_dur_ablation<span class="ot">&lt;-</span><span class="fu">sample_trunclogn</span>(n, <span class="dv">1</span>, .<span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">12</span>, <span class="dv">2</span>)  </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(first_dur_ablation), <span class="at">xlab=</span><span class="st">"Hours"</span>, <span class="at">main=</span><span class="st">"Duration of acute eyestalk ablation pain"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="health_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(first_dur_ablation, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       5%       50%       95% 
+0.4087381 0.8723194 1.6786906 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>first_pain_ablation<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.1</span>, <span class="dv">55</span>, <span class="dv">35</span>, <span class="fl">9.9</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then for the second half:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 168 hours in a week, sample from log-normal for consistency</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>sec_dur_ablation<span class="ot">&lt;-</span><span class="fu">sample_trunclogn</span>(<span class="at">n=</span>n, <span class="at">min_value=</span><span class="dv">0</span>, <span class="at">max_value=</span><span class="dv">240</span>, <span class="at">mean=</span><span class="dv">120</span>, <span class="at">sd=</span><span class="dv">72</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(sec_dur_ablation) , <span class="at">main=</span><span class="st">"Duration of chronic eyestalk ablation pain"</span>, <span class="at">xlab=</span><span class="st">"Hours"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="health_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(sec_dur_ablation, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       5%       50%       95% 
+ 40.53911  98.20777 203.10504 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sec_pain_ablation<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.002</span>, <span class="fl">0.004</span>, <span class="dv">10</span>, <span class="fl">89.994</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Combine into Pain-Tracks:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>paintrack_ablation<span class="ot">&lt;-</span>(first_dur_ablation <span class="sc">*</span> first_pain_ablation) <span class="sc">+</span> (</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  sec_dur_ablation <span class="sc">*</span> sec_pain_ablation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Duration notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Time can’t be lower than 0, and a long right tail may be more plausible than a symmetric distribution, so we use a log-normal distribution for both types of pain.</p>
+<p><strong>Acute pain (Part 1)</strong> <a href="https://doi.org/10.1016/j.aquaculture.2003.09.034">Taylor et al.&nbsp;(2004)</a> noted that erratic swimming continued for an hour after ablation.</p>
+<p><strong>Chronic pain (Part 2)</strong> To be conservative, we assume that chronic pain lasts only four days, on average, with a range up to 10 days. We truncate the lower bound at 0 hours, to account for the possibility that shrimp do not experience chronic pain from eyestalk ablation.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Intensity notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We assume severity is the same in each production style, conditional on being ablated. This assumption may be violated if the method for ablating shrimp varies in pain severity and is correlated with production style.</p>
+<p><strong>Acute pain (Part 1)</strong> We base our estimates on the findings from <a href="https://doi.org/10.17605/OSF.IO/YAFQV">our previous report</a>:</p>
+<blockquote class="blockquote">
+<p>After having one eyestalk ablated, shrimp display several behaviors potentially indicative of pain, like tail-flicking, recoiling, stooping (laying prone on the pond floor), disorientation, avoiding sheltering, erratic swimming and rubbing the affected area for a period of time after ablation (<a href="https://doi.org/10.1016/j.applanim.2012.06.002">Diarte-Plata et al., 2012</a>; <a href="https://doi.org/10.1016/j.anbehav.2007.07.004">Barr et al., 2008</a>; <a href="https://doi.org/10.1016/j.aquaculture.2003.09.034">Taylor et al., 2004</a>). In particular, <a href="https://doi.org/10.1016/j.applanim.2012.06.002">Diarte-Plata et al.&nbsp;(2012)</a> report that ligation, even using a local anesthetic, causes more stress than other techniques, as indicated by significantly more tail-flicking, recoil, disorientation, and rubbing of the affected area. Additionally, up to 80% of the studied shrimp displayed similar behaviors when a slitting ablation method was used. Similarly, in <a href="https://doi.org/10.1016/j.aquaculture.2003.09.034">Taylor et al.’s (2004)</a> study, 80% of the shrimp exhibited erratic swimming behavior right after the animals had one of their eyes ablated. Shrimp show fewer behavioral signs of stress if a topical anesthetic is applied before ablation (<a href="https://doi.org/10.1016/j.applanim.2012.06.002">Diarte-Plata et al., 2012</a>; <a href="https://doi.org/10.1016/j.aquaculture.2003.09.034">Taylor et al., 2004</a>).</p>
+</blockquote>
+<p>Many of these behaviors seem consistent with ‘hurtful’ and ‘disabling’ pain, so we assign most of the pain to these categories. We also include a small proportion in ‘excruciating’ because mortality is higher in ablated females (<a href="https://doi.org/10.1016/j.aquaculture.2019.01.018">Zacarias et al., 2019</a>).</p>
+<p><strong>Chronic pain (Part 2)</strong> This follows directly after part 1 pain. We assume that the pain is much milder but also longer-lasting.</p>
+<p>As behavior returns to normal roughly an hour after ablation (<a href="https://doi.org/10.1016/j.aquaculture.2003.09.034">Taylor et al., 2004</a>), we assign most of the chronic pain to the ‘annoying’ category. We still leave some in the other pain categories because some mortality of ablated broodstock likely happens during the chronic pain stage.</p>
+</div>
+</div>
+</div>
+<p>Now we combine the Pain-Tracks with prevalence.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>ablation_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">ext =</span> paintrack_ablation<span class="sc">*</span>prev_ablation<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">semi =</span> paintrack_ablation<span class="sc">*</span>prev_ablation<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">int =</span> paintrack_ablation<span class="sc">*</span>prev_ablation<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">super =</span> paintrack_ablation<span class="sc">*</span>prev_ablation<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, we combine the pain categories across farm types and calculate the disabling-equivalent pain hours.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>ablation<span class="ot">&lt;-</span>ablation_farms <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>average_hours_ablation <span class="ot">&lt;-</span> ablation <span class="sc">%&gt;%</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>average_hours_ablation<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  average_hours_ablation<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    average_hours_ablation<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>      average_hours_ablation<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>        average_hours_ablation<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>ablation_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_ablation<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_ablation<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_ablation<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_ablation<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_ablation<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_ablation))</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(ablation_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_ablation"</span>,<span class="st">"Hurtful_ablation"</span>,<span class="st">"Disabling_ablation"</span>, <span class="st">"Excruciating_ablation"</span>, <span class="st">"Disabling-Equivalent_Eyestalk_ablation"</span>)</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(ablation_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> 5% </th>
+   <th style="text-align:right;"> 50% </th>
+   <th style="text-align:right;"> 95% </th>
+   <th style="text-align:right;"> Mean </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Annoying_ablation </td>
+   <td style="text-align:right;"> 7.91e-05 </td>
+   <td style="text-align:right;"> 0.0002084 </td>
+   <td style="text-align:right;"> 0.0004879 </td>
+   <td style="text-align:right;"> 0.0002361 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Hurtful_ablation </td>
+   <td style="text-align:right;"> 8.00e-06 </td>
+   <td style="text-align:right;"> 0.0000229 </td>
+   <td style="text-align:right;"> 0.0000600 </td>
+   <td style="text-align:right;"> 0.0000270 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling_ablation </td>
+   <td style="text-align:right;"> 5.00e-07 </td>
+   <td style="text-align:right;"> 0.0000011 </td>
+   <td style="text-align:right;"> 0.0000025 </td>
+   <td style="text-align:right;"> 0.0000013 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Excruciating_ablation </td>
+   <td style="text-align:right;"> 0.00e+00 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.0000000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling-Equivalent_Eyestalk_ablation </td>
+   <td style="text-align:right;"> 2.10e-06 </td>
+   <td style="text-align:right;"> 0.0000054 </td>
+   <td style="text-align:right;"> 0.0000163 </td>
+   <td style="text-align:right;"> 0.0000094 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+</section>
+<section id="biosecurity-failures" class="level1">
+<h1>Biosecurity failures</h1>
+<p>Here, we are evaluating shrimp suffering from diseases cause only by biosecurity failures on a farm. This welfare threat does not get credit for all of the welfare issues associated with diseases, but only diseases that cannot be explained by other factors. Biosecurity failures may include using a contaminated water source, equipment or feed, or not preventing wild animals (e.g., birds or insects) from transmitting a disease.</p>
+<section id="prevalence-1" class="level2">
+<h2 class="anchored" data-anchor-id="prevalence-1">Prevalence</h2>
+<p>14.5% of <em>P. vannamei</em> and 32.5% of <em>P. monodon</em> shrimp die pre-slaughter in the ongrowing stage (<a href="https://doi.org/10.17605/OSF.IO/W7MUZ">McKay &amp; McAuliffe, 2024. Table 1</a>). In our estimates of the average days lived by a shrimp (see <a href="set-up.html#sec-preslaughtmort" class="quarto-xref"><span>Calculating pre-slaughter mortality rates</span></a>), ~16.8% of <em>P. vannamei</em>, <em>P. monodon</em>, and other penaeid shrimp die in the ongrowing stage prior to slaughter:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(stage_probabilities[,<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.168777</code></pre>
+</div>
+</div>
+<p>Here, we hypothesize that half of these are from diseases. This would mean roughly 8.4% of shrimp die from diseases. Potentially, some diseases are never noticed or are treated and shrimp do not die from them (though many shrimp viruses cause significant losses). On the other hand, some diseases instances will be caused by other welfare issues (e.g., physiological stress from nonoptimal water quality), which we are not counting here. As such, we estimate that 5–20% of shrimp . We think diseases are most prevalent in semi-intensive farms as they have reasonably high stocking densities but fewer resources to put into biosecurity measures.</p>
+<p>The numbers in the table below equate to roughly 5–20% of shrimp overall when considering the proportions of farm types.</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Extensive</strong></th>
+<th><strong>Semi-intensive</strong></th>
+<th><strong>Intensive</strong></th>
+<th><strong>Super-intensive</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5–20% (mean 12.5%)</td>
+<td>5.5–30% (mean 17.75%)</td>
+<td>5–18% (mean 11.5%)</td>
+<td>0.5–5% (mean 2.75%)</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.125</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.05</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.04748098</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.1775</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.055</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.07784878</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.115</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.05</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.04085345</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.0275</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,<span class="at">sd_val=</span><span class="fl">0.1</span>,</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.005</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01526186</code></pre>
+</div>
+</div>
+<p>Sampling from beta distribution:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>prev_disease_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.125</span>, <span class="fl">0.1775</span>, <span class="fl">0.115</span>, <span class="fl">0.0275</span>),</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.04725389</span>, <span class="fl">0.07789251</span>, <span class="fl">0.04081146</span>, <span class="fl">0.01525188</span>))</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>prev_disease_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_disease_stat<span class="sc">$</span>mean, prev_disease_stat<span class="sc">$</span>sd)</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_disease_dist)<span class="ot">&lt;-</span>prev_disease_stat<span class="sc">$</span>FarmType</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>prev_disease<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_disease_dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pain-tracks-1" class="level2">
+<h2 class="anchored" data-anchor-id="pain-tracks-1">Pain-Tracks</h2>
+<p>We model mostly on information about White Spot Syndrome Virus (WSSV) and Acute Hepatopancreatic Necrosis Disease (AHPND), as many sources report that these have most negatively impacted industry production, suggesting they are the most prevalent. While <a href="https://doi.org/10.1111/jwas.12589">Flegel (2019, Fig. 3)</a> shows that the impact of AHPND on production was most severe, WSSV has been present for much longer (since ~1996) and shrimp are still affected today, so we weight each equally.We combine these into one pain track by multiplying each by half (since most shrimp die from these diseases, its likely they do not experience both).</p>
+<p><img src="images/diseases.png" class="img-fluid"></p>
+<p>AHPND duration and pain:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>ahpnd_dur_disease<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="dv">12</span>, <span class="dv">600</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>ahpnd_pain_disease<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.01</span>, <span class="dv">10</span>, <span class="dv">80</span>, <span class="fl">9.99</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>WSSV duration and pain:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>wssv_dur_disease<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="dv">72</span>, <span class="dv">240</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>wssv_pain_disease<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.05</span>, <span class="dv">30</span>, <span class="dv">50</span>, <span class="fl">19.95</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Combine into Pain-Tracks:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>paintrack_disease<span class="ot">&lt;-</span>(ahpnd_dur_disease <span class="sc">*</span> ahpnd_pain_disease <span class="sc">*</span> <span class="fl">0.5</span>) <span class="sc">+</span> (</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  wssv_dur_disease <span class="sc">*</span> wssv_pain_disease <span class="sc">*</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Duration notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>AHPND</strong> <a href="https://perma.cc/K2G9-CBLB">Tran et al.&nbsp;(2014, p.&nbsp;14)</a> note that “With regards to the EMS/AHPND, our studies show that shrimp exhibit very acute mortality as early as 12 hours of exposure to the agent.” <a href="https://perma.cc/2X3E-T9TF">WOAH (2023, Ch. 2.2.1, p.&nbsp;2)</a> notes that mass mortalities occur within 30–35 days of stocking the pond and that signs of disease can occur as early as 10 days post–stocking. We take 25 days as our upper bound, which is 600 hours</p>
+<p><strong>WSSV</strong> <a href="https://perma.cc/UR3K-99VY">WOAH (2023, Ch. 2.2.8, p.3)</a> reports “A very high mortality rate in the shrimp population can be expected within a few days of the onset of behavioral signs” – we therefore put duration at 3 to 10 days</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Intensity notes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>AHPND</strong> A behavioral sign is dropping to the bottom of the pond, while physiological signs are soft shells and pigment loss in the connective tissue.</p>
+<p><strong>WSSV</strong> Symptoms include <a href="https://perma.cc/UR3K-99VY">(WOAH, 2023, Ch. 2.2.8, p.3)</a>: - Lethargy - Reduced or ceased feeding - Abnormal swimming (slow, on the side, near water surface or round edges of pond) - ‘Loosened attachment of the carapace’ - Delayed hemolymph clotting</p>
+</div>
+</div>
+</div>
+<p>Weight the pain tracks by prevalence estimations and proportion of farming attributable to each farm type.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>disease_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> paintrack_disease<span class="sc">*</span>prev_disease<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">semi =</span> paintrack_disease<span class="sc">*</span>prev_disease<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">int =</span> paintrack_disease<span class="sc">*</span>prev_disease<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">super =</span> paintrack_disease<span class="sc">*</span>prev_disease<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Add the pain categories across farm types and calculate the disabling-equivalent pain hours.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>disease<span class="ot">&lt;-</span>disease_farms <span class="sc">%&gt;%</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>average_hours_disease <span class="ot">&lt;-</span> disease <span class="sc">%&gt;%</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>average_hours_disease<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>  average_hours_disease<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>    average_hours_disease<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>      average_hours_disease<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>        average_hours_disease<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>disease_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_disease<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_disease<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_disease<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_disease<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_disease<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
+<span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_disease))</span>
+<span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(disease_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
+<span id="cb37-24"><a href="#cb37-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_disease"</span>,<span class="st">"Hurtful_disease"</span>,<span class="st">"Disabling_disease"</span>, <span class="st">"Excruciating_disease"</span>, <span class="st">"Disabling-Equivalent_Biosecurity_failures"</span>)</span>
+<span id="cb37-25"><a href="#cb37-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(disease_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> 5% </th>
+   <th style="text-align:right;"> 50% </th>
+   <th style="text-align:right;"> 95% </th>
+   <th style="text-align:right;"> Mean </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Annoying_disease </td>
+   <td style="text-align:right;"> 1.509127 </td>
+   <td style="text-align:right;"> 3.5857216 </td>
+   <td style="text-align:right;"> 7.2594709 </td>
+   <td style="text-align:right;"> 3.8815107 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Hurtful_disease </td>
+   <td style="text-align:right;"> 6.018873 </td>
+   <td style="text-align:right;"> 19.0049188 </td>
+   <td style="text-align:right;"> 39.3423348 </td>
+   <td style="text-align:right;"> 20.3108731 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling_disease </td>
+   <td style="text-align:right;"> 2.059690 </td>
+   <td style="text-align:right;"> 4.5506404 </td>
+   <td style="text-align:right;"> 8.7731622 </td>
+   <td style="text-align:right;"> 4.8701028 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Excruciating_disease </td>
+   <td style="text-align:right;"> 0.000000 </td>
+   <td style="text-align:right;"> 0.0000006 </td>
+   <td style="text-align:right;"> 0.0345415 </td>
+   <td style="text-align:right;"> 0.0069459 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Disabling-Equivalent_Biosecurity_failures </td>
+   <td style="text-align:right;"> 2.915719 </td>
+   <td style="text-align:right;"> 7.2201350 </td>
+   <td style="text-align:right;"> 23.3666873 </td>
+   <td style="text-align:right;"> 10.5694993 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/feed_management.html" class="pagination-link" aria-label="Feed management">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Feed management</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/transportation.html" class="pagination-link" aria-label="Transportation">
+        <span class="nav-page-text"><span class="chapter-title">Transportation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
