@@ -1,5 +1,5 @@
 ---
-title: "Harvest and slaughter"
+title: "End of production"
 ---
 
 
@@ -24,6 +24,8 @@ Our prevalence estimates are:
 | 100%          | 100%               | 99--100%    | 95--100%            |
 
 ```{r}
+#| layout-ncol: 2
+
 find_good_sd_binary(mean_val=0.995, tol=1e-6, sd_val=0.01,
                    fifth_percentile=0.99, ninety_fifth_percentile=1)
 find_good_sd_binary(mean_val=0.975, tol=1e-6, sd_val=0.01,
@@ -35,7 +37,7 @@ Sampling from beta distribution:
 prev_harvest_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.99999, 0.999999, 0.995, 0.975),
-                               sd = c(0.0000001, 0.0000001, 0.003740806, 0.01850762))
+                               sd = c(0.0000001, 0.0000001, 0.003744034, 0.01852459))
 prev_harvest_dist<-mapply(sample_beta, prev_harvest_stat$mean, prev_harvest_stat$sd)
 colnames(prev_harvest_dist)<-prev_harvest_stat$FarmType
 prev_harvest_dist[,1:2] <- 1
@@ -168,6 +170,8 @@ Our prevalence estimates are:
 
 First, we draw from the beta distribution for the prevalence of using ice slurry:
 ```{r}
+#| layout-ncol: 3
+
 find_good_sd_binary(mean_val=0.7, tol=1e-6,
                    fifth_percentile=0.5, ninety_fifth_percentile=0.9)
 find_good_sd_binary(mean_val=0.775, tol=1e-6,
@@ -181,7 +185,7 @@ Sampling from beta distribution:
 prev_iceslurry_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.7, 0.775, 0.9885, 0.99999),
-                               sd = c(0.1242302, 0.1117355, 0.00561642, 0.00001))
+                               sd = c(0.1243683, 0.1120429, 0.005626181, 0.00001))
 prev_iceslurry_dist<-mapply(sample_beta, prev_iceslurry_stat$mean, prev_iceslurry_stat$sd)
 colnames(prev_iceslurry_dist)<-prev_iceslurry_stat$FarmType
 prev_iceslurry_dist[,4]<-1
@@ -190,15 +194,18 @@ prev_iceslurry_dist[,4]<-1
 Then, the prevalence of shrimp that die after harvest, before slaughter.
 
 ```{r}
+#| layout-ncol: 2
 find_good_sd_binary(mean_val=0.25, tol=1e-6,
                    fifth_percentile=0, ninety_fifth_percentile=0.5)
 find_good_sd_binary(mean_val=0.125, tol=1e-6,
                    fifth_percentile=0, ninety_fifth_percentile=0.25)
 
+```
+
+```{r}
 prev_slaught_stat <- data.frame(FarmType = c(
-  "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
-                               mean = c(0.25, 0.25, 0.125, 0.00001),
-                               sd = c(0.1735919, 0.1735919, 0.09051201, 0.00001))
+  "Extensive", "Semi-Intensive","Intensive","Super-Intensive"), mean = c(0.25, 0.25, 0.125, 0.00001),
+  sd = c(0.1729832, 0.1729832, 0.08962196, 0.00001))
 prev_slaught_dist<-mapply(sample_beta, prev_slaught_stat$mean, prev_slaught_stat$sd)
 colnames(prev_slaught_dist)<-prev_slaught_stat$FarmType
 prev_slaught_dist[,4]<-1 # as we are multiplying with the ice slurry prevalences, we cannot set this to 0, as the calculation would not work. Since we just want the super-intensive prevalence to be 1, we set it to 1 here. 

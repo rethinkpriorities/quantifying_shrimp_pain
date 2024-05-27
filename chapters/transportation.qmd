@@ -22,13 +22,15 @@ Our prevalence estimates are:
 | 0--10% (mean 5%) | 0--50% (mean 25%)  | 50--100% (mean 75%) | 80--100% (mean 90%) |
 
 ```{r}
+#| layout-ncol: 4
+
 find_good_sd_binary(mean_val=0.05, tol=1e-6,
                    fifth_percentile=0, ninety_fifth_percentile=0.1)
 find_good_sd_binary(mean_val=0.25, tol=1e-6,
                    fifth_percentile=0, ninety_fifth_percentile=0.5)
-find_good_sd_binary(mean_val=0.75, tol=1e-6, #sd_val=0.15,
+find_good_sd_binary(mean_val=0.75, tol=1e-6, 
                    fifth_percentile=0.5, ninety_fifth_percentile=1)
-find_good_sd_binary(mean_val=0.9, tol=1e-6, #sd_val=0.05,
+find_good_sd_binary(mean_val=0.9, tol=1e-6, 
                    fifth_percentile=0.8, ninety_fifth_percentile=1)
 ```
 
@@ -37,7 +39,7 @@ Sampling from beta distribution:
 prev_nowater_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.05, 0.25, 0.75, 0.9),
-                               sd = c(0.03708807, 0.1728733, 0.1736133, 0.0723155))
+                               sd = c(0.0368478, 0.1727593, 0.1725248, 0.07310057))
 prev_nowater_dist<-mapply(sample_beta, prev_nowater_stat$mean, prev_nowater_stat$sd)
 colnames(prev_nowater_dist)<-prev_nowater_stat$FarmType
 
@@ -140,6 +142,8 @@ Our prevalence estimates are:
 | 50--100% (mean 75%) | 90--100% (mean 95%) | 50--90% (mean 70%) | 10--90% (mean 50%)  |
 
 ```{r}
+#| layout-ncol: 4
+
 find_good_sd_binary(mean_val=0.75, tol=1e-6,
                    fifth_percentile=0.5, ninety_fifth_percentile=1)
 find_good_sd_binary(mean_val=0.95, tol=1e-6,
@@ -155,7 +159,7 @@ Sampling from beta distribution:
 prev_water_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.75, 0.95, 0.7, 0.5),
-                               sd = c(0.173297, 0.03705066, 0.1236821, 0.2478614))
+                               sd = c(0.1731566, 0.0368054, 0.1244102, 0.2482915))
 prev_water_dist<-mapply(sample_beta, prev_water_stat$mean, prev_water_stat$sd)
 colnames(prev_water_dist)<-prev_water_stat$FarmType
 

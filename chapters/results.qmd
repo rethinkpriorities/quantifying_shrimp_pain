@@ -81,6 +81,8 @@ show_table(results) %>%
 ```
 
 
+
+
 We also want to see the results broken down by pain type.
 
 ```{r}

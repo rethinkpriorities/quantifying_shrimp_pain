@@ -19,6 +19,8 @@ Our prevalence estimates are:
 | 25--100% (mean 75%) | 50--100% (mean 75%) | 90--100% (mean 98%) | 90--100% (mean 98%) |
 
 ```{r}
+#| layout-ncol: 3
+
 find_good_sd_binary(mean_val=0.75, tol=1e-6,
                    fifth_percentile=0.25, ninety_fifth_percentile=1)
 find_good_sd_binary(mean_val=0.75, tol=1e-6,
@@ -33,7 +35,7 @@ Sampling from beta distribution:
 prev_ablation_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.75, 0.75, 0.98, 0.98),
-                               sd = c(0.2916584, 0.1742204, 0.058643, 0.058643))
+                               sd = c(0.2914784, 0.1733532, 0.05873486, 0.05873486))
 prev_ablation_dist<-mapply(sample_beta, prev_ablation_stat$mean, prev_ablation_stat$sd)
 colnames(prev_ablation_dist)<-prev_ablation_stat$FarmType
 
@@ -195,6 +197,8 @@ The numbers in the table below equate to roughly 5--20% of shrimp overall when c
 | 5--20% (mean 12.5%) | 5.5--30% (mean 17.75%) | 5--18% (mean 11.5%) | 0.5--5% (mean 2.75%)     |
 
 ```{r}
+#| layout-ncol: 4
+
 find_good_sd_binary(mean_val=0.125, tol=1e-6,
                    fifth_percentile=0.05, ninety_fifth_percentile=0.2)
 find_good_sd_binary(mean_val=0.1775, tol=1e-6,
@@ -211,7 +215,7 @@ Sampling from beta distribution:
 prev_disease_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.125, 0.1775, 0.115, 0.0275),
-                               sd = c(0.04725389, 0.07789251, 0.04081146, 0.01525188))
+                               sd = c(0.04715328, 0.0776112, 0.04096845, 0.01522693))
 prev_disease_dist<-mapply(sample_beta, prev_disease_stat$mean, prev_disease_stat$sd)
 colnames(prev_disease_dist)<-prev_disease_stat$FarmType
 

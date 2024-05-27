@@ -134,6 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Methods for quantifying the impact of welfare threats on shrimp</a> 
         <div class="sidebar-tools-main">
+    <a href="https://github.com/rethinkpriorities/quantifying_shrimp_pain/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -197,7 +198,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/harvest_slaughter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Harvest and slaughter</span></a>
+  <a href="../chapters/harvest_slaughter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">End of production</span></a>
   </div>
 </li>
       </ul>
@@ -254,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#pain-tracks-6" id="toc-pain-tracks-6" class="nav-link" data-scroll-target="#pain-tracks-6">Pain-Tracks</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/rethinkpriorities/quantifying_shrimp_pain/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -626,7 +627,7 @@ Intensity notes
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>prev_hitemp_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.2</span>, <span class="fl">0.15</span>, <span class="fl">0.05</span>, <span class="fl">0.025</span>),</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.06183434</span>, <span class="fl">0.04065279</span>, <span class="fl">0.03682119</span>, <span class="fl">0.01854216</span>))</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.06179771</span>, <span class="fl">0.040631</span>, <span class="fl">0.03660087</span>, <span class="fl">0.01867974</span>))</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>prev_hitemp_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_hitemp_stat<span class="sc">$</span>mean, prev_hitemp_stat<span class="sc">$</span>sd)</span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_hitemp_dist)<span class="ot">&lt;-</span>prev_hitemp_stat<span class="sc">$</span>FarmType</span>
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
@@ -758,38 +759,38 @@ Intensity notes
 <tbody>
   <tr>
    <td style="text-align:left;"> Annoying_hitemp </td>
-   <td style="text-align:right;"> 1.4889565 </td>
-   <td style="text-align:right;"> 14.0167557 </td>
-   <td style="text-align:right;"> 30.5679857 </td>
-   <td style="text-align:right;"> 14.5630534 </td>
+   <td style="text-align:right;"> 1.4815094 </td>
+   <td style="text-align:right;"> 14.0656198 </td>
+   <td style="text-align:right;"> 30.4705546 </td>
+   <td style="text-align:right;"> 14.5577175 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_hitemp </td>
-   <td style="text-align:right;"> 0.1544035 </td>
-   <td style="text-align:right;"> 1.4619952 </td>
-   <td style="text-align:right;"> 3.5033888 </td>
-   <td style="text-align:right;"> 1.5782308 </td>
+   <td style="text-align:right;"> 0.1535746 </td>
+   <td style="text-align:right;"> 1.4655054 </td>
+   <td style="text-align:right;"> 3.4800825 </td>
+   <td style="text-align:right;"> 1.5764484 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling_hitemp </td>
-   <td style="text-align:right;"> 0.0000008 </td>
-   <td style="text-align:right;"> 0.0014139 </td>
-   <td style="text-align:right;"> 0.0586487 </td>
-   <td style="text-align:right;"> 0.0121292 </td>
+   <td style="text-align:right;"> 0.0000007 </td>
+   <td style="text-align:right;"> 0.0014175 </td>
+   <td style="text-align:right;"> 0.0591489 </td>
+   <td style="text-align:right;"> 0.0120646 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Excruciating_hitemp </td>
    <td style="text-align:right;"> 0.0000000 </td>
    <td style="text-align:right;"> 0.0000459 </td>
-   <td style="text-align:right;"> 0.0377438 </td>
-   <td style="text-align:right;"> 0.0071459 </td>
+   <td style="text-align:right;"> 0.0373763 </td>
+   <td style="text-align:right;"> 0.0071722 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling-Equivalent_High_temperature </td>
-   <td style="text-align:right;"> 0.0341467 </td>
-   <td style="text-align:right;"> 0.3880948 </td>
-   <td style="text-align:right;"> 17.6994943 </td>
-   <td style="text-align:right;"> 3.8662654 </td>
+   <td style="text-align:right;"> 0.0342852 </td>
+   <td style="text-align:right;"> 0.3861913 </td>
+   <td style="text-align:right;"> 17.8070982 </td>
+   <td style="text-align:right;"> 3.8696995 </td>
   </tr>
 </tbody>
 </table>
@@ -859,7 +860,7 @@ Intensity notes
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>prev_lowtemp_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.1</span>, <span class="fl">0.025</span>, <span class="fl">0.005</span>),</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.07280416</span>, <span class="fl">0.0726222</span>, <span class="fl">0.01859695</span>, <span class="fl">0.07053341</span>))</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.07280474</span>, <span class="fl">0.07254953</span>, <span class="fl">0.01859695</span>, <span class="fl">0.07053341</span>))</span>
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>prev_lowtemp_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_lowtemp_stat<span class="sc">$</span>mean, prev_lowtemp_stat<span class="sc">$</span>sd)</span>
 <span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_lowtemp_dist)<span class="ot">&lt;-</span>prev_lowtemp_stat<span class="sc">$</span>FarmType</span>
 <span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a></span>
@@ -996,17 +997,17 @@ Intensity notes
 <tbody>
   <tr>
    <td style="text-align:left;"> Annoying_lowtemp </td>
-   <td style="text-align:right;"> 0.3168474 </td>
-   <td style="text-align:right;"> 3.2949650 </td>
-   <td style="text-align:right;"> 10.5281755 </td>
-   <td style="text-align:right;"> 4.0390939 </td>
+   <td style="text-align:right;"> 0.3224764 </td>
+   <td style="text-align:right;"> 3.2871236 </td>
+   <td style="text-align:right;"> 10.5030561 </td>
+   <td style="text-align:right;"> 4.0362914 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_lowtemp </td>
-   <td style="text-align:right;"> 0.0101424 </td>
-   <td style="text-align:right;"> 0.1169336 </td>
-   <td style="text-align:right;"> 0.5086633 </td>
-   <td style="text-align:right;"> 0.1692231 </td>
+   <td style="text-align:right;"> 0.0101805 </td>
+   <td style="text-align:right;"> 0.1165840 </td>
+   <td style="text-align:right;"> 0.5072650 </td>
+   <td style="text-align:right;"> 0.1688784 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling_lowtemp </td>
@@ -1024,10 +1025,10 @@ Intensity notes
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling-Equivalent_Low_temperature </td>
-   <td style="text-align:right;"> 0.0028666 </td>
-   <td style="text-align:right;"> 0.0312607 </td>
-   <td style="text-align:right;"> 0.1238695 </td>
-   <td style="text-align:right;"> 0.0428132 </td>
+   <td style="text-align:right;"> 0.0029003 </td>
+   <td style="text-align:right;"> 0.0312694 </td>
+   <td style="text-align:right;"> 0.1232026 </td>
+   <td style="text-align:right;"> 0.0427732 </td>
   </tr>
 </tbody>
 </table>
@@ -1098,7 +1099,7 @@ Intensity notes
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>prev_salin_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>),</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.1516433</span>, <span class="fl">0.1512303</span>, <span class="fl">0.1516433</span>, <span class="fl">0.1137706</span>))</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.1516433</span>, <span class="fl">0.1512303</span>, <span class="fl">0.1516433</span>, <span class="fl">0.1137723</span>))</span>
 <span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>prev_salin_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_salin_stat<span class="sc">$</span>mean, prev_salin_stat<span class="sc">$</span>sd)</span>
 <span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_salin_dist)<span class="ot">&lt;-</span>prev_salin_stat<span class="sc">$</span>FarmType</span>
 <span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a></span>
@@ -1248,8 +1249,8 @@ Intensity notes
    <td style="text-align:left;"> Annoying_salin </td>
    <td style="text-align:right;"> 38.4782629 </td>
    <td style="text-align:right;"> 403.444084 </td>
-   <td style="text-align:right;"> 1753.0712822 </td>
-   <td style="text-align:right;"> 653.4683386 </td>
+   <td style="text-align:right;"> 1753.0713107 </td>
+   <td style="text-align:right;"> 653.4683351 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_salin </td>
@@ -1276,7 +1277,7 @@ Intensity notes
    <td style="text-align:left;"> Disabling-Equivalent_Low_salinity </td>
    <td style="text-align:right;"> 0.2457338 </td>
    <td style="text-align:right;"> 2.701558 </td>
-   <td style="text-align:right;"> 14.3659242 </td>
+   <td style="text-align:right;"> 14.3659243 </td>
    <td style="text-align:right;"> 6.8776228 </td>
   </tr>
 </tbody>
@@ -1352,7 +1353,7 @@ Intensity notes
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>prev_ph_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">0.2</span>, <span class="fl">0.075</span>, <span class="fl">0.05</span>),</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.1239592</span>, <span class="fl">0.07883415</span>, <span class="fl">0.05486407</span>, <span class="fl">0.03679417</span>))</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.1239601</span>, <span class="fl">0.07874184</span>, <span class="fl">0.054691</span>, <span class="fl">0.03682036</span>))</span>
 <span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>prev_ph_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_ph_stat<span class="sc">$</span>mean, prev_ph_stat<span class="sc">$</span>sd)</span>
 <span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_ph_dist)<span class="ot">&lt;-</span>prev_ph_stat<span class="sc">$</span>FarmType</span>
 <span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a></span>
@@ -1492,38 +1493,38 @@ Intensity notes
 <tbody>
   <tr>
    <td style="text-align:left;"> Annoying_ph </td>
-   <td style="text-align:right;"> 2.9155514 </td>
-   <td style="text-align:right;"> 27.5340707 </td>
-   <td style="text-align:right;"> 62.7912601 </td>
-   <td style="text-align:right;"> 29.0914893 </td>
+   <td style="text-align:right;"> 2.9105247 </td>
+   <td style="text-align:right;"> 27.5305727 </td>
+   <td style="text-align:right;"> 62.3456752 </td>
+   <td style="text-align:right;"> 29.0677935 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_ph </td>
-   <td style="text-align:right;"> 0.2302680 </td>
-   <td style="text-align:right;"> 2.1702823 </td>
-   <td style="text-align:right;"> 5.2439589 </td>
-   <td style="text-align:right;"> 2.3521284 </td>
+   <td style="text-align:right;"> 0.2299551 </td>
+   <td style="text-align:right;"> 2.1714127 </td>
+   <td style="text-align:right;"> 5.2394812 </td>
+   <td style="text-align:right;"> 2.3530146 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling_ph </td>
    <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0012077 </td>
-   <td style="text-align:right;"> 0.0970901 </td>
-   <td style="text-align:right;"> 0.0190645 </td>
+   <td style="text-align:right;"> 0.0012072 </td>
+   <td style="text-align:right;"> 0.0994635 </td>
+   <td style="text-align:right;"> 0.0192728 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Excruciating_ph </td>
    <td style="text-align:right;"> 0.0000000 </td>
    <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0030925 </td>
-   <td style="text-align:right;"> 0.0019175 </td>
+   <td style="text-align:right;"> 0.0031246 </td>
+   <td style="text-align:right;"> 0.0018570 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling-Equivalent_Nonoptimal_pH </td>
-   <td style="text-align:right;"> 0.0436829 </td>
-   <td style="text-align:right;"> 0.4252873 </td>
-   <td style="text-align:right;"> 1.8986938 </td>
-   <td style="text-align:right;"> 1.4231406 </td>
+   <td style="text-align:right;"> 0.0429287 </td>
+   <td style="text-align:right;"> 0.4249535 </td>
+   <td style="text-align:right;"> 1.9043246 </td>
+   <td style="text-align:right;"> 1.3857547 </td>
   </tr>
 </tbody>
 </table>
@@ -1595,7 +1596,7 @@ Intensity notes
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>prev_ammon_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
 <span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
 <span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.4</span>, <span class="fl">0.6</span>, <span class="fl">0.3</span>),</span>
-<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.1875005</span>, <span class="fl">0.1168816</span>, <span class="fl">0.148216</span>, <span class="fl">0.2121288</span>))</span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.1871343</span>, <span class="fl">0.116733</span>, <span class="fl">0.1477067</span>, <span class="fl">0.2117818</span>))</span>
 <span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>prev_ammon_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_ammon_stat<span class="sc">$</span>mean, prev_ammon_stat<span class="sc">$</span>sd)</span>
 <span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_ammon_dist)<span class="ot">&lt;-</span>prev_ammon_stat<span class="sc">$</span>FarmType</span>
 <span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a></span>
@@ -1737,38 +1738,38 @@ Intensity notes
 <tbody>
   <tr>
    <td style="text-align:left;"> Annoying_ammon </td>
-   <td style="text-align:right;"> 5.1662001 </td>
-   <td style="text-align:right;"> 48.5059510 </td>
-   <td style="text-align:right;"> 111.3131413 </td>
-   <td style="text-align:right;"> 51.5116612 </td>
+   <td style="text-align:right;"> 5.1502330 </td>
+   <td style="text-align:right;"> 48.4607904 </td>
+   <td style="text-align:right;"> 111.011758 </td>
+   <td style="text-align:right;"> 51.4990561 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_ammon </td>
-   <td style="text-align:right;"> 5.2298129 </td>
-   <td style="text-align:right;"> 49.4503625 </td>
-   <td style="text-align:right;"> 113.2894852 </td>
-   <td style="text-align:right;"> 52.4802670 </td>
+   <td style="text-align:right;"> 5.2567087 </td>
+   <td style="text-align:right;"> 49.6168940 </td>
+   <td style="text-align:right;"> 113.373264 </td>
+   <td style="text-align:right;"> 52.5209640 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling_ammon </td>
-   <td style="text-align:right;"> 0.0175157 </td>
-   <td style="text-align:right;"> 0.2712161 </td>
-   <td style="text-align:right;"> 1.8690624 </td>
-   <td style="text-align:right;"> 0.5232312 </td>
+   <td style="text-align:right;"> 0.0171883 </td>
+   <td style="text-align:right;"> 0.2711866 </td>
+   <td style="text-align:right;"> 1.912982 </td>
+   <td style="text-align:right;"> 0.5270102 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Excruciating_ammon </td>
    <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0007412 </td>
-   <td style="text-align:right;"> 0.2140499 </td>
-   <td style="text-align:right;"> 0.0455886 </td>
+   <td style="text-align:right;"> 0.0007275 </td>
+   <td style="text-align:right;"> 0.212213 </td>
+   <td style="text-align:right;"> 0.0457202 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling-Equivalent_High_un-ionized_ammonia </td>
-   <td style="text-align:right;"> 0.7526935 </td>
-   <td style="text-align:right;"> 8.0544581 </td>
-   <td style="text-align:right;"> 108.8214200 </td>
-   <td style="text-align:right;"> 29.4341657 </td>
+   <td style="text-align:right;"> 0.7454907 </td>
+   <td style="text-align:right;"> 8.0618306 </td>
+   <td style="text-align:right;"> 107.992425 </td>
+   <td style="text-align:right;"> 29.5479680 </td>
   </tr>
 </tbody>
 </table>
@@ -1829,10 +1830,10 @@ Intensity notes
 <pre><code>[1] 0.05481785</code></pre>
 </div>
 <div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<pre><code>[1] 0.01856181</code></pre>
+<pre><code>[1] 0.01856241</code></pre>
 </div>
 <div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<pre><code>[1] 0.01844806</code></pre>
+<pre><code>[1] 0.01860082</code></pre>
 </div>
 </div>
 </div>
@@ -1841,7 +1842,7 @@ Intensity notes
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>prev_pollute_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
 <span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
 <span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.075</span>, <span class="fl">0.025</span>, <span class="fl">0.025</span>),</span>
-<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.03724687</span>, <span class="fl">0.0550811</span>, <span class="fl">0.01864936</span>, <span class="fl">0.01853204</span>))</span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.03688937</span>, <span class="fl">0.05481785</span>, <span class="fl">0.01856241</span>, <span class="fl">0.01860082</span>))</span>
 <span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>prev_pollute_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_pollute_stat<span class="sc">$</span>mean, prev_pollute_stat<span class="sc">$</span>sd)</span>
 <span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_pollute_dist)<span class="ot">&lt;-</span>prev_pollute_stat<span class="sc">$</span>FarmType</span>
 <span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a></span>
@@ -1969,38 +1970,38 @@ Intensity notes
 <tbody>
   <tr>
    <td style="text-align:left;"> Annoying_pollute </td>
-   <td style="text-align:right;"> 0.5378309 </td>
-   <td style="text-align:right;"> 5.2157157 </td>
-   <td style="text-align:right;"> 14.267714 </td>
-   <td style="text-align:right;"> 5.9464876 </td>
+   <td style="text-align:right;"> 0.5448365 </td>
+   <td style="text-align:right;"> 5.2093107 </td>
+   <td style="text-align:right;"> 14.1297963 </td>
+   <td style="text-align:right;"> 5.9196037 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_pollute </td>
-   <td style="text-align:right;"> 0.2028687 </td>
-   <td style="text-align:right;"> 1.9673546 </td>
-   <td style="text-align:right;"> 5.457683 </td>
-   <td style="text-align:right;"> 2.2591521 </td>
+   <td style="text-align:right;"> 0.2042883 </td>
+   <td style="text-align:right;"> 1.9668327 </td>
+   <td style="text-align:right;"> 5.4333346 </td>
+   <td style="text-align:right;"> 2.2534826 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling_pollute </td>
    <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0000075 </td>
-   <td style="text-align:right;"> 0.012040 </td>
-   <td style="text-align:right;"> 0.0025071 </td>
+   <td style="text-align:right;"> 0.0000077 </td>
+   <td style="text-align:right;"> 0.0124537 </td>
+   <td style="text-align:right;"> 0.0026113 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Excruciating_pollute </td>
    <td style="text-align:right;"> 0.0000000 </td>
    <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.004683 </td>
-   <td style="text-align:right;"> 0.0012909 </td>
+   <td style="text-align:right;"> 0.0046633 </td>
+   <td style="text-align:right;"> 0.0013086 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling-Equivalent_Pollutants </td>
-   <td style="text-align:right;"> 0.0244430 </td>
-   <td style="text-align:right;"> 0.2631292 </td>
-   <td style="text-align:right;"> 2.389382 </td>
-   <td style="text-align:right;"> 0.9401825 </td>
+   <td style="text-align:right;"> 0.0246568 </td>
+   <td style="text-align:right;"> 0.2610910 </td>
+   <td style="text-align:right;"> 2.4128145 </td>
+   <td style="text-align:right;"> 0.9464586 </td>
   </tr>
 </tbody>
 </table>
@@ -2423,4 +2424,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/rethinkpriorities/quantifying_shrimp_pain/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

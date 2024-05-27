@@ -279,7 +279,7 @@ Sampling from beta distribution:
 prev_hitemp_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.2, 0.15, 0.05, 0.025),
-                               sd = c(0.06183434, 0.04065279, 0.03682119, 0.01854216))
+                               sd = c(0.06179771, 0.040631, 0.03660087, 0.01867974))
 prev_hitemp_dist<-mapply(sample_beta, prev_hitemp_stat$mean, prev_hitemp_stat$sd)
 colnames(prev_hitemp_dist)<-prev_hitemp_stat$FarmType
 
@@ -433,7 +433,7 @@ Sampling from beta distribution:
 prev_lowtemp_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.1, 0.1, 0.025, 0.005),
-                               sd = c(0.07280416, 0.0726222, 0.01859695, 0.07053341))
+                               sd = c(0.07280474, 0.07254953, 0.01859695, 0.07053341))
 prev_lowtemp_dist<-mapply(sample_beta, prev_lowtemp_stat$mean, prev_lowtemp_stat$sd)
 colnames(prev_lowtemp_dist)<-prev_lowtemp_stat$FarmType
 
@@ -599,7 +599,7 @@ Sampling from beta distribution:
 prev_salin_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.5, 0.5, 0.5, 0.75),
-                               sd = c(0.1516433, 0.1512303, 0.1516433, 0.1137706))
+                               sd = c(0.1516433, 0.1512303, 0.1516433, 0.1137723))
 prev_salin_dist<-mapply(sample_beta, prev_salin_stat$mean, prev_salin_stat$sd)
 colnames(prev_salin_dist)<-prev_salin_stat$FarmType
 
@@ -784,7 +784,7 @@ Sampling from beta distribution:
 prev_ph_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.3, 0.2, 0.075, 0.05),
-                               sd = c(0.1239592, 0.07883415, 0.05486407, 0.03679417))
+                               sd = c(0.1239601, 0.07874184, 0.054691, 0.03682036))
 prev_ph_dist<-mapply(sample_beta, prev_ph_stat$mean, prev_ph_stat$sd)
 colnames(prev_ph_dist)<-prev_ph_stat$FarmType
 
@@ -953,7 +953,7 @@ Sampling from beta distribution:
 prev_ammon_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.5, 0.4, 0.6, 0.3),
-                               sd = c(0.1875005, 0.1168816, 0.148216, 0.2121288))
+                               sd = c(0.1871343, 0.116733, 0.1477067, 0.2117818))
 prev_ammon_dist<-mapply(sample_beta, prev_ammon_stat$mean, prev_ammon_stat$sd)
 colnames(prev_ammon_dist)<-prev_ammon_stat$FarmType
 
@@ -1115,7 +1115,7 @@ Sampling from beta distribution:
 prev_pollute_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.05, 0.075, 0.025, 0.025),
-                               sd = c(0.03724687, 0.0550811, 0.01864936, 0.01853204))
+                               sd = c(0.03688937, 0.05481785, 0.01856241, 0.01860082))
 prev_pollute_dist<-mapply(sample_beta, prev_pollute_stat$mean, prev_pollute_stat$sd)
 colnames(prev_pollute_dist)<-prev_pollute_stat$FarmType
 

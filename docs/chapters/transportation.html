@@ -134,6 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Methods for quantifying the impact of welfare threats on shrimp</a> 
         <div class="sidebar-tools-main">
+    <a href="https://github.com/rethinkpriorities/quantifying_shrimp_pain/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -197,7 +198,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/harvest_slaughter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Harvest and slaughter</span></a>
+  <a href="../chapters/harvest_slaughter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">End of production</span></a>
   </div>
 </li>
       </ul>
@@ -229,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#pain-tracks-1" id="toc-pain-tracks-1" class="nav-link" data-scroll-target="#pain-tracks-1">Pain-Tracks</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/rethinkpriorities/quantifying_shrimp_pain/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -284,44 +285,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.05</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="dv">0</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="dv">0</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.1</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.25</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="dv">0</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.5</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.75</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.9</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.8</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel" data-layout-ncol="4">
+<div class="quarto-layout-row">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <pre><code>[1] 0.0368478</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.25</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="dv">0</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <pre><code>[1] 0.1727593</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.75</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.15,</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <pre><code>[1] 0.1725248</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.9</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.05,</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.8</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <pre><code>[1] 0.07310057</code></pre>
+</div>
 </div>
 </div>
 <p>Sampling from beta distribution:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>prev_nowater_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.25</span>, <span class="fl">0.75</span>, <span class="fl">0.9</span>),</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.03708807</span>, <span class="fl">0.1728733</span>, <span class="fl">0.1736133</span>, <span class="fl">0.0723155</span>))</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>prev_nowater_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_nowater_stat<span class="sc">$</span>mean, prev_nowater_stat<span class="sc">$</span>sd)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_nowater_dist)<span class="ot">&lt;-</span>prev_nowater_stat<span class="sc">$</span>FarmType</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>prev_nowater_unadjusted<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_nowater_dist)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>sold_live<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="at">min=</span><span class="fl">0.01</span>, <span class="at">max=</span><span class="fl">0.02</span>)</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>broodstock_transported<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="at">min=</span><span class="fl">0.2</span>, <span class="at">max=</span><span class="fl">0.5</span>)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>Waterless_Population_Proportion<span class="ot">=</span>((female_broodstock_prop<span class="sc">*</span><span class="dv">2</span>)<span class="sc">*</span>broodstock_transported)<span class="sc">+</span>sold_live <span class="co"># adding shrimp who are sold live (estimated to be between 1% to 5% of shrimp) to proportion of broodstock (calculated as proportion of broodstock that are female, multiplied by two)</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(Waterless_Population_Proportion))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>prev_nowater_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.25</span>, <span class="fl">0.75</span>, <span class="fl">0.9</span>),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.0368478</span>, <span class="fl">0.1727593</span>, <span class="fl">0.1725248</span>, <span class="fl">0.07310057</span>))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>prev_nowater_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_nowater_stat<span class="sc">$</span>mean, prev_nowater_stat<span class="sc">$</span>sd)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_nowater_dist)<span class="ot">&lt;-</span>prev_nowater_stat<span class="sc">$</span>FarmType</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>prev_nowater_unadjusted<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_nowater_dist)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>sold_live<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="at">min=</span><span class="fl">0.01</span>, <span class="at">max=</span><span class="fl">0.02</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>broodstock_transported<span class="ot">&lt;-</span><span class="fu">runif</span>(n, <span class="at">min=</span><span class="fl">0.2</span>, <span class="at">max=</span><span class="fl">0.5</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>Waterless_Population_Proportion<span class="ot">=</span>((female_broodstock_prop<span class="sc">*</span><span class="dv">2</span>)<span class="sc">*</span>broodstock_transported)<span class="sc">+</span>sold_live <span class="co"># adding shrimp who are sold live (estimated to be between 1% to 5% of shrimp) to proportion of broodstock (calculated as proportion of broodstock that are female, multiplied by two)</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(Waterless_Population_Proportion))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -329,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>prev_nowater<span class="ot">&lt;-</span>prev_nowater_unadjusted<span class="sc">*</span>Waterless_Population_Proportion</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>prev_nowater<span class="ot">&lt;-</span>prev_nowater_unadjusted<span class="sc">*</span>Waterless_Population_Proportion</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="pain-tracks" class="level2">
@@ -337,14 +340,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Our hypothesized pain category allocations are as follows:</p>
 <p><img src="images/waterless.png" class="img-fluid"></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dur_nowater <span class="ot">=</span> <span class="fu">rtruncnorm</span>(n, <span class="at">a=</span><span class="dv">4</span>, <span class="at">b=</span><span class="dv">72</span>, <span class="at">mean=</span><span class="dv">30</span>, <span class="at">sd =</span> <span class="dv">8</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>pain_nowater<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.03</span>, <span class="fl">0.06</span>, <span class="dv">39</span>, <span class="fl">60.91</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dur_nowater <span class="ot">=</span> <span class="fu">rtruncnorm</span>(n, <span class="at">a=</span><span class="dv">4</span>, <span class="at">b=</span><span class="dv">72</span>, <span class="at">mean=</span><span class="dv">30</span>, <span class="at">sd =</span> <span class="dv">8</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>pain_nowater<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.03</span>, <span class="fl">0.06</span>, <span class="dv">39</span>, <span class="fl">60.91</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Combine the intensity and duration information</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>paintrack_nowater<span class="ot">&lt;-</span>(dur_nowater <span class="sc">*</span> pain_nowater)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>paintrack_nowater<span class="ot">&lt;-</span>(dur_nowater <span class="sc">*</span> pain_nowater)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -380,39 +383,39 @@ Intensity notes
 </div>
 <p>Weight the pain tracks by prevalence estimations and proportion of farming attributable to each farm type, as well as the average days lived by a shrimp.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>nowater_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">semi =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">int =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">super =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>nowater_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">semi =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">int =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">super =</span> paintrack_nowater<span class="sc">*</span>prev_nowater<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Add the pain categories across farm types and calculate the disabling-equivalent pain hours.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>nowater<span class="ot">&lt;-</span>nowater_farms <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>average_hours_nowater <span class="ot">&lt;-</span> nowater <span class="sc">%&gt;%</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>average_hours_nowater<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  average_hours_nowater<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    average_hours_nowater<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>      average_hours_nowater<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>        average_hours_nowater<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>nowater_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_nowater))</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(nowater_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_nowater"</span>,<span class="st">"Hurtful_nowater"</span>,<span class="st">"Disabling_nowater"</span>, <span class="st">"Excruciating_nowater"</span>, <span class="st">"Disabling-Equivalent_Waterless_transport"</span>)</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(nowater_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>nowater<span class="ot">&lt;-</span>nowater_farms <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>average_hours_nowater <span class="ot">&lt;-</span> nowater <span class="sc">%&gt;%</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>average_hours_nowater<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  average_hours_nowater<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    average_hours_nowater<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>      average_hours_nowater<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>        average_hours_nowater<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>nowater_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_nowater<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_nowater))</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(nowater_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_nowater"</span>,<span class="st">"Hurtful_nowater"</span>,<span class="st">"Disabling_nowater"</span>, <span class="st">"Excruciating_nowater"</span>, <span class="st">"Disabling-Equivalent_Waterless_transport"</span>)</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(nowater_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
@@ -427,38 +430,38 @@ Intensity notes
 <tbody>
   <tr>
    <td style="text-align:left;"> Annoying_nowater </td>
-   <td style="text-align:right;"> 0.0667529 </td>
-   <td style="text-align:right;"> 0.1536398 </td>
-   <td style="text-align:right;"> 0.2856364 </td>
-   <td style="text-align:right;"> 0.1619736 </td>
+   <td style="text-align:right;"> 0.0671444 </td>
+   <td style="text-align:right;"> 0.1535049 </td>
+   <td style="text-align:right;"> 0.2854154 </td>
+   <td style="text-align:right;"> 0.1619333 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_nowater </td>
-   <td style="text-align:right;"> 0.0419052 </td>
-   <td style="text-align:right;"> 0.0978090 </td>
-   <td style="text-align:right;"> 0.1850438 </td>
-   <td style="text-align:right;"> 0.1036503 </td>
+   <td style="text-align:right;"> 0.0421197 </td>
+   <td style="text-align:right;"> 0.0977156 </td>
+   <td style="text-align:right;"> 0.1853044 </td>
+   <td style="text-align:right;"> 0.1036284 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling_nowater </td>
    <td style="text-align:right;"> 0.0000000 </td>
    <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0008201 </td>
-   <td style="text-align:right;"> 0.0001557 </td>
+   <td style="text-align:right;"> 0.0008299 </td>
+   <td style="text-align:right;"> 0.0001546 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Excruciating_nowater </td>
    <td style="text-align:right;"> 0.0000000 </td>
    <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0002831 </td>
-   <td style="text-align:right;"> 0.0000794 </td>
+   <td style="text-align:right;"> 0.0002784 </td>
+   <td style="text-align:right;"> 0.0000797 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling-Equivalent_Waterless_transport </td>
-   <td style="text-align:right;"> 0.0031816 </td>
-   <td style="text-align:right;"> 0.0123721 </td>
-   <td style="text-align:right;"> 0.1267407 </td>
-   <td style="text-align:right;"> 0.0517893 </td>
+   <td style="text-align:right;"> 0.0032079 </td>
+   <td style="text-align:right;"> 0.0123731 </td>
+   <td style="text-align:right;"> 0.1267021 </td>
+   <td style="text-align:right;"> 0.0524277 </td>
   </tr>
 </tbody>
 </table>
@@ -497,38 +500,40 @@ Intensity notes
 </tr>
 </tbody>
 </table>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.75</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1735861</code></pre>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.75</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.95</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.9</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.7</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.15,</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.9</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.5</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.05,</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.1</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel" data-layout-ncol="4">
+<div class="quarto-layout-row">
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<pre><code>[1] 0.1731566</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.95</span>, <span class="at">tol=</span><span class="fl">1e-6</span>,</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.9</span>, <span class="at">ninety_fifth_percentile=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.03670729</code></pre>
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<pre><code>[1] 0.0368054</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.7</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.15,</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.5</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1242004</code></pre>
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<pre><code>[1] 0.1244102</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_good_sd_binary</span>(<span class="at">mean_val=</span><span class="fl">0.5</span>, <span class="at">tol=</span><span class="fl">1e-6</span>, <span class="co">#sd_val=0.05,</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fifth_percentile=</span><span class="fl">0.1</span>, <span class="at">ninety_fifth_percentile=</span><span class="fl">0.9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.2479444</code></pre>
+<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<pre><code>[1] 0.2482915</code></pre>
+</div>
 </div>
 </div>
 <p>Sampling from beta distribution:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>prev_water_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.75</span>, <span class="fl">0.95</span>, <span class="fl">0.7</span>, <span class="fl">0.5</span>),</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.173297</span>, <span class="fl">0.03705066</span>, <span class="fl">0.1236821</span>, <span class="fl">0.2478614</span>))</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>prev_water_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_water_stat<span class="sc">$</span>mean, prev_water_stat<span class="sc">$</span>sd)</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_water_dist)<span class="ot">&lt;-</span>prev_water_stat<span class="sc">$</span>FarmType</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>prev_water<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_water_dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>prev_water_stat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FarmType =</span> <span class="fu">c</span>(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extensive"</span>, <span class="st">"Semi-Intensive"</span>,<span class="st">"Intensive"</span>,<span class="st">"Super-Intensive"</span>),</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">mean =</span> <span class="fu">c</span>(<span class="fl">0.75</span>, <span class="fl">0.95</span>, <span class="fl">0.7</span>, <span class="fl">0.5</span>),</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">0.1731566</span>, <span class="fl">0.0368054</span>, <span class="fl">0.1244102</span>, <span class="fl">0.2482915</span>))</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>prev_water_dist<span class="ot">&lt;-</span><span class="fu">mapply</span>(sample_beta, prev_water_stat<span class="sc">$</span>mean, prev_water_stat<span class="sc">$</span>sd)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_water_dist)<span class="ot">&lt;-</span>prev_water_stat<span class="sc">$</span>FarmType</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>prev_water<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_water_dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="pain-tracks-1" class="level2">
@@ -536,14 +541,14 @@ Intensity notes
 <p>Our hypothesized pain category allocations are as follows:</p>
 <p><img src="images/water.png" class="img-fluid"></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>dur_water <span class="ot">=</span> <span class="fu">rtruncnorm</span>(n, <span class="at">a=</span><span class="fl">0.1</span>, <span class="at">b=</span><span class="dv">72</span>, <span class="at">mean=</span><span class="dv">24</span>, <span class="at">sd =</span> <span class="dv">16</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>pain_water<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.03</span>, <span class="fl">0.1</span>, <span class="dv">25</span>, <span class="fl">74.87</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>dur_water <span class="ot">=</span> <span class="fu">rtruncnorm</span>(n, <span class="at">a=</span><span class="fl">0.1</span>, <span class="at">b=</span><span class="dv">72</span>, <span class="at">mean=</span><span class="dv">24</span>, <span class="at">sd =</span> <span class="dv">16</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>pain_water<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="fu">sample_dirichlet</span>(<span class="fl">0.03</span>, <span class="fl">0.1</span>, <span class="dv">25</span>, <span class="fl">74.87</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">colnames&lt;-</span><span class="st">`</span>(paincategories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Combine the intensity and duration information</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>paintrack_water<span class="ot">&lt;-</span>(dur_water <span class="sc">*</span> pain_water)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>paintrack_water<span class="ot">&lt;-</span>(dur_water <span class="sc">*</span> pain_water)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -580,39 +585,39 @@ Intensity notes
 </div>
 <p>Then we combine all of the estimations for water-based transport.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>water_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">semi =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">int =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">super =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>water_farms<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span>Extensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Ext,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">semi =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span><span class="st">`</span><span class="at">Semi-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Semi,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">int =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span>Intensive<span class="sc">*</span>prop_sample<span class="sc">$</span>Int,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">super =</span> paintrack_water<span class="sc">*</span>prev_water<span class="sc">$</span><span class="st">`</span><span class="at">Super-Intensive</span><span class="st">`</span><span class="sc">*</span>prop_sample<span class="sc">$</span>Super)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Add the pain categories across farm types and calculate the disabling-equivalent pain hours.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>water<span class="ot">&lt;-</span>water_farms <span class="sc">%&gt;%</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>average_hours_water <span class="ot">&lt;-</span> water <span class="sc">%&gt;%</span></span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>average_hours_water<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
-<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>  average_hours_water<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
-<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    average_hours_water<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
-<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>      average_hours_water<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
-<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>        average_hours_water<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
-<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>water_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
-<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
-<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
-<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
-<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
-<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
-<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_water))</span>
-<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(water_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
-<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_water"</span>,<span class="st">"Hurtful_water"</span>,<span class="st">"Disabling_water"</span>, <span class="st">"Excruciating_water"</span>, <span class="st">"Disabling-Equivalent_Water-based_transport"</span>)</span>
-<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(water_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>water<span class="ot">&lt;-</span>water_farms <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">allfarms.Annoying =</span> ext.Annoying <span class="sc">+</span> semi.Annoying <span class="sc">+</span> int.Annoying <span class="sc">+</span> super.Annoying,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Hurtful =</span> ext.Hurtful <span class="sc">+</span> semi.Hurtful <span class="sc">+</span> int.Hurtful <span class="sc">+</span> super.Hurtful,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Disabling =</span> ext.Disabling <span class="sc">+</span> semi.Disabling <span class="sc">+</span> int.Disabling <span class="sc">+</span> super.Disabling,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">allfarms.Excruciating =</span> ext.Excruciating <span class="sc">+</span> semi.Excruciating <span class="sc">+</span> int.Excruciating <span class="sc">+</span> super.Excruciating,)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>average_hours_water <span class="ot">&lt;-</span> water <span class="sc">%&gt;%</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"allfarms"</span>))</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>average_hours_water<span class="sc">$</span>Disabling_Equivalent<span class="ot">&lt;-</span> (</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  average_hours_water<span class="sc">$</span>allfarms.Annoying<span class="sc">*</span>Annoying_Weight) <span class="sc">+</span> (</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    average_hours_water<span class="sc">$</span>allfarms.Hurtful<span class="sc">*</span>Hurtful_Weight) <span class="sc">+</span>(</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>      average_hours_water<span class="sc">$</span>allfarms.Disabling<span class="sc">*</span>Disabling_Weight)<span class="sc">+</span>(</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>        average_hours_water<span class="sc">$</span>allfarms.Excruciating<span class="sc">*</span>Excruciating_Weight)</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>water_summary<span class="ot">&lt;-</span><span class="fu">cbind</span>(<span class="fu">round</span>(<span class="fu">rbind</span>(</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Annoying, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Hurtful, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))), </span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Disabling, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>allfarms.Excruciating, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>))),</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_water<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_water))</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(water_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_water"</span>,<span class="st">"Hurtful_water"</span>,<span class="st">"Disabling_water"</span>, <span class="st">"Excruciating_water"</span>, <span class="st">"Disabling-Equivalent_Water-based_transport"</span>)</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(water_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
@@ -627,38 +632,38 @@ Intensity notes
 <tbody>
   <tr>
    <td style="text-align:left;"> Annoying_water </td>
-   <td style="text-align:right;"> 2.5309177 </td>
-   <td style="text-align:right;"> 13.8800618 </td>
-   <td style="text-align:right;"> 29.0857687 </td>
-   <td style="text-align:right;"> 14.5892966 </td>
+   <td style="text-align:right;"> 2.6230708 </td>
+   <td style="text-align:right;"> 13.9280642 </td>
+   <td style="text-align:right;"> 29.1203058 </td>
+   <td style="text-align:right;"> 14.6228313 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_water </td>
-   <td style="text-align:right;"> 0.8265666 </td>
-   <td style="text-align:right;"> 4.5308162 </td>
-   <td style="text-align:right;"> 10.0927009 </td>
-   <td style="text-align:right;"> 4.8686389 </td>
+   <td style="text-align:right;"> 0.8450727 </td>
+   <td style="text-align:right;"> 4.5302856 </td>
+   <td style="text-align:right;"> 10.1136136 </td>
+   <td style="text-align:right;"> 4.8780652 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling_water </td>
    <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0000937 </td>
-   <td style="text-align:right;"> 0.1068054 </td>
-   <td style="text-align:right;"> 0.0194248 </td>
+   <td style="text-align:right;"> 0.0000931 </td>
+   <td style="text-align:right;"> 0.1064375 </td>
+   <td style="text-align:right;"> 0.0195400 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Excruciating_water </td>
    <td style="text-align:right;"> 0.0000000 </td>
    <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0192934 </td>
-   <td style="text-align:right;"> 0.0057867 </td>
+   <td style="text-align:right;"> 0.0190364 </td>
+   <td style="text-align:right;"> 0.0058738 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling-Equivalent_Water-based_transport </td>
-   <td style="text-align:right;"> 0.0958431 </td>
-   <td style="text-align:right;"> 0.6160014 </td>
-   <td style="text-align:right;"> 8.2244725 </td>
-   <td style="text-align:right;"> 3.5477647 </td>
+   <td style="text-align:right;"> 0.0968607 </td>
+   <td style="text-align:right;"> 0.6170167 </td>
+   <td style="text-align:right;"> 8.4886314 </td>
+   <td style="text-align:right;"> 3.5948063 </td>
   </tr>
 </tbody>
 </table>
@@ -1065,8 +1070,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/harvest_slaughter.html" class="pagination-link" aria-label="Harvest and slaughter">
-        <span class="nav-page-text"><span class="chapter-title">Harvest and slaughter</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/harvest_slaughter.html" class="pagination-link" aria-label="End of production">
+        <span class="nav-page-text"><span class="chapter-title">End of production</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1075,4 +1080,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/rethinkpriorities/quantifying_shrimp_pain/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

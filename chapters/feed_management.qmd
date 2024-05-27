@@ -29,7 +29,7 @@ Sampling from beta distribution:
 prev_malnu_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.05, 0.05, 0.05, 0.05),
-                               sd = c(0.03671062, 0.03671062, 0.03671062, 0.03671062))
+                               sd = c(0.0368478, 0.0368478, 0.0368478, 0.0368478))
 prev_malnu_dist<-mapply(sample_beta, prev_malnu_stat$mean, prev_malnu_stat$sd)
 colnames(prev_malnu_dist)<-prev_malnu_stat$FarmType
 
@@ -155,6 +155,8 @@ In extensive farms, shrimp rely on the natural feed of the pond. Since shrimp ca
 | 0--10% (mean 5%) | 0--25% (mean 10%)  | 0--25% (mean 15%) | 0--25% (mean 15%)   |
 
 ```{r}
+#| layout-ncol: 3
+
 find_good_sd_binary(mean_val=0.05, tol=1e-6,
                    fifth_percentile=0, ninety_fifth_percentile=0.1)
 find_good_sd_binary(mean_val=0.1, tol=1e-6,
@@ -169,7 +171,7 @@ Sampling from beta distribution:
 prev_hunger_stat <- data.frame(FarmType = c(
   "Extensive", "Semi-Intensive","Intensive","Super-Intensive"),
                                mean = c(0.05, 0.1, 0.15, 0.15),
-                               sd = c(0.03691847, 0.1071233, 0.07320132, 0.07320132))
+                               sd = c(0.03699412, 0.1082522, 0.07359837, 0.07359837))
 prev_hunger_dist<-mapply(sample_beta, prev_hunger_stat$mean, prev_hunger_stat$sd)
 colnames(prev_hunger_dist)<-prev_hunger_stat$FarmType
 
