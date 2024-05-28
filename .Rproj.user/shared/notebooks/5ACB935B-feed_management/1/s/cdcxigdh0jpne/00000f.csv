@@ -1,7 +1,0 @@
-"0","paintrack_hunger_ext<-(dur_hunger_ext * pain_hunger_ext)"
-"0",""
-"0","paintrack_hunger_semi<-(dur_hunger_semi * pain_hunger_semi)"
-"0",""
-"0","paintrack_hunger_int<-(dur_hunger_int * pain_hunger_int)"
-"0",""
-"0","paintrack_hunger_super<-(dur_hunger_super * pain_hunger_super)"

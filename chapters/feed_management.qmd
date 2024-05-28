@@ -15,7 +15,7 @@ Broadly, we expect malnutrition is not a significant problem on shrimp farms bec
 Our prevalence estimates are:
 
 | **Extensive**    | **Semi-intensive** | **Intensive**    | **Super-intensive** |
-|------------------|------------------|------------------|------------------|
+|------------------|------------------|------------------|-------------------|
 | 0--10% (mean 5%) | 0--10% (mean 5%)   | 0--10% (mean 5%) | 0--10% (mean 5%)    |
 
 ```{r}
@@ -151,7 +151,7 @@ show_table(malnu_summary)
 In extensive farms, shrimp rely on the natural feed of the pond. Since shrimp can likely graze continuously in these ponds, we think shrimp in extensive farms are unlikely to be underfed. Semi-intensive, intensive and super-intensive farms provision shrimp with artificial feeds, which can be expensive ([Ayisi et al., 2017](https://doi.org/10.1016/j.hjb.2017.09.004)), so underfeeding may be more common in these farm types due to farmers trying to save on costs. However, given the critical role of feeding in shrimp growth, we hypothesize that inadequate nutrition in shrimp farms is unlikely to be a welfare problem of significant scope.
 
 | **Extensive**    | **Semi-intensive** | **Intensive**     | **Super-intensive** |
-|------------------|------------------|------------------|------------------|
+|------------------|------------------|------------------|-------------------|
 | 0--10% (mean 5%) | 0--25% (mean 10%)  | 0--25% (mean 15%) | 0--25% (mean 15%)   |
 
 ```{r}

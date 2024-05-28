@@ -80,9 +80,6 @@ show_table(results) %>%
 
 ```
 
-
-
-
 We also want to see the results broken down by pain type.
 
 ```{r}
@@ -151,7 +148,10 @@ results_paintype$pain_type<-factor(results_paintype$pain_type, levels=c("Excruci
 ```
 
 Now we can plot the results:
+
 ```{r}
+#| warning: false
+#| output: false
 
 results_paintype$welfare_threat<-factor(results_paintype$welfare_threat, levels=c(unique(rownames(results))))
 
@@ -208,11 +208,16 @@ fig1<-paintype.plot + diseq.plot +
 
 fig1
 
-#ggsave(filename="../results/fig1.png", plot=fig1, width=13, height=8.5)
+#ggsave(filename="results/fig1.png", plot=fig1, width=13, height=8.5)
 ```
 
+![](/results/fig1.png)
+
 We also plot the proportion of pain of each intensity for each welfare threat:
+
 ```{r}
+#| warnings: false
+#| output: false
 
 # stacked percentage bars
 fig3<-ggplot(results_paintype) +
@@ -242,7 +247,7 @@ fig3<-ggplot(results_paintype) +
   scale_y_discrete(expand=c(0,0))
 fig3
 
-#ggsave(filename="../results/fig3.png", plot=fig3, width=9.5, height=5.5)
+#ggsave(filename="results/fig3.png", plot=fig3, width=9.5, height=5.5)
 ```
 
-
+![](/results/fig3.png)
