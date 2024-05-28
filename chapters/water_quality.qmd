@@ -1022,7 +1022,6 @@ ggplot(data, aes(x=Date, y=NH3, fill=Daytime)) +
 ```
 
 Other water quality variables modulate un-ionized ammonia. For example, ammonia is positively correlated with pH, and ammonia is more toxic when DO or salinity are low ([Kungvankij et al., 1986](http://www.fao.org/3/ac210e/AC210E09.htm); [Allan et al., 1990](https://doi.org/10.1016/0044-8486(90)90193-Q); [Lin & Chen, 2001](https://doi.org/10.1016/S0022-0981(01)00227-1); [Kubitza, 2017](https://perma.cc/NGN7-SFDB)). [Clayton et al., 2022, p. 304](https://5mbooks.com/product/the-shrimp-book-ii) say that the proportion of un-ionized ammonia "depends on the temperature, salinity, and pH of the water", but that "the proportion of NH3 \[uni-ionized ammonia\] and NH4+ \[ammonium ion\] forms changes most dramatically in relation to pH". We, therefore, model ammonia similarly to high pH and (secondarily) temperature and salinity.
-
 :::
 
 ::: {.callout-note collapse="true"}

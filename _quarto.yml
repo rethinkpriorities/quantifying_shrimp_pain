@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 book:
-  title: "Methods for quantifying the impact of welfare threats on shrimp"
+  title: "Methods for quantifying and prioritizing shrimp welfare threats"
   author: "Hannah McKay and William McAuliffe"
   repo-url: https://github.com/rethinkpriorities/quantifying_shrimp_pain/
   repo-actions: [issue]
