@@ -144,7 +144,7 @@ density_summary<-cbind(round(rbind(
   (quantile(x =average_hours_dens$Disabling_Equivalent, probs = c(.05, .50, .95)))), 10),
   "Mean" = colMeans(average_hours_dens))
 row.names(density_summary)<-c(
-  "Annoying_dens","Hurtful_dens","Disabling_dens", "Excruciating_dens", "Disabling-Equivalent_High_density")
+  "Annoying_dens","Hurtful_dens","Disabling_dens", "Excruciating_dens", "Disabling-Equivalent_High_stocking_density")
 show_table(density_summary)
 
 ```

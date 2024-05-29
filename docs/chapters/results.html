@@ -287,7 +287,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> High density </td>
+   <td style="text-align:left;"> High stocking density </td>
    <td style="text-align:center;"> 5.2 </td>
    <td style="text-align:center;"> 49 </td>
    <td style="text-align:center;"> 112 </td>
@@ -482,7 +482,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="ot">&lt;-</span><span class="fu">rbind</span>(percent_total, percent_overall)</span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"subst"</span>, <span class="st">"Lack of substrate"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"dens"</span>, <span class="st">"High density"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"dens"</span>, <span class="st">"High stocking density"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"salin"</span>, <span class="st">"Low salinity"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
 <span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"ammon"</span>, <span class="st">"High un-ionized ammonia"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
 <span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"ph"</span>, <span class="st">"Nonoptimal pH"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
@@ -550,8 +550,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Pain)</span>
 <span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>layout <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">area</span>(<span class="at">t =</span> <span class="dv">1</span>, <span class="at">l =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="dv">200</span>, <span class="at">r =</span> <span class="dv">110</span>),</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">area</span>(<span class="at">t =</span> <span class="dv">105</span>, <span class="at">l =</span> <span class="dv">36</span>, <span class="at">b =</span> <span class="dv">200</span>, <span class="at">r =</span> <span class="dv">110</span>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">area</span>(<span class="at">t =</span> <span class="dv">1</span>, <span class="at">l =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="dv">200</span>, <span class="at">r =</span> <span class="dv">220</span>),</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">area</span>(<span class="at">t =</span> <span class="dv">105</span>, <span class="at">l =</span> <span class="dv">72</span>, <span class="at">b =</span> <span class="dv">200</span>, <span class="at">r =</span> <span class="dv">220</span>)</span>
 <span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="co"># using the patchwork package to arrange the plots</span></span>
@@ -561,7 +561,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="at">top=</span>.<span class="dv">05</span>,<span class="at">r=</span>.<span class="dv">1</span>,<span class="at">b=</span>.<span class="dv">05</span>,<span class="at">l=</span><span class="sc">-</span>.<span class="dv">4</span>), <span class="st">"cm"</span>)) </span>
 <span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>fig1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave(filename="results/fig1.png", plot=fig1, width=13, height=8.5)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave(filename="results/fig1.png", plot=fig1, width=14, height=8.5)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><img src="../results/fig1.png" class="img-fluid"></p>
 <p>We also plot the proportion of pain of each intensity for each welfare threat:</p>

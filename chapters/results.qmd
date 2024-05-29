@@ -121,7 +121,7 @@ colnames(percent_overall)<-colnames(percent_total)
 results_paintype<-rbind(percent_total, percent_overall)
 
 results_paintype$welfare_threat<-gsub("subst", "Lack of substrate", results_paintype$welfare_threat)
-results_paintype$welfare_threat<-gsub("dens", "High density", results_paintype$welfare_threat)
+results_paintype$welfare_threat<-gsub("dens", "High stocking density", results_paintype$welfare_threat)
 results_paintype$welfare_threat<-gsub("salin", "Low salinity", results_paintype$welfare_threat)
 results_paintype$welfare_threat<-gsub("ammon", "High un-ionized ammonia", results_paintype$welfare_threat)
 results_paintype$welfare_threat<-gsub("ph", "Nonoptimal pH", results_paintype$welfare_threat)
@@ -196,8 +196,8 @@ diseq.plot<-ggplot(results_diseq) +
   facet_wrap(~Pain)
 
 layout <- c(
-  area(t = 1, l = 1, b = 200, r = 110),
-  area(t = 105, l = 36, b = 200, r = 110)
+  area(t = 1, l = 1, b = 200, r = 220),
+  area(t = 105, l = 72, b = 200, r = 220)
 )
 
 # using the patchwork package to arrange the plots
@@ -208,7 +208,7 @@ fig1<-paintype.plot + diseq.plot +
 
 fig1
 
-#ggsave(filename="results/fig1.png", plot=fig1, width=13, height=8.5)
+#ggsave(filename="results/fig1.png", plot=fig1, width=14, height=8.5)
 ```
 
 ![](/results/fig1.png)
