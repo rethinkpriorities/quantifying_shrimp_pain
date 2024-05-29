@@ -1,2 +1,0 @@
-"0","paintrack_disease<-(ahpnd_dur_disease * ahpnd_pain_disease * 0.5) + ("
-"0","  wssv_dur_disease * wssv_pain_disease * 0.5)"

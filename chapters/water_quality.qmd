@@ -59,13 +59,14 @@ prev_lowdo<-as.data.frame(prev_lowdo_dist)
 
 ## Pain-Tracks
 
+[Krummenauer et al. (2011)](https://doi.org/10.1111/j.1749-7345.2011.00507.x) and [Supriatna et al. (2017)](https://perma.cc/H7MN-XWCA) suggest that DO concentrations get worse as the production cycle progresses, especially after 90 days. We therefore construct separate Pain-Tracks for the first and second half of the production cycle for each farm type.
+
 Our pain tracks for low DO on the four farm types are as follows:
 
 ![](images/lowdo.png)
 
-[Krummenauer et al. (2011)](https://doi.org/10.1111/j.1749-7345.2011.00507.x) and [Supriatna et al. (2017)](https://perma.cc/H7MN-XWCA) suggest that DO concentrations get worse as the production cycle progresses, especially after 90 days. We therefore construct separate Pain-Tracks for the first and second half of the production cycle for each farm type.
 
-We therefore need to split our estimates of average days lived into the first and second halves of production:
+To construct these Pain-Tracks, we need to split our estimates of average days lived into the first and second halves of production:
 
 ```{r}
 max(average_days_lived)

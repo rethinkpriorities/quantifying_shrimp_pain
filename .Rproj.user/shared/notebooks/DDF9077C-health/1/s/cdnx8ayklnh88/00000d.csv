@@ -1,4 +1,0 @@
-"0",""
-"0",""
-"0","first_dur_ablation<-sample_trunclogn(n, 1, .5, 1/12, 2)  "
-"0","plot(density(first_dur_ablation), xlab=""Hours"", main=""Duration of acute eyestalk ablation pain"")"

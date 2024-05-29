@@ -1,4 +1,0 @@
-"0","ablation_farms<-data.frame(ext = paintrack_ablation*prev_ablation$Extensive*prop_sample$Ext,"
-"0","                   semi = paintrack_ablation*prev_ablation$`Semi-Intensive`*prop_sample$Semi,"
-"0","                   int = paintrack_ablation*prev_ablation$Intensive*prop_sample$Int,"
-"0","                   super = paintrack_ablation*prev_ablation$`Super-Intensive`*prop_sample$Super)"

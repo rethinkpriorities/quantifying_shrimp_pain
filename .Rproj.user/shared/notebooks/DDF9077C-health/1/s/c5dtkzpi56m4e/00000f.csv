@@ -1,5 +1,0 @@
-"0","wssv_dur_disease<-runif(n, 72, 240)"
-"0",""
-"0","wssv_pain_disease<-data.frame(sample_dirichlet(0.05, 30, 50, 19.95)) %>%"
-"0","  `colnames<-`(paincategories)"
-"0",""

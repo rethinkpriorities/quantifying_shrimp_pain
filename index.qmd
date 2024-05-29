@@ -1,6 +1,6 @@
 # Preface {.unnumbered}
 
-In this document, we estimate the intensity, duration, and prevalence of pain caused to farmed shrimp by 18 welfare threats. 
+In this document, we estimate the intensity, duration, and prevalence of pain caused to farmed shrimp by 18 welfare threats. You can download the code we use fromour [GitHub Repository](https://github.com/rethinkpriorities/quantifying_shrimp_pain).
 
 We assess only the ongrowing stage of shrimp farming (which includes the postlarval and juvenile–subadult life stages), because the vast majority of research and on-farm surveys are conducted at this stage. Hatcheries (which supply ongrowing farms) are less studied and have different welfare requirements ([Pedrazzani et al., 2023](https://doi.org/10.3390/ani13050807)), which would require its own assessment for pain quantification.
 

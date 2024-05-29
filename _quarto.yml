@@ -33,7 +33,7 @@ format:
     code-overflow: wrap
     code-copy: true
     toc: true
-    toc-expand: 2
+    toc-expand: 3
     callout-appearance: simple
     number-depth: 3
     callout-icon: false

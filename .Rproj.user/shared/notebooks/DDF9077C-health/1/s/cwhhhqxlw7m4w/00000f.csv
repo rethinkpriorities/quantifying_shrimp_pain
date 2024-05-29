@@ -1,5 +1,0 @@
-"0","ahpnd_dur_disease<-runif(n, 12, 600)"
-"0",""
-"0","ahpnd_pain_disease<-data.frame(sample_dirichlet(0.01, 10, 80, 9.99)) %>%"
-"0","  `colnames<-`(paincategories)"
-"0",""

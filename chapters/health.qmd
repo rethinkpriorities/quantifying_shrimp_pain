@@ -178,7 +178,7 @@ show_table(ablation_summary)
 
 # Biosecurity failures
 
-Here, we are evaluating shrimp suffering from diseases cause only by biosecurity failures on a farm. This welfare threat does not get credit for all of the welfare issues associated with diseases, but only diseases that cannot be explained by other factors. Biosecurity failures may include using a contaminated water source, equipment or feed, or not preventing wild animals (e.g., birds or insects) from transmitting a disease. 
+Here, we are evaluating shrimp suffering from diseases cause only by biosecurity failures on a farm. This welfare threat does not get credit for all of the welfare issues associated with diseases, but only diseases that cannot be explained by other factors. Biosecurity failures may include using a contaminated water source, equipment or feed, or not preventing wild animals (e.g., birds or insects) from transmitting a disease.
 
 ## Prevalence
 
@@ -192,9 +192,9 @@ Here, we hypothesize that half of these are from diseases. This would mean rough
 
 The numbers in the table below equate to roughly 5--20% of shrimp overall when considering the proportions of farm types.
 
-| **Extensive**      | **Semi-intensive**   | **Intensive**        | **Super-intensive** |
+| **Extensive**       | **Semi-intensive**     | **Intensive**       | **Super-intensive**  |
 |------------------|------------------|------------------|------------------|
-| 5--20% (mean 12.5%) | 5.5--30% (mean 17.75%) | 5--18% (mean 11.5%) | 0.5--5% (mean 2.75%)     |
+| 5--20% (mean 12.5%) | 5.5--30% (mean 17.75%) | 5--18% (mean 11.5%) | 0.5--5% (mean 2.75%) |
 
 ```{r}
 #| layout-ncol: 4
@@ -268,7 +268,13 @@ paintrack_disease<-(ahpnd_dur_disease * ahpnd_pain_disease * 0.5) + (
 
 **AHPND** A behavioral sign is dropping to the bottom of the pond, while physiological signs are soft shells and pigment loss in the connective tissue.
 
-**WSSV** Symptoms include [(WOAH, 2023, Ch. 2.2.8, p.3)](https://perma.cc/UR3K-99VY): - Lethargy - Reduced or ceased feeding - Abnormal swimming (slow, on the side, near water surface or round edges of pond) - 'Loosened attachment of the carapace' - Delayed hemolymph clotting
+**WSSV** Symptoms include [(WOAH, 2023, Ch. 2.2.8, p.3)](https://perma.cc/UR3K-99VY):
+
+-   Lethargy
+-   Reduced or ceased feeding
+-   Abnormal swimming (slow, on the side, near water surface or round edges of pond)
+-   Loosened attachment of the carapace
+-    Delayed hemolymph clotting
 :::
 
 Weight the pain tracks by prevalence estimations and proportion of farming attributable to each farm type.

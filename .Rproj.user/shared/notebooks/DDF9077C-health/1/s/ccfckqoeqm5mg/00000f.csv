@@ -1,8 +1,0 @@
-"0","prev_disease_stat <- data.frame(FarmType = c("
-"0","  ""Extensive"", ""Semi-Intensive"",""Intensive"",""Super-Intensive""),"
-"0","                               mean = c(0.125, 0.1775, 0.115, 0.0275),"
-"0","                               sd = c(0.04725389, 0.07789251, 0.04081146, 0.01525188))"
-"0","prev_disease_dist<-mapply(sample_beta, prev_disease_stat$mean, prev_disease_stat$sd)"
-"0","colnames(prev_disease_dist)<-prev_disease_stat$FarmType"
-"0",""
-"0","prev_disease<-as.data.frame(prev_disease_dist)"
