@@ -75,6 +75,7 @@ We can also see the average number of female broodstock.
 ```{r}
 mean(vannamei_broodstock+monodon_broodstock+otherpen_broodstock)
 ```
+
 ## Pain-Tracks
 
 ![](images/ablation.png)
