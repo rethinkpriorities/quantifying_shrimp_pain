@@ -71,6 +71,10 @@ prev_ablation<-prev_ablation_unadjusted*female_broodstock_prop
 
 ```
 
+We can also see the average number of female broodstock.
+```{r}
+mean(vannamei_broodstock+monodon_broodstock+otherpen_broodstock)
+```
 ## Pain-Tracks
 
 ![](images/ablation.png)
