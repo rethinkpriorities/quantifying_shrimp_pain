@@ -283,15 +283,12 @@ allpain_totals_summary
 total_byintensity<-rbind(annoying_totals_summary, hurtful_totals_summary,
                          disabling_totals_summary, excruciating_totals_summary)
 
-total_byintensity
-
 percent<-total_byintensity %>%
   mutate(as.percent=(Mean/sum(Mean))*100)
 
-percent
 
 paintype_results<-plyr::rbind.fill(percent, allpain_totals_summary)
-paintype_results
+show_table(paintype_results)
 ```
 
 
@@ -416,7 +413,6 @@ layout <- c(
 
 # using the patchwork package to arrange the plots
 fig1<-paintype.plot + diseq.plot +
-  plot_annotation(caption="Circles are means, lines are 90% credible intervals. Totals are means and credible intervals summed.") +
   plot_layout(design = layout, guides="collect") & theme(legend.position = 'bottom', plot.caption = element_text(hjust = 0.7, size=12),
   plot.margin = unit(c(top=.05,r=.1,b=.05,l=-.4), "cm")) 
 
@@ -461,7 +457,7 @@ fig3<-ggplot(results_paintype) +
   scale_y_discrete(expand=c(0,0))
 fig3
 
-ggsave(filename="results/fig3.png", plot=fig3, width=9.5, height=5.5)
+ggsave(filename="../results/fig3.png", plot=fig3, width=9.5, height=5.5)
 ```
 
 ![](/results/fig3.png)
