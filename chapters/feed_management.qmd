@@ -280,4 +280,9 @@ for (i in 1:length(feedmanagement)){
   write.csv(get(feedmanagement[i]), file=savefile)
 }
 
+write.csv(average_hours_hunger,
+          file="../results/full_results/hunger.csv", row.names=FALSE)
+write.csv(average_hours_malnu,
+          file="../results/full_results/malnu.csv", row.names=FALSE)
+
 ```

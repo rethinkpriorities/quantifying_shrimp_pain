@@ -4,6 +4,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+{{< include _functions_data.qmd >}}
+
 # Results {.unnumbered}
 
 Now we put the results from each welfare threat into one table.
@@ -42,6 +44,57 @@ kable(x, table.attr = 'data-quarto-disable-processing="true"', align="c") %>%
 
 ```
 
+We calculate the total time in disabling-equivalent pain, using all of the 100,000 simulations. Then, we calculate the 5th, 50th, and 95th percentiles for the total time in pain.
+```{r}
+#| output: false
+# load disabling-equivalent estimates
+
+totals_files <- list.files(path="../results/full_results", pattern='\\.csv$', full.names=TRUE)
+
+totals_csv <- lapply(totals_files, read.csv,)
+
+names(totals_csv) <- gsub(".csv","",
+                       list.files("../results/full_results", pattern='\\.csv$', full.names = FALSE), fixed = TRUE)
+
+list2env(totals_csv, globalenv())
+```
+
+```{r}
+
+# putting all the disabling-equivalent estimates (100,000 for each threat) into one data frame
+totals<-data.frame(Eyestalk_ablation = ablation[,5],
+              `High_un-ionized_ammonia` = ammon[,5],
+              High_stocking_density=dens[,5],
+              Biosecurity_failures=disease[,5],
+              Harvest=harvest[,5],
+              High_temperature=hitemp[,5],
+              Hunger=hunger[,5],
+              Low_dissolved_oxygen=lowdo[,5],
+              Low_temperature=lowtemp[,5],
+              Malnutrition=malnu[,5],
+              Waterless_transport=nowater[,5],
+              Nonoptimal_pH=ph[,5],
+              Pollutants=pollute[,5],
+              Predators=pred[,5],
+              Low_salinity=salin[,5],
+              `Ice-slurry_slaughter`=slaught[,5],
+              Lack_of_substrate=subst[,5],
+              `Water-based_transport`=water[,5])
+
+# summing across rows to get 100,000 estimates of the total disabling-equivalent hours
+totals <- totals %>%
+  adorn_totals("col")
+
+# finding the 5th, 50th, and 95th percentiles and mean
+totals_summary<-as.data.frame(cbind(welfare_threat="Total", round(rbind(
+  quantile(x=totals$Total, probs = c(.05, .50, .95))), 10),
+  "Mean" = mean(totals$Total)))
+totals_summary[,2:5]<-as.numeric(totals_summary[,2:5])
+
+totals_summary
+```
+
+
 ```{r}
 
 ## Results
@@ -59,7 +112,7 @@ diseq_results<-comparison_table %>%
 # arranging the rows in descending order and adding a total row.
 results<-as.data.frame(diseq_results, rownames=TRUE) %>%
   arrange(desc(Mean)) %>%
-  adorn_totals("row") %>%
+  rbind(totals_summary) %>%
   column_to_rownames("welfare_threat") %>%
   mutate(`5%` = signif(`5%`, pmax(2,trunc(log10(`5%`)+1))), # rounding all results to 2 significant figure, except those with more than two significant digits before the decimal point (log10 counts the digits)
          `50%` = signif(`50%`, pmax(2,trunc(log10(`50%`)+1))),
@@ -83,6 +136,167 @@ show_table(results) %>%
 We also want to see the results broken down by pain type.
 
 ```{r}
+annoying_totals<-data.frame(Eyestalk_ablation = ablation[,1],
+              `High_un-ionized_ammonia` = ammon[,1],
+              High_stocking_density=dens[,1],
+              Biosecurity_failures=disease[,1],
+              Harvest=harvest[,1],
+              High_temperature=hitemp[,1],
+              Hunger=hunger[,1],
+              Low_dissolved_oxygen=lowdo[,1],
+              Low_temperature=lowtemp[,1],
+              Malnutrition=malnu[,1],
+              Waterless_transport=nowater[,1],
+              Nonoptimal_pH=ph[,1],
+              Pollutants=pollute[,1],
+              Predators=pred[,1],
+              Low_salinity=salin[,1],
+              `Ice-slurry_slaughter`=slaught[,1],
+              Lack_of_substrate=subst[,1],
+              `Water-based_transport`=water[,1])
+
+# summing across rows to get 100,000 estimates of the total disabling-equivalent hours
+annoying_totals <- annoying_totals %>%
+  adorn_totals("col")
+
+# finding the 5th, 50th, and 95th percentiles and mean
+annoying_totals_summary<-as.data.frame(cbind(welfare_threat="Annoying", round(rbind(
+  quantile(x=annoying_totals$Total, probs = c(.05, .50, .95))), 10),
+  "Mean" = mean(annoying_totals$Total)))
+annoying_totals_summary[,2:5]<-as.numeric(annoying_totals_summary[,2:5])
+
+annoying_totals_summary
+
+## Hurtful totals
+hurtful_totals<-data.frame(Eyestalk_ablation = ablation[,2],
+              `High_un-ionized_ammonia` = ammon[,2],
+              High_stocking_density=dens[,2],
+              Biosecurity_failures=disease[,2],
+              Harvest=harvest[,2],
+              High_temperature=hitemp[,2],
+              Hunger=hunger[,2],
+              Low_dissolved_oxygen=lowdo[,2],
+              Low_temperature=lowtemp[,2],
+              Malnutrition=malnu[,2],
+              Waterless_transport=nowater[,2],
+              Nonoptimal_pH=ph[,2],
+              Pollutants=pollute[,2],
+              Predators=pred[,2],
+              Low_salinity=salin[,2],
+              `Ice-slurry_slaughter`=slaught[,2],
+              Lack_of_substrate=subst[,2],
+              `Water-based_transport`=water[,2])
+
+# summing across rows to get 100,000 estimates of the total disabling-equivalent hours
+hurtful_totals <- hurtful_totals %>%
+  adorn_totals("col")
+
+# finding the 5th, 50th, and 95th percentiles and mean
+hurtful_totals_summary<-as.data.frame(cbind(welfare_threat="Hurtful", round(rbind(
+  quantile(x=hurtful_totals$Total, probs = c(.05, .50, .95))), 10),
+  "Mean" = mean(hurtful_totals$Total)))
+hurtful_totals_summary[,2:5]<-as.numeric(hurtful_totals_summary[,2:5])
+
+hurtful_totals_summary
+
+## Disabling
+disabling_totals<-data.frame(Eyestalk_ablation = ablation[,3],
+              `High_un-ionized_ammonia` = ammon[,3],
+              High_stocking_density=dens[,3],
+              Biosecurity_failures=disease[,3],
+              Harvest=harvest[,3],
+              High_temperature=hitemp[,3],
+              Hunger=hunger[,3],
+              Low_dissolved_oxygen=lowdo[,3],
+              Low_temperature=lowtemp[,3],
+              Malnutrition=malnu[,3],
+              Waterless_transport=nowater[,3],
+              Nonoptimal_pH=ph[,3],
+              Pollutants=pollute[,3],
+              Predators=pred[,3],
+              Low_salinity=salin[,3],
+              `Ice-slurry_slaughter`=slaught[,3],
+              Lack_of_substrate=subst[,3],
+              `Water-based_transport`=water[,3])
+
+# summing across rows to get 100,000 estimates of the total disabling-equivalent hours
+disabling_totals <- disabling_totals %>%
+  adorn_totals("col")
+
+# finding the 5th, 50th, and 95th percentiles and mean
+disabling_totals_summary<-as.data.frame(cbind(welfare_threat="Disabling", round(rbind(
+  quantile(x=disabling_totals$Total, probs = c(.05, .50, .95))), 10),
+  "Mean" = mean(disabling_totals$Total)))
+disabling_totals_summary[,2:5]<-as.numeric(disabling_totals_summary[,2:5])
+
+disabling_totals_summary
+
+## Ecruciating
+excruciating_totals<-data.frame(Eyestalk_ablation = ablation[,4],
+              `High_un-ionized_ammonia` = ammon[,4],
+              High_stocking_density=dens[,4],
+              Biosecurity_failures=disease[,4],
+              Harvest=harvest[,4],
+              High_temperature=hitemp[,4],
+              Hunger=hunger[,4],
+              Low_dissolved_oxygen=lowdo[,4],
+              Low_temperature=lowtemp[,4],
+              Malnutrition=malnu[,4],
+              Waterless_transport=nowater[,4],
+              Nonoptimal_pH=ph[,4],
+              Pollutants=pollute[,4],
+              Predators=pred[,4],
+              Low_salinity=salin[,4],
+              `Ice-slurry_slaughter`=slaught[,4],
+              Lack_of_substrate=subst[,4],
+              `Water-based_transport`=water[,4])
+
+# summing across rows to get 100,000 estimates of the total disabling-equivalent hours
+excruciating_totals <- excruciating_totals %>%
+  adorn_totals("col")
+
+# finding the 5th, 50th, and 95th percentiles and mean
+excruciating_totals_summary<-as.data.frame(cbind(welfare_threat="Excruciating", round(rbind(
+  quantile(x=excruciating_totals$Total, probs = c(.05, .50, .95))), 10),
+  "Mean" = mean(excruciating_totals$Total)))
+excruciating_totals_summary[,2:5]<-as.numeric(excruciating_totals_summary[,2:5])
+
+excruciating_totals_summary
+
+allpain_totals<-data.frame(annoying_totals$Total,
+                           hurtful_totals$Total,
+                           disabling_totals$Total,
+                           excruciating_totals$Total)
+
+# summing across rows to get 100,000 estimates of the total disabling-equivalent hours
+allpain_totals <- allpain_totals %>%
+  mutate(Total=rowSums(allpain_totals))
+
+# finding the 5th, 50th, and 95th percentiles and mean
+allpain_totals_summary<-as.data.frame(cbind(welfare_threat="Total (pain categories summed)", round(rbind(
+  quantile(x=allpain_totals$Total, probs = c(.05, .50, .95))), 10),
+  "Mean" = mean(allpain_totals$Total)))
+allpain_totals_summary[,2:5]<-as.numeric(allpain_totals_summary[,2:5])
+
+allpain_totals_summary
+
+total_byintensity<-rbind(annoying_totals_summary, hurtful_totals_summary,
+                         disabling_totals_summary, excruciating_totals_summary)
+
+total_byintensity
+
+percent<-total_byintensity %>%
+  mutate(as.percent=(Mean/sum(Mean))*100)
+
+percent
+
+paintype_results<-plyr::rbind.fill(percent, allpain_totals_summary)
+paintype_results
+```
+
+
+
+```{r}
 
 results_byintensity<-comparison_table %>%
   dplyr::filter(!str_detect(welfare_threat, "Disabling-Equivalent")) %>%
@@ -100,22 +314,22 @@ percent_total<-percent_byintensity %>%
   mutate_at(.vars = vars(total), .funs = ~ case_when(
     abs(.x) > 0.001 ~ round(.x, digits = 2), TRUE ~ round(.x, digits = 4)))
 
-total_byintensity<-reframe(results_byintensity, .by=pain_type, 
-                            total=sum(Mean), 
-                            total.95=sum(`95%`),
-                           total.50=sum(`50%`),
-                            total.5=sum(`5%`)) %>%
-  mutate(percent.total=total/sum(total))
+# total_by.intensity<-reframe(results_byintensity, .by=pain_type, 
+#                              total=sum(Mean), 
+#                              total.95=sum(`95%`),
+#                             total.50=sum(`50%`),
+#                              total.5=sum(`5%`)) %>%
+#   mutate(percent.total=total/sum(total))
 
 percent_overall<-data.frame(
   pain_type=c("Annoying", "Hurtful", "Disabling", "Excruciating"),
   welfare_threat = rep("Total", 4), 
-  `5%`=total_byintensity$total.5,
-  `50%`=total_byintensity$total.50,
-  `95%`=total_byintensity$total.95,
-  Mean=total_byintensity$total,
-  percent=total_byintensity$percent.total,
-  total=rep(sum(total_byintensity$total), 4))
+  `5%`=total_byintensity$`5%`,
+  `50%`=total_byintensity$`50%`,
+  `95%`=total_byintensity$`95%`,
+  Mean=total_byintensity$Mean,
+  percent=total_byintensity$Mean/sum(total_byintensity$Mean),
+  total=rep(sum(total_byintensity$Mean), 4))
 colnames(percent_overall)<-colnames(percent_total)
 
 results_paintype<-rbind(percent_total, percent_overall)
@@ -208,7 +422,7 @@ fig1<-paintype.plot + diseq.plot +
 
 fig1
 
-#ggsave(filename="results/fig1.png", plot=fig1, width=14, height=8.5)
+#ggsave(filename="../results/fig1.png", plot=fig1, width=14, height=8.5)
 ```
 
 ![](/results/fig1.png)
@@ -247,7 +461,7 @@ fig3<-ggplot(results_paintype) +
   scale_y_discrete(expand=c(0,0))
 fig3
 
-#ggsave(filename="results/fig3.png", plot=fig3, width=9.5, height=5.5)
+ggsave(filename="results/fig3.png", plot=fig3, width=9.5, height=5.5)
 ```
 
 ![](/results/fig3.png)

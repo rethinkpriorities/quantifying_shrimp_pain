@@ -423,4 +423,12 @@ for (i in 1:length(pondhabitat)){
   savefile<-paste0(paste0("../results/", pondhabitat[i]), ".csv")
   write.csv(get(pondhabitat[i]), file=savefile)
 }
+
+write.csv(average_hours_dens,
+          file="../results/full_results/dens.csv", row.names=FALSE)
+write.csv(average_hours_subst,
+          file="../results/full_results/subst.csv", row.names=FALSE)
+write.csv(average_hours_pred,
+          file="../results/full_results/pred.csv", row.names=FALSE)
+
 ```

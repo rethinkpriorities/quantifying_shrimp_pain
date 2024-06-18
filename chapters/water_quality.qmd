@@ -1228,12 +1228,28 @@ show_table(pollute_summary)
 #| eval: true
 
 waterquality<-c("lowdo_summary", "hitemp_summary", "lowtemp_summary",
-         "salin_summary", "ph_summary", "ammon_summary", 
+         "salin_summary", "ph_summary", "ammon_summary",
          "pollute_summary")
 
 for (i in 1:length(waterquality)){
   savefile<-paste0(paste0("../results/", waterquality[i]), ".csv")
   write.csv(get(waterquality[i]), file=savefile)
 }
+
+write.csv(average_hours_lowdo,
+          file="../results/full_results/lowdo.csv", row.names=FALSE)
+write.csv(average_hours_hitemp,
+          file="../results/full_results/hitemp.csv", row.names=FALSE)
+write.csv(average_hours_lowtemp,
+          file="../results/full_results/lowtemp.csv", row.names=FALSE)
+write.csv(average_hours_salin,
+          file="../results/full_results/salin.csv", row.names=FALSE)
+write.csv(average_hours_ph,
+          file="../results/full_results/ph.csv", row.names=FALSE)
+write.csv(average_hours_ammon,
+          file="../results/full_results/ammon.csv", row.names=FALSE)
+write.csv(average_hours_pollute,
+          file="../results/full_results/pollute.csv", row.names=FALSE)
+
 
 ```

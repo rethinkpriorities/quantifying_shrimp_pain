@@ -254,4 +254,8 @@ for (i in 1:length(transportation)){
   write.csv(get(transportation[i]), file=savefile)
 }
 
+write.csv(average_hours_water,
+          file="../results/full_results/water.csv", row.names=FALSE)
+write.csv(average_hours_nowater,
+          file="../results/full_results/nowater.csv", row.names=FALSE)
 ```

@@ -1,7 +1,7 @@
 "0","prev_malnu_stat <- data.frame(FarmType = c("
 "0","  ""Extensive"", ""Semi-Intensive"",""Intensive"",""Super-Intensive""),"
 "0","                               mean = c(0.05, 0.05, 0.05, 0.05),"
-"0","                               sd = c(0.03671062, 0.03671062, 0.03671062, 0.03671062))"
+"0","                               sd = c(0.0368478, 0.0368478, 0.0368478, 0.0368478))"
 "0","prev_malnu_dist<-mapply(sample_beta, prev_malnu_stat$mean, prev_malnu_stat$sd)"
 "0","colnames(prev_malnu_dist)<-prev_malnu_stat$FarmType"
 "0",""

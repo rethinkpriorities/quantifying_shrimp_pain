@@ -334,4 +334,8 @@ for (i in 1:length(health)){
   write.csv(get(health[i]), file=savefile)
 }
 
+write.csv(average_hours_ablation,
+          file="../results/full_results/ablation.csv", row.names=FALSE)
+write.csv(average_hours_disease,
+          file="../results/full_results/disease.csv", row.names=FALSE)
 ```

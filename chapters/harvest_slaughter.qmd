@@ -316,4 +316,10 @@ for (i in 1:length(harvest)){
   write.csv(get(harvest[i]), file=savefile)
 }
 
+
+write.csv(average_hours_harvest,
+          file="../results/full_results/harvest.csv", row.names=FALSE)
+write.csv(average_hours_slaught,
+          file="../results/full_results/slaught.csv", row.names=FALSE)
+
 ```
