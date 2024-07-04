@@ -2,7 +2,10 @@
 title: "Water quality"
 ---
 
+
 {{< include _functions_data.qmd >}}
+
+
 
 In this chapter we evaluate the effects of seven water quality parameters on shrimp. We evaluate each variable in isolation, but in reality, many have direct effects on other variables. We also assume that water quality is uniform throughout the tank, though this is likely not the case. The probable impact on our results is that we underestimate the prevalence of water quality issues for intensive or super-intensive systems, because their high stocking densities might mean that some shrimp are forced to occupy less desirable parts of the tank.
 

@@ -144,7 +144,7 @@ otherpen_eggs<-runif(100000, min=200000, max=1000000) # according to Table 4.6a,
 otherpen_broodstock<-allspecies_dof$otherpen_dof/otherpen_eggs*0.5
 otherpen_broodstock_prop<-otherpen_broodstock/(otherpen_broodstock+allspecies_dof$otherpen_dof)
 
-female_broodstock_prop<-(vannamei_broodstock+monodon_broodstock+otherpen_broodstock)/(vannamei_broodstock+monodon_broodstock+otherpen_broodstock+allspecies_dof$vannamei_dof+allspecies_dof$monodon_dof+allspecies_dof$otherpen_dof)
+female_broodstock_prop<-readRDS(file="../data/female_broodstock_prop.RData")
 
 # load sold live proportion
 sold_live<-runif(n, min=0.01, max=0.02)

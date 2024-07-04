@@ -6,6 +6,7 @@ title: "Pond habitat"
 {{< include _functions_data.qmd >}}
 
 
+
 # High density 
 
 To avoid double counting and because we assume most farmers using very high densities are using methods to prevent low DO and high ammonia, we are not counting the water-quality effects of high densities here.

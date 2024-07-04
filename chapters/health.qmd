@@ -2,7 +2,10 @@
 title: "Health"
 ---
 
+
 {{< include _functions_data.qmd >}}
+
+
 
 # Eyestalk ablation
 
@@ -10,7 +13,7 @@ We split eyestalk ablation into two categories: The ablation itself and the hour
 
 ## Prevalence
 
-An estimate we will use for both parts is how often eyestalk ablation occurs in each production system. We assume that eyestalk ablation becomes more common in more intensive systems because these systems are far more likely to rely on captive broodstock than wild-caught shrimp. Still, the prevalence is unlikely to be 100% for intensive and super-intensive farms because some broodstock suppliers have stopped using eyestalk ablation ([Albalat et al., 2022](https://doi.org/10.3389/fmars.2022.886024)). We are less certain to what extent semi-intensive farms use captive broodstock. Traditionally, extensive systems relied more on wild-caught young shrimp, so we are less certain how prevalent eyestalk ablation is in thiis farm type.
+An estimate we will use for both parts is how often eyestalk ablation occurs in each production system. We assume that eyestalk ablation becomes more common in more intensive systems because these systems are far more likely to rely on captive broodstock than wild-caught shrimp. Still, the prevalence is unlikely to be 100% for intensive and super-intensive farms because some broodstock suppliers have stopped using eyestalk ablation ([Albalat et al., 2022](https://doi.org/10.3389/fmars.2022.886024)). We are less certain to what extent semi-intensive farms use captive broodstock. Traditionally, extensive systems relied more on wild-caught young shrimp, so we are less certain how prevalent eyestalk ablation is in this farm type.
 
 Our prevalence estimates are:
 
@@ -42,14 +45,50 @@ colnames(prev_ablation_dist)<-prev_ablation_stat$FarmType
 prev_ablation_unadjusted<-as.data.frame(prev_ablation_dist)
 ```
 
-We also need to adjust for the fact that only female broodstock are subjected to eyestalk ablation, not their offspring who are actually raised for food. We calculate the number of broodstock by using the total number of shrimp that die on farms (from [Waldhorn & Autric's 2023](http://doi.org/10.31219/osf.io/b8n3t) Guesstimate model), divided by the number of eggs different species lay per spawn, and assuming only half the eggs hatch.
+We also need to adjust for the fact that only female broodstock are subjected to eyestalk ablation, not their offspring who are actually raised for food. We calculate the number of broodstock by using the total number of shrimp that die on farms *from the postlarval stage onward* (from [Waldhorn & Autric's 2023](http://doi.org/10.31219/osf.io/b8n3t) Guesstimate model), divided by the number of eggs different species lay per spawn, and assuming only half the eggs hatch.
 
-See [set up chapter](set-up.qmd) for how the variables used here were calculated.
+See [set up chapter](set-up.qmd) for how the variables used here were calculated. First, we must calculate the number of shrimp that die on farms from the postlarval stage onward. We do so because other threats are evaluated for the harms they cause in the ongrowing stage only, so we must calculate the proportion of shrimp that are broodstock against only this population. handling the data in the same way as the set-up, using the `kde1d` function to generate 100,000 samples.
 
 ```{r}
-# distribution of egg numbers
-allspecies_dof<-as.data.frame(allspecies_dof)
+library(kde1d) # load the required package
 
+allspecies_dof<-as.data.frame(allspecies_dof) # load the estimations for number of shrimp that die on farms, calculated in the set-up chapter
+
+# load mortality samples to calculate larval mortality rates for each species
+vannamei_mort_samp<-read.csv("../data/vannamei_mortality_rates.csv",header=TRUE, sep=",") # Cells UY, UJ, and TF in the Guesstimate model
+monodon_mort_samp<-read.csv("../data/monodon_mortality_rates.csv", header=TRUE, sep=",") # Cells ZA, XZ, and YR in the Guesstimate model
+otherpen_mort_samp<-read.csv("../data/otherpen_mortality_rates.csv", header=TRUE,sep=",")
+ # Cells MU, UQ, and XJ in the Guesstimate model
+
+vannamei_larval_prob<-data.frame(larval=rep(NA, 100000)) # create empty data frame
+
+# fill empty data frame with data simulated from Guesstimate data using kde1d function
+vannamei_larval_prob$larval<-vannamei_mort_samp$larval %>% 
+  kde1d(xmin = 0,
+        xmax = 1) %>% # Probabilities cannot be less than 0 or more than 1 so we add these as xmin and xmax
+  rkde1d(100000,.)
+
+# repeat for other taxa
+monodon_larval_prob<-data.frame(larval=rep(NA, 100000))
+monodon_larval_prob$larval<-monodon_mort_samp$larval %>% 
+  kde1d(xmin = 0, 
+        xmax = 1) %>%
+  rkde1d(100000,.)
+otherpen_larval_prob<-data.frame(larval=rep(NA, 100000))
+otherpen_larval_prob$larval<-otherpen_mort_samp$larval %>% 
+  kde1d(xmin = 0, 
+        xmax = 1) %>%
+  rkde1d(100000,.)
+
+# calculate the number of shrimp that die on farms after the larval stage for each species
+vannamei_dof_pl<-allspecies_dof$vannamei_dof*(1-vannamei_larval_prob$larval)
+monodon_dof_pl<-allspecies_dof$monodon_dof*(1-monodon_larval_prob$larval)
+otherpen_dof_pl<-allspecies_dof$otherpen_dof*(1-otherpen_larval_prob$larval)
+```
+
+We now have the number of shrimp that die on farms, both in total and from the postlarval stage onward. Next, we can estimate the number of broodstock that would have been needed to produce the total number of shrimp that died on farms, and calculate that number of broodstock as a proportion of our population of interest (shrimp in the ongrowing stage).
+```{r}
+# distribution of egg numbers
 vannamei_eggs<-runif(100000, min=100000, max=250000) # according to FAO
 vannamei_broodstock<-allspecies_dof$vannamei_dof/vannamei_eggs*0.5 # assuming only half of eggs hatch. 
 vannamei_broodstock_prop<-vannamei_broodstock/(vannamei_broodstock+allspecies_dof$vannamei_dof)
@@ -62,18 +101,21 @@ otherpen_eggs<-runif(100000, min=200000, max=1000000) # according to Table 4.6a,
 otherpen_broodstock<-allspecies_dof$otherpen_dof/otherpen_eggs*0.5
 otherpen_broodstock_prop<-otherpen_broodstock/(otherpen_broodstock+allspecies_dof$otherpen_dof)
 
-female_broodstock_prop<-(vannamei_broodstock+monodon_broodstock+otherpen_broodstock)/(vannamei_broodstock+monodon_broodstock+otherpen_broodstock+allspecies_dof$vannamei_dof+allspecies_dof$monodon_dof+allspecies_dof$otherpen_dof)
+female_broodstock<-(vannamei_broodstock+monodon_broodstock+otherpen_broodstock)
+
+female_broodstock_prop<- (female_broodstock/(female_broodstock+vannamei_dof_pl+monodon_dof_pl+otherpen_dof_pl))
 
 head(female_broodstock_prop) # the proportion of shrimp that are female broodstock.
 
 # multiply proportion of farms that source larvae from ablated broodstock by proportion of shrimp on those farms that are broodstock. This gives you the proportion of farmed broodstock that are ablated shrimp.
 prev_ablation<-prev_ablation_unadjusted*female_broodstock_prop
 
+#saveRDS(female_broodstock_prop, file="../data/female_broodstock_prop.RData")
 ```
 
 We can also see the average number of female broodstock.
 ```{r}
-mean(vannamei_broodstock+monodon_broodstock+otherpen_broodstock)
+mean(female_broodstock)
 ```
 
 ## Pain-Tracks

@@ -4,7 +4,10 @@ editor_options:
   chunk_output_type: console
 ---
 
+
 {{< include _functions_data.qmd >}}
+
+
 
 # Results {.unnumbered}
 
