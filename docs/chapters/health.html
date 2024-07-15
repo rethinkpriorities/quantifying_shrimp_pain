@@ -370,17 +370,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>female_broodstock<span class="ot">&lt;-</span>(vannamei_broodstock<span class="sc">+</span>monodon_broodstock<span class="sc">+</span>otherpen_broodstock)</span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>female_broodstock_prop<span class="ot">&lt;-</span> (female_broodstock<span class="sc">/</span>(female_broodstock<span class="sc">+</span>vannamei_dof_pl<span class="sc">+</span>monodon_dof_pl<span class="sc">+</span>otherpen_dof_pl))</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>female_broodstock_prop<span class="ot">&lt;-</span>(female_broodstock<span class="sc">/</span>((female_broodstock<span class="sc">*</span><span class="dv">2</span>)<span class="sc">+</span>vannamei_dof_pl<span class="sc">+</span>monodon_dof_pl<span class="sc">+</span>otherpen_dof_pl)) <span class="co"># we multiply the number of female broodstock by two in our calculation of the shrimp population to account for male broodstock</span></span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(female_broodstock_prop) <span class="co"># the proportion of shrimp that are female broodstock.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.206959e-06 3.640229e-06 2.544718e-06 4.045479e-06 3.934490e-06
-[6] 4.239612e-06</code></pre>
+<pre><code>[1] 2.206954e-06 3.640216e-06 2.544712e-06 4.045463e-06 3.934474e-06
+[6] 4.239594e-06</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># multiply proportion of farms that source larvae from ablated broodstock by proportion of shrimp on those farms that are broodstock. This gives you the proportion of farmed broodstock that are ablated shrimp.</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>prev_ablation<span class="ot">&lt;-</span>prev_ablation_unadjusted<span class="sc">*</span>female_broodstock_prop</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#saveRDS(female_broodstock_prop, file="../data/female_broodstock_prop.RData")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(female_broodstock_prop, <span class="at">file=</span><span class="st">"../data/female_broodstock_prop.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can also see the average number of female broodstock.</p>
 <div class="cell">
@@ -510,7 +510,9 @@ Intensity notes
 <span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_ablation))</span>
 <span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(ablation_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
 <span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_ablation"</span>,<span class="st">"Hurtful_ablation"</span>,<span class="st">"Disabling_ablation"</span>, <span class="st">"Excruciating_ablation"</span>, <span class="st">"Disabling-Equivalent_Eyestalk_ablation"</span>)</span>
-<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(ablation_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(ablation_summary, <span class="at">table.attr =</span> <span class="st">'data-quarto-disable-processing="true"'</span>, <span class="at">digits=</span><span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">full_width=</span><span class="cn">FALSE</span>, <span class="at">position=</span><span class="st">"center"</span>, <span class="at">font_size=</span><span class="dv">12</span>,</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>                  <span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"condensed"</span>)) <span class="co"># the show_table function defaults to 7 decimal places, but our results here are smaller than that so we manually show the results with an updated "digits" value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
@@ -525,38 +527,38 @@ Intensity notes
 <tbody>
   <tr>
    <td style="text-align:left;"> Annoying_ablation </td>
-   <td style="text-align:right;"> 9.54e-05 </td>
-   <td style="text-align:right;"> 0.0002542 </td>
-   <td style="text-align:right;"> 0.0005995 </td>
-   <td style="text-align:right;"> 2.89e-04 </td>
+   <td style="text-align:right;"> 9.53931e-05 </td>
+   <td style="text-align:right;"> 2.54163e-04 </td>
+   <td style="text-align:right;"> 5.99458e-04 </td>
+   <td style="text-align:right;"> 0.0002890057 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_ablation </td>
-   <td style="text-align:right;"> 9.70e-06 </td>
-   <td style="text-align:right;"> 0.0000279 </td>
-   <td style="text-align:right;"> 0.0000739 </td>
-   <td style="text-align:right;"> 3.31e-05 </td>
+   <td style="text-align:right;"> 9.65270e-06 </td>
+   <td style="text-align:right;"> 2.78967e-05 </td>
+   <td style="text-align:right;"> 7.39223e-05 </td>
+   <td style="text-align:right;"> 0.0000330733 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling_ablation </td>
-   <td style="text-align:right;"> 6.00e-07 </td>
-   <td style="text-align:right;"> 0.0000014 </td>
-   <td style="text-align:right;"> 0.0000031 </td>
-   <td style="text-align:right;"> 1.60e-06 </td>
+   <td style="text-align:right;"> 5.72200e-07 </td>
+   <td style="text-align:right;"> 1.37490e-06 </td>
+   <td style="text-align:right;"> 3.11400e-06 </td>
+   <td style="text-align:right;"> 0.0000015528 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Excruciating_ablation </td>
-   <td style="text-align:right;"> 0.00e+00 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.00e+00 </td>
+   <td style="text-align:right;"> 0.00000e+00 </td>
+   <td style="text-align:right;"> 0.00000e+00 </td>
+   <td style="text-align:right;"> 1.81000e-08 </td>
+   <td style="text-align:right;"> 0.0000000097 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling-Equivalent_Eyestalk_ablation </td>
-   <td style="text-align:right;"> 2.60e-06 </td>
-   <td style="text-align:right;"> 0.0000066 </td>
-   <td style="text-align:right;"> 0.0000200 </td>
-   <td style="text-align:right;"> 1.17e-05 </td>
+   <td style="text-align:right;"> 2.59320e-06 </td>
+   <td style="text-align:right;"> 6.60870e-06 </td>
+   <td style="text-align:right;"> 2.00116e-05 </td>
+   <td style="text-align:right;"> 0.0000116850 </td>
   </tr>
 </tbody>
 </table>

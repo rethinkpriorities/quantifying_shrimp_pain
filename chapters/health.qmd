@@ -103,14 +103,14 @@ otherpen_broodstock_prop<-otherpen_broodstock/(otherpen_broodstock+allspecies_do
 
 female_broodstock<-(vannamei_broodstock+monodon_broodstock+otherpen_broodstock)
 
-female_broodstock_prop<- (female_broodstock/(female_broodstock+vannamei_dof_pl+monodon_dof_pl+otherpen_dof_pl))
+female_broodstock_prop<-(female_broodstock/((female_broodstock*2)+vannamei_dof_pl+monodon_dof_pl+otherpen_dof_pl)) # we multiply the number of female broodstock by two in our calculation of the shrimp population to account for male broodstock
 
 head(female_broodstock_prop) # the proportion of shrimp that are female broodstock.
 
 # multiply proportion of farms that source larvae from ablated broodstock by proportion of shrimp on those farms that are broodstock. This gives you the proportion of farmed broodstock that are ablated shrimp.
 prev_ablation<-prev_ablation_unadjusted*female_broodstock_prop
 
-#saveRDS(female_broodstock_prop, file="../data/female_broodstock_prop.RData")
+saveRDS(female_broodstock_prop, file="../data/female_broodstock_prop.RData")
 ```
 
 We can also see the average number of female broodstock.
@@ -219,7 +219,11 @@ ablation_summary<-cbind(round(rbind(
   "Mean" = colMeans(average_hours_ablation))
 row.names(ablation_summary)<-c(
   "Annoying_ablation","Hurtful_ablation","Disabling_ablation", "Excruciating_ablation", "Disabling-Equivalent_Eyestalk_ablation")
-show_table(ablation_summary)
+kable(ablation_summary, table.attr = 'data-quarto-disable-processing="true"', digits=10) %>%
+  kableExtra::kable_styling(full_width=FALSE, position="center", font_size=12,
+                  bootstrap_options = c("condensed")) # the show_table function defaults to 7 decimal places, but our results here are smaller than that so we manually show the results with an updated "digits" value
+
+
 
 ```
 
