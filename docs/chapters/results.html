@@ -285,8 +285,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>totals_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  welfare_threat       5%      50%      95%     Mean
-1          Total 25.06219 112.2686 351.7476 154.1117</code></pre>
+<pre><code>  welfare_threat       5%      50%     95%     Mean
+1          Total 27.63739 115.0953 355.836 157.1543</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -401,6 +401,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    <td style="text-align:center;"> — </td>
   </tr>
   <tr>
+   <td style="text-align:left;"> Ice-slurry slaughter </td>
+   <td style="text-align:center;"> 0.27 </td>
+   <td style="text-align:center;"> 2.7 </td>
+   <td style="text-align:center;"> 7.2 </td>
+   <td style="text-align:center;"> 3 </td>
+   <td style="text-align:center;"> — </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> Harvest </td>
    <td style="text-align:center;"> 0.11 </td>
    <td style="text-align:center;"> 0.96 </td>
@@ -465,14 +473,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    <td style="text-align:center;"> 2.4 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Ice-Slurry slaughter </td>
-   <td style="text-align:center;"> 0.00043 </td>
-   <td style="text-align:center;"> 0.0046 </td>
-   <td style="text-align:center;"> 0.018 </td>
-   <td style="text-align:center;"> 0.0063 </td>
-   <td style="text-align:center;"> 0.38 </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Eyestalk ablation </td>
    <td style="text-align:center;"> 0.0000026 </td>
    <td style="text-align:center;"> 0.0000066 </td>
@@ -482,10 +482,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </tr>
   <tr>
    <td style="text-align:left;font-weight: bold;background-color: lightgrey !important;"> Total </td>
-   <td style="text-align:center;font-weight: bold;background-color: lightgrey !important;"> 25 </td>
-   <td style="text-align:center;font-weight: bold;background-color: lightgrey !important;"> 112 </td>
-   <td style="text-align:center;font-weight: bold;background-color: lightgrey !important;"> 352 </td>
-   <td style="text-align:center;font-weight: bold;background-color: lightgrey !important;"> 154 </td>
+   <td style="text-align:center;font-weight: bold;background-color: lightgrey !important;"> 28 </td>
+   <td style="text-align:center;font-weight: bold;background-color: lightgrey !important;"> 115 </td>
+   <td style="text-align:center;font-weight: bold;background-color: lightgrey !important;"> 356 </td>
+   <td style="text-align:center;font-weight: bold;background-color: lightgrey !important;"> 157 </td>
    <td style="text-align:center;font-weight: bold;background-color: lightgrey !important;"> — </td>
   </tr>
 </tbody>
@@ -562,7 +562,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>hurtful_totals_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  welfare_threat       5%      50%      95%     Mean
-1        Hurtful 111.2305 562.6624 841.3865 519.7689</code></pre>
+1        Hurtful 111.2306 562.6626 841.3868 519.7692</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Disabling</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>disabling_totals<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">Eyestalk_ablation =</span> ablation[,<span class="dv">3</span>],</span>
@@ -597,7 +597,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>disabling_totals_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  welfare_threat       5%      50%      95%     Mean
-1      Disabling 2.715309 5.516055 10.10686 5.858266</code></pre>
+1      Disabling 2.737285 5.540913 10.13035 5.882116</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ecruciating</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>excruciating_totals<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">Eyestalk_ablation =</span> ablation[,<span class="dv">4</span>],</span>
@@ -632,7 +632,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>excruciating_totals_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  welfare_threat          5%        50%       95%      Mean
-1   Excruciating 0.001803573 0.02679766 0.4872938 0.1334237</code></pre>
+1   Excruciating 0.006992051 0.03299267 0.4935622 0.1394545</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>allpain_totals<span class="ot">&lt;-</span><span class="fu">data.frame</span>(annoying_totals<span class="sc">$</span>Total,</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                           hurtful_totals<span class="sc">$</span>Total,</span>
@@ -652,7 +652,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>allpain_totals_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                  welfare_threat       5%      50%      95%     Mean
-1 Total (pain categories summed) 803.0925 5269.631 7403.393 4700.612</code></pre>
+1 Total (pain categories summed) 803.1153 5269.674 7403.425 4700.642</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>total_byintensity<span class="ot">&lt;-</span><span class="fu">rbind</span>(annoying_totals_summary, hurtful_totals_summary,</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                         disabling_totals_summary, excruciating_totals_summary)</span>
@@ -682,38 +682,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    <td style="text-align:center;"> 4658.1333172 </td>
    <td style="text-align:center;"> 6666.7204653 </td>
    <td style="text-align:center;"> 4174.8509724 </td>
-   <td style="text-align:center;"> 88.8150593 </td>
+   <td style="text-align:center;"> 88.8144891 </td>
   </tr>
   <tr>
    <td style="text-align:center;"> Hurtful </td>
-   <td style="text-align:center;"> 111.2305404 </td>
-   <td style="text-align:center;"> 562.6623918 </td>
-   <td style="text-align:center;"> 841.3865372 </td>
-   <td style="text-align:center;"> 519.7689275 </td>
-   <td style="text-align:center;"> 11.0574745 </td>
+   <td style="text-align:center;"> 111.2305713 </td>
+   <td style="text-align:center;"> 562.6625718 </td>
+   <td style="text-align:center;"> 841.3868042 </td>
+   <td style="text-align:center;"> 519.7692294 </td>
+   <td style="text-align:center;"> 11.0574099 </td>
   </tr>
   <tr>
    <td style="text-align:center;"> Disabling </td>
-   <td style="text-align:center;"> 2.7153089 </td>
-   <td style="text-align:center;"> 5.5160549 </td>
-   <td style="text-align:center;"> 10.1068551 </td>
-   <td style="text-align:center;"> 5.8582665 </td>
-   <td style="text-align:center;"> 0.1246278 </td>
+   <td style="text-align:center;"> 2.7372845 </td>
+   <td style="text-align:center;"> 5.5409133 </td>
+   <td style="text-align:center;"> 10.1303455 </td>
+   <td style="text-align:center;"> 5.8821155 </td>
+   <td style="text-align:center;"> 0.1251343 </td>
   </tr>
   <tr>
    <td style="text-align:center;"> Excruciating </td>
-   <td style="text-align:center;"> 0.0018036 </td>
-   <td style="text-align:center;"> 0.0267977 </td>
-   <td style="text-align:center;"> 0.4872938 </td>
-   <td style="text-align:center;"> 0.1334237 </td>
-   <td style="text-align:center;"> 0.0028384 </td>
+   <td style="text-align:center;"> 0.0069921 </td>
+   <td style="text-align:center;"> 0.0329927 </td>
+   <td style="text-align:center;"> 0.4935622 </td>
+   <td style="text-align:center;"> 0.1394545 </td>
+   <td style="text-align:center;"> 0.0029667 </td>
   </tr>
   <tr>
    <td style="text-align:center;"> Total (pain categories summed) </td>
-   <td style="text-align:center;"> 803.0924967 </td>
-   <td style="text-align:center;"> 5269.6313016 </td>
-   <td style="text-align:center;"> 7403.3933105 </td>
-   <td style="text-align:center;"> 4700.6115901 </td>
+   <td style="text-align:center;"> 803.1153482 </td>
+   <td style="text-align:center;"> 5269.6744487 </td>
+   <td style="text-align:center;"> 7403.4250142 </td>
+   <td style="text-align:center;"> 4700.6417719 </td>
    <td style="text-align:center;"> NA </td>
   </tr>
 </tbody>
@@ -771,7 +771,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"water"</span>, <span class="st">"Water-based transport"</span> , results_paintype<span class="sc">$</span>welfare_threat)</span>
 <span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"pollute"</span>, <span class="st">"Pollutants"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
 <span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"harvest"</span>, <span class="st">"Harvest"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
-<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"slaught"</span>, <span class="st">"Ice-Slurry slaughter"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"slaught"</span>, <span class="st">"Ice-slurry slaughter"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
 <span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"ablation"</span>, <span class="st">"Eyestalk ablation"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
 <span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"pred"</span>, <span class="st">"Predators"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
 <span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>results_paintype<span class="sc">$</span>welfare_threat<span class="ot">&lt;-</span><span class="fu">gsub</span>(<span class="st">"lowtemp"</span>, <span class="st">"Low temperature"</span>, results_paintype<span class="sc">$</span>welfare_threat)</span>
@@ -837,7 +837,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a>  <span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="at">top=</span>.<span class="dv">05</span>,<span class="at">r=</span>.<span class="dv">1</span>,<span class="at">b=</span>.<span class="dv">05</span>,<span class="at">l=</span><span class="sc">-</span>.<span class="dv">4</span>), <span class="st">"cm"</span>)) </span>
 <span id="cb17-52"><a href="#cb17-52" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-53"><a href="#cb17-53" aria-hidden="true" tabindex="-1"></a>fig1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave(filename="../results/fig1.png", plot=fig1, width=14, height=8.5)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">"../results/fig1.png"</span>, <span class="at">plot=</span>fig1, <span class="at">width=</span><span class="dv">14</span>, <span class="at">height=</span><span class="fl">8.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><img src="../results/fig1.png" class="img-fluid"></p>
 <p>We also plot the proportion of pain of each intensity for each welfare threat:</p>

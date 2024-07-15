@@ -1,5 +1,7 @@
 ---
 title: "End of production"
+editor_options: 
+  chunk_output_type: console
 ---
 
 
@@ -156,7 +158,7 @@ slaughtered_samp_totals<-slaughtered_samp %>%
 
 ``` 
 
-Shrimp who are sold live are not slaughtered so we must account for this in our estimations. We, therefore, estimate that all farm types are 98% likely to use ice slurry to slaughter shrimp. We then account for the fact that only shrimp who make it slaughter age and do not die during collection are slaughtered. To do this, we weight by the relevant life-stage proportions, and by our estimate that between 0% and 50% of shrimp die during collection, before slaughter.
+Shrimp who are sold live are not slaughtered so we must account for this in our estimations. We use the same estimate for the proportion of shrimp sold live as in the @sec-waterless section, that between 1% and 2% of shrimp are sold live and, therefore, are not slaughtered during the farming cycle. Thus, we weight our estimations by between 0.99 and 0.98. We then account for the fact that only shrimp who make it slaughter age and do not die during collection are slaughtered. To do this, we weight by the relevant life-stage proportions, and by our estimate that between 0% and 50% of shrimp die during collection, before slaughter.
 
 Our prevalence estimates are:
 
@@ -210,16 +212,16 @@ prev_slaught_dist<-mapply(sample_beta, prev_slaught_stat$mean, prev_slaught_stat
 colnames(prev_slaught_dist)<-prev_slaught_stat$FarmType
 prev_slaught_dist[,4]<-1 # as we are multiplying with the ice slurry prevalences, we cannot set this to 0, as the calculation would not work. Since we just want the super-intensive prevalence to be 1, we set it to 1 here. 
 
-prev_slaught_unadjusted<-as.data.frame(prev_slaught_dist*prev_iceslurry_dist)
+prev_slaught_unadjusted<-as.data.frame((1-prev_slaught_dist)*prev_iceslurry_dist)
 
 # adjust for the fact that only shrimp who don't die pre-slaughter are slaughtered
 slaughter_population_proportion <- stage_probabilities[,3]
 
 # adjust for shrimp slaughtered by electrical stunners provided by SWP
-electrical_stunning<-1-(1200000000/mean(slaughtered_samp_totals$total))*100
+electrical_stunning<-1-(1200000000/mean(slaughtered_samp_totals$total))
 
 # also adjust for shrimp sold live
-prev_slaught<-prev_slaught_unadjusted*slaughter_population_proportion*electrical_stunning*sold_live
+prev_slaught<-prev_slaught_unadjusted*slaughter_population_proportion*electrical_stunning*(1-sold_live)
 ```
 
 ## Pain-Tracks
@@ -298,7 +300,7 @@ slaught_summary<-cbind(round(rbind(
   (quantile(x =average_hours_slaught$Disabling_Equivalent, probs = c(.05, .50, .95)))), 10),
   "Mean" = colMeans(average_hours_slaught))
 row.names(slaught_summary)<-c(
-  "Annoying_slaught","Hurtful_slaught","Disabling_slaught", "Excruciating_slaught", "Disabling-Equivalent_Ice-Slurry_slaughter")
+  "Annoying_slaught","Hurtful_slaught","Disabling_slaught", "Excruciating_slaught", "Disabling-Equivalent_Ice-slurry_slaughter")
 show_table(slaught_summary)
 
 ```

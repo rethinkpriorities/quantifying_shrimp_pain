@@ -479,7 +479,7 @@ Intensity notes
 <pre><code>[1] 0.2990682</code></pre>
 </div>
 </div>
-<p>Shrimp who are sold live are not slaughtered so we must account for this in our estimations. We, therefore, estimate that all farm types are 98% likely to use ice slurry to slaughter shrimp. We then account for the fact that only shrimp who make it slaughter age and do not die during collection are slaughtered. To do this, we weight by the relevant life-stage proportions, and by our estimate that between 0% and 50% of shrimp die during collection, before slaughter.</p>
+<p>Shrimp who are sold live are not slaughtered so we must account for this in our estimations. We use the same estimate for the proportion of shrimp sold live as in the <a href="transportation.html" class="quarto-xref"><span>Waterless transport</span></a> section, that between 1% and 2% of shrimp are sold live and, therefore, are not slaughtered during the farming cycle. Thus, we weight our estimations by between 0.99 and 0.98. We then account for the fact that only shrimp who make it slaughter age and do not die during collection are slaughtered. To do this, we weight by the relevant life-stage proportions, and by our estimate that between 0% and 50% of shrimp die during collection, before slaughter.</p>
 <p>Our prevalence estimates are:</p>
 <table class="table">
 <colgroup>
@@ -566,16 +566,16 @@ Intensity notes
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(prev_slaught_dist)<span class="ot">&lt;-</span>prev_slaught_stat<span class="sc">$</span>FarmType</span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>prev_slaught_dist[,<span class="dv">4</span>]<span class="ot">&lt;-</span><span class="dv">1</span> <span class="co"># as we are multiplying with the ice slurry prevalences, we cannot set this to 0, as the calculation would not work. Since we just want the super-intensive prevalence to be 1, we set it to 1 here. </span></span>
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>prev_slaught_unadjusted<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(prev_slaught_dist<span class="sc">*</span>prev_iceslurry_dist)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>prev_slaught_unadjusted<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>((<span class="dv">1</span><span class="sc">-</span>prev_slaught_dist)<span class="sc">*</span>prev_iceslurry_dist)</span>
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># adjust for the fact that only shrimp who don't die pre-slaughter are slaughtered</span></span>
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>slaughter_population_proportion <span class="ot">&lt;-</span> stage_probabilities[,<span class="dv">3</span>]</span>
 <span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="co"># adjust for shrimp slaughtered by electrical stunners provided by SWP</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>electrical_stunning<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">-</span>(<span class="dv">1200000000</span><span class="sc">/</span><span class="fu">mean</span>(slaughtered_samp_totals<span class="sc">$</span>total))<span class="sc">*</span><span class="dv">100</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>electrical_stunning<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">-</span>(<span class="dv">1200000000</span><span class="sc">/</span><span class="fu">mean</span>(slaughtered_samp_totals<span class="sc">$</span>total))</span>
 <span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co"># also adjust for shrimp sold live</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>prev_slaught<span class="ot">&lt;-</span>prev_slaught_unadjusted<span class="sc">*</span>slaughter_population_proportion<span class="sc">*</span>electrical_stunning<span class="sc">*</span>sold_live</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>prev_slaught<span class="ot">&lt;-</span>prev_slaught_unadjusted<span class="sc">*</span>slaughter_population_proportion<span class="sc">*</span>electrical_stunning<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>sold_live)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="pain-tracks-1" class="level2">
@@ -664,7 +664,7 @@ Intensity notes
 <span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">quantile</span>(<span class="at">x =</span>average_hours_slaught<span class="sc">$</span>Disabling_Equivalent, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">50</span>, .<span class="dv">95</span>)))), <span class="dv">10</span>),</span>
 <span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mean"</span> <span class="ot">=</span> <span class="fu">colMeans</span>(average_hours_slaught))</span>
 <span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(slaught_summary)<span class="ot">&lt;-</span><span class="fu">c</span>(</span>
-<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_slaught"</span>,<span class="st">"Hurtful_slaught"</span>,<span class="st">"Disabling_slaught"</span>, <span class="st">"Excruciating_slaught"</span>, <span class="st">"Disabling-Equivalent_Ice-Slurry_slaughter"</span>)</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annoying_slaught"</span>,<span class="st">"Hurtful_slaught"</span>,<span class="st">"Disabling_slaught"</span>, <span class="st">"Excruciating_slaught"</span>, <span class="st">"Disabling-Equivalent_Ice-slurry_slaughter"</span>)</span>
 <span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a><span class="fu">show_table</span>(slaught_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table data-quarto-disable-processing="true" class="table table-condensed" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -687,31 +687,31 @@ Intensity notes
   </tr>
   <tr>
    <td style="text-align:left;"> Hurtful_slaught </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0000003 </td>
-   <td style="text-align:right;"> 0.0000022 </td>
-   <td style="text-align:right;"> 0.0000006 </td>
+   <td style="text-align:right;"> 0.0000124 </td>
+   <td style="text-align:right;"> 0.0001939 </td>
+   <td style="text-align:right;"> 0.0009612 </td>
+   <td style="text-align:right;"> 0.0003025 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Disabling_slaught </td>
-   <td style="text-align:right;"> 0.0000124 </td>
-   <td style="text-align:right;"> 0.0000426 </td>
-   <td style="text-align:right;"> 0.0001098 </td>
-   <td style="text-align:right;"> 0.0000494 </td>
+   <td style="text-align:right;"> 0.0106834 </td>
+   <td style="text-align:right;"> 0.0236873 </td>
+   <td style="text-align:right;"> 0.0377748 </td>
+   <td style="text-align:right;"> 0.0238985 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Excruciating_slaught </td>
-   <td style="text-align:right;"> 0.0000029 </td>
-   <td style="text-align:right;"> 0.0000105 </td>
-   <td style="text-align:right;"> 0.0000287 </td>
-   <td style="text-align:right;"> 0.0000125 </td>
+   <td style="text-align:right;"> 0.0024501 </td>
+   <td style="text-align:right;"> 0.0058400 </td>
+   <td style="text-align:right;"> 0.0103551 </td>
+   <td style="text-align:right;"> 0.0060433 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Disabling-Equivalent_Ice-Slurry_slaughter </td>
-   <td style="text-align:right;"> 0.0004258 </td>
-   <td style="text-align:right;"> 0.0046073 </td>
-   <td style="text-align:right;"> 0.0181189 </td>
-   <td style="text-align:right;"> 0.0063178 </td>
+   <td style="text-align:left;"> Disabling-Equivalent_Ice-slurry_slaughter </td>
+   <td style="text-align:right;"> 0.2658441 </td>
+   <td style="text-align:right;"> 2.6654759 </td>
+   <td style="text-align:right;"> 7.2117464 </td>
+   <td style="text-align:right;"> 3.0488984 </td>
   </tr>
 </tbody>
 </table>

@@ -47,7 +47,7 @@ prev_ablation_unadjusted<-as.data.frame(prev_ablation_dist)
 
 We also need to adjust for the fact that only female broodstock are subjected to eyestalk ablation, not their offspring who are actually raised for food. We calculate the number of broodstock by using the total number of shrimp that die on farms *from the postlarval stage onward* (from [Waldhorn & Autric's 2023](http://doi.org/10.31219/osf.io/b8n3t) Guesstimate model), divided by the number of eggs different species lay per spawn, and assuming only half the eggs hatch.
 
-See [set up chapter](set-up.qmd) for how the variables used here were calculated. First, we must calculate the number of shrimp that die on farms from the postlarval stage onward. We do so because other threats are evaluated for the harms they cause in the ongrowing stage only, so we must calculate the proportion of shrimp that are broodstock against only this population. handling the data in the same way as the set-up, using the `kde1d` function to generate 100,000 samples.
+See [set up chapter](set-up.qmd) for how the variables used here were calculated. First, we must calculate the number of shrimp that die on farms from the postlarval stage onward. We do so because other threats are evaluated for the harms they cause in the ongrowing stage only, so we must calculate the proportion of shrimp that are broodstock against only this population. We do so handling the data in the same way as the Set-up chapter, using the `kde1d` function to generate 100,000 samples.
 
 ```{r}
 library(kde1d) # load the required package

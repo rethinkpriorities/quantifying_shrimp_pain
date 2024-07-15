@@ -310,7 +310,7 @@ prev_pred_stat <- data.frame(FarmType = c(
                                sd = c(0.17334, 0.1077494, 0.03673223, 0.001))
 prev_pred_dist<-mapply(sample_beta, prev_pred_stat$mean, prev_pred_stat$sd)
 colnames(prev_pred_dist)<-prev_pred_stat$FarmType
-prev_pred_dist[,4]<-1
+prev_pred_dist[,4]<-0
 
 prev_pred<-as.data.frame(prev_pred_dist)
 ```
